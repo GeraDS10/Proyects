@@ -1,0 +1,508 @@
+body{
+    margin: 0;
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;   
+}
+ 
+ header{
+    display: flex;
+    background-color: rgba(53,58,64, 1);
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10%;
+ }
+
+ header span{
+    color: white;
+ }
+
+ .logo_container{
+    display: flex;
+    font-size: 150%;
+    text-align: center;
+    align-items: center;
+    padding-left: 10%;
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+ }
+
+ #cac_logo{
+    width: 30%;
+ }
+
+nav{
+    opacity: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    padding-right: 2%;
+}
+nav li{
+    display: flex;
+    font-size: 80%;
+}
+
+.selected{
+    color: rgba(255, 255, 255, 1);
+}
+
+.highlight{
+    color: green;
+}
+
+nav li ul{
+    white-space: nowrap;
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+}
+nav li ul a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.summary_container{
+    background-color: rgba(00, 00, 00, 0.75);
+    display: flex;
+    align-items: flex-end;
+    height: 80vh;
+}
+
+#summary_background_img{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.summary{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.summary_title{
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+    font-size: 200%;
+}
+
+.summary_text{
+    width: 50%;
+}
+
+.summary_buttons{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    margin: 0%;
+}
+
+#postulate_button{
+    color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+    background-color: rgba(00, 00, 00, 0);
+    border-radius: 0.25rem;
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+    border: solid 0.5px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#buy_button{
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(41,167,68, 1);
+    border-radius: 0.3rem;
+    border: 1px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+    margin-left: 3%;
+}
+
+.speakers{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2%;
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+}
+
+.speaker{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    align-items: center;
+    border: solid 1px;
+    border-color: rgba(00, 00, 00, 0.15);
+    font-size: smaller;
+}
+
+.speakers_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.speaker_img{
+    width: 25vw;
+}
+
+.speaker_img img{
+    width: 100%;
+    height: 15em;
+}
+
+.speaker_links{
+    width: 100%;
+}
+
+.speaker_links button{
+    margin-left: 0.5vw;
+}
+
+.speaker_review{
+    overflow: hidden;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: justify;
+}
+.review_container{
+    display: flex;
+    background-color: rgba(53,58,64,1);
+    color: white;
+    margin-bottom: 2%;
+    height: 60vh;
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+}
+
+.review_text{
+    font-size: smaller;
+}
+
+
+.button_link_javascript{
+    border: none;
+    border-radius: 0.2vw;
+    background-color: rgba(254,193,6, 1);
+}
+
+.button_link_react{
+    border: none;
+    border-radius: 0.2vw;
+    background-color: rgba(22,163,184,1);
+}
+
+.button_link_startups{
+    border: none;
+    border-radius: 0.2vw;
+    background-color: rgba(219,54,70,1);
+}
+
+.button_link_business{
+    border: none;
+    border-radius: 0.2vw;
+    background-color: rgba(108,117,124, 1);
+}
+
+.review{
+    padding-left: 3%;
+}
+
+#review_image{
+    width: 50%;  
+}
+
+#review_container_know_more{
+    background-color: rgba(00, 00, 00, 0);
+    color: rgba(255, 255, 255, 1);
+    width: 15%;
+    height: 10%;
+   border-color: rgba(255, 255, 255, 1);
+   border-radius: 0.25rem;
+}
+
+.form_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1%;
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+}
+
+.form_speaker{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_container_pre_spekear{
+    margin: 1%;
+    font-size: 0.7rem;
+}
+
+.form_container h3{
+    font-size: 2em;
+    margin: 1%;
+}
+
+.form_container_post_speaker{
+    font-size: small;
+}
+
+.form_container_underline{
+    color: rgba(00, 00, 00, 1);
+    text-decoration: none;
+    border-bottom:2px dotted #9999CC;
+}
+
+
+.form_container_identification{
+    width: 100%;
+    margin-bottom: 1%;
+    display: flex;
+    height: 3vh;
+}
+
+.form_name{
+    width: 48%;
+    margin-right: 1%;
+    border-radius: 0.25rem;
+    border: 1px solid;
+    border-color: rgba(00, 00, 00, 0.30);
+}
+
+.form_lastname{
+    width: 48%;
+    border-radius: 0.25rem;
+    border: 1px solid;
+    border-color: rgba(00, 00, 00, 0.30);
+}
+
+#theme{
+    width: 100%;
+    padding-bottom: 10%;
+    border-radius: 0.25rem;
+    border: 1px solid;
+    border-color: rgba(00, 00, 00, 0.30);
+}
+
+.form_reminder{
+    align-self: baseline;
+    color: rgba(00, 00, 00, 0.60);
+    font-size: x-small;
+}
+
+#send_form-button{
+    background-color: rgba(150,201,62, 1);
+    color: rgba(255, 255, 255, 1);
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border: 0;
+}
+
+footer li{
+    background-color: rgba(20, 50, 90, 1);
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+}
+
+footer li ul{
+    font-size: small;
+    margin: 0%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.tickets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.tickets_list{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+}
+
+.tickets_list_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1px;
+    border-style: solid;
+    border-color: red;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    height: 65%;
+    width: 20%;
+}
+
+.ticket_list_card_estudiante{
+    border-color: rgba(102,176,255,255);
+}
+
+.ticket_list_card_trainee{
+    border-color: rgba(115,199,212,255);
+}
+
+.ticket_list_card_junior{
+    border-color: rgba(255,193,10,255);
+}
+
+.tickets_list_card_reminder{
+    color: rgba(00, 00, 00, 0.60);
+    font-size: 0.9em;
+}
+
+.tickets_price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.tickets_price h2{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 2em;
+}
+
+#form_tickets_buy{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_tickets_identification{
+    display: flex;
+    width: 100%;
+}
+
+.form_tickets_identification input{
+    padding-left: 1%;
+    height: 4vh;
+}
+
+.form_tickets_contact{
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#form_tickets_contact_mail{
+    width: 100%;
+    height: 4vh;
+    border-radius: 0.25rem;
+    border: 1px solid;
+    border-color: rgba(00, 00, 00, 0.30);
+    padding: 0% 0% 1% 0%;
+}
+
+#form_tickets_lastname{
+    border-radius: 0.25rem;
+    border: 1px solid;
+    border-color: rgba(00, 00, 00, 0.30);
+    width: 100%;
+    height: 4vh;
+}
+
+.form_tickets_selection{
+    display: flex;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.form_tickets_selection input{
+    border-radius: 0.25rem;
+    border: 1px solid;
+    border-color: rgba(00, 00, 00, 0.30);
+    padding-left: 2%;
+}
+
+.form_tickets_selection aside{
+    margin-bottom: 2%;
+}
+
+.form_tickets_quantity{
+    width: 50%;
+    margin-right: 2%;
+}
+
+#form_tickets_quantity_input{
+    width: 98%;
+    height: 4vh;
+}
+
+.form_tickets_category{
+    width: 50%;
+}
+
+#form_tickets_category_select{
+    width: 100%;
+    height: 4.4vh;
+    border-radius: 0.25rem;
+    border: 1px solid;
+    border-color: rgba(00, 00, 00, 0.30);
+}
+
+.form_tickets_buy input{
+    width: inherit;
+    height: 3vh;
+}
+
+.form_tickets_total{
+    background-color: rgba(204,229,255,255);
+    width: 100%;
+}
+
+#form_tickets_total_output{
+    padding-left: 2%;
+}
+
+.form_tickets_buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#form_tickets_borrar{
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(150,201,62, 1);
+    border-radius: 0.3rem;
+    border: 1px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 48%;
+    margin-right: 2%;
+    font-size: larger;
+}
+
+#form_tickets_submit{
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(150,201,62, 1);
+    border-radius: 0.3rem;
+    border: 1px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 48%;
+    font-size: larger;
+}
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo_container">
+        <span>Conf Bs As</span>
+        </div>
+        <nav>
+            <li>
+                <ul id="navLaConferencia"><a href="inicio.html" >La Conferencia</a></ul>
+                <ul>Los Oradores</ul>
+                <ul>El lugar y la fecha</ul>
+                <ul ><a href="tickets.html" id="navSerOrador">Conviertete en Orador</a></ul>
+                <ul class="highlight"  id="navBuyTickets">Comprar tickets</ul>
+            </li>
+        </nav>
+    </header>
+   <section class="tickets">
+    <div class="tickets_list">
+        <div class="tickets_list_card ticket_list_card_estudiante">
+            <h3>Estudiante</h3>
+                <p>Tiene un descuento</p>
+                <h3>80%</h3>
+                <p class="tickets_list_card_reminder">*presentar documentacion</p>
+        </div>
+        <div class="tickets_list_card ticket_list_card_trainee">
+            <h3>Trainee</h3>
+            <p>Tiene un descuento</p>
+            <h3>50%</h3>
+            <p class="tickets_list_card_reminder">*presentar documentacion</p>
+        </div>
+        <div class="tickets_list_card ticket_list_card_junior">
+            <h3>Junior</h3>
+            <p>Tiene un descuento</p>
+            <h3>15%</h3>
+            <p class="tickets_list_card_reminder">*presentar documentacion</p>
+        </div>  
+    </div>
+    <div class="tickets_price">
+        <aside>VENTA</aside>
+    <h2>VALOR DE TICKET $200</h2>
+    </div>
+        <form action="" id="form_tickets_buy">
+            <div class="form_tickets_identification">
+                <input type="text" name="nombre" class="form_name" id="form_tickets_buy_nombre" placeholder="Nombre">
+                <input type="text" name="" class="form_lastname" id="form_tickets_buy_lastname" placeholder="Apellido">
+            </div>
+            <div class="form_tickets_contact">
+                <input type="email" name="" id="form_tickets_contact_mail" placeholder="  Correo">
+            </div>
+            <div class="form_tickets_selection">
+                <div class="form_tickets_quantity">
+                    <aside>Cantidad</aside>
+                    <input type="number" name="" id="form_tickets_quantity_input" placeholder="cantidad">
+                </div>
+                <div class="form_tickets_category">
+                    <aside>Categoria</aside>
+                    <select name="" id="form_tickets_category_select">
+                        <option value="estudiante">Estudiante</option>
+                        <option value="trainee">Trainee</option>
+                        <option value="junior">Junior</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form_tickets_total">
+                <p id="form_tickets_total_output">Total a Pagar: $</p>
+            </div>
+            <div class="form_tickets_buttons">
+                <button type="reset" id="form_tickets_borrar">Borrar</button>
+                <button type="submit" id="form_tickets_submit">Resumen</button>
+            </div>
+        </form>
+   </section>
+    <footer>
+        <li>
+            <ul>Preguntas frecuentes</ul>
+            <ul>Contáctanos</ul>
+            <ul>Prensa</ul>
+            <ul>Conferencias</ul>
+            <ul>Términos y condiciones</ul>
+            <ul>Privacidad</ul>
+            <ul>Estudiantes</ul>
+        </li>
+    </footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

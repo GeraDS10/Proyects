@@ -1,0 +1,237 @@
+body{
+    background-color: black;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo h1{
+    color: orangered;
+}
+
+.logo img{
+    max-height: 150%;
+}
+
+nav li{
+    display: flex;
+    flex-direction: column;
+}
+nav li ul{
+    font-size: small;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+
+
+}
+header nav a{
+    text-decoration: none;
+    color: orangered;
+    background-color: black;
+    border: solid 0.5px;
+    border-radius: 50%;
+    margin-bottom: 5%;
+    border-color: rgb(111, 4, 182);
+}
+a:hover{
+    background-color: white;
+}
+
+.index_section{
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.index_section p{
+    width: 80%;
+}
+
+section h2{
+    color: rgb(111, 4, 182);
+}
+
+section p{
+    color: orangered;
+}
+
+section button{
+    color: orangered;
+    background-color: black;
+    border-radius: 40%;
+    border-color: rgb(111, 4, 182);
+}
+
+section button:hover{
+    background-color: white;
+}
+
+
+.contact_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_section img{
+    width:80%;
+    align-self: center;
+}
+
+.contact_section span{
+    color: orangered;
+    margin-bottom: 1%;
+}
+
+.aboutUs_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.galery_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    border: solid 1px;
+    background-color: white;
+    border-radius: 20%;
+    margin-bottom: 2%;
+}
+
+.card img{
+    padding-top: 5%;
+    width: inherit;
+}
+
+.card p{
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: small;
+}
+
+.card button{
+    margin-bottom: 1%;
+}
+
+.redes{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-around;
+    border-top: solid 1px;
+    border-color: orangered;
+}
+
+.redes div img{
+    width: 100%;
+    height: 80%;
+}
+
+.redes div{
+    width: 20%;
+}
+
+@media only screen and (min-width: 680px){
+    header{
+        display: flex;
+        justify-content: space-around;
+    }
+    .logo{
+        display: flex;
+        flex-direction: row;
+    }
+    nav {
+        display: flex;
+        width: 50%;
+    }
+
+    nav li{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-self: center;
+    }
+
+    nav li a{
+        width: 50%;
+        margin: 0%;
+        margin-left: 5%;
+    }
+    nav li a ul{
+        
+    }
+
+    .index_section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .redes div img{
+        width: 50%;
+    }
+
+    .contact_section img{
+        width: 50%;
+        height: 50%;
+    }
+
+    .aboutUs_section{
+
+    }
+
+    .aboutUs_section p{
+        width: 50%;
+    }
+
+    .galery_section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .galery_section_beer{
+        display: flex;
+        align-items: center;
+        width: 100%;
+     justify-content: center;
+    }
+
+    .card{
+        width: 100%;
+        height: 100%;
+        margin-left: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card p{
+    }
+
+    .card img{
+        width: 20%;
+        height: 30%;
+    }
+    
+}
+
+

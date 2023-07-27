@@ -1,0 +1,259 @@
+/*header*/
+
+header img {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    display: block;
+    height: fit-content;
+    width: 100%;
+    height: 9em;
+}
+
+header div{
+    display: flex;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+header div img{
+    margin: 0 10px 0 10px;
+    height: 100px;
+    width: auto;
+    position: initial;
+}
+
+h1{
+    font-size: 3em;
+}
+
+/*nav*/
+
+nav article section{
+    width: 25%;
+    padding:0 5%;
+    border: solid white; 
+}
+
+nav article section:hover{
+    cursor: pointer;
+}
+
+nav article{
+    display: none;
+    flex-direction: column;
+}
+
+.deslizar{
+    margin: 0%;
+    display: block;
+}
+
+nav img{
+    width: 35px;
+}
+
+/* nav .btn section:hover{
+    background-color: rgb(54, 54, 54);
+} */
+
+/*footer*/
+
+footer{
+    background-color: rgb(49, 49, 49);
+    border: solid orangered;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+h5{
+    margin: 2px 5px 2px 5%;
+    font-size: 1em;
+}
+
+footer ul{
+    display: flex;
+    margin: 5px 0 5px 0;
+    padding: 5px;
+}
+
+footer ul li{
+    margin-right: 5%;
+    font-size: 1em;
+    list-style: none;
+}
+
+/*general*/
+
+body{
+    background-color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0 1% 0 1%;
+}
+
+h2{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+a, body, tbody{
+    color: aliceblue;
+}
+
+/*index*/
+
+.subcontenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid rgb(161, 97, 67);
+}
+
+.variedades{
+    width: 50%;
+    margin-left: 3rem;
+}
+
+.contenido{
+    max-width: 800px;
+    margin: auto;
+}
+
+ol{
+    padding: 0px;
+    list-style: upper-roman;
+}
+
+.vino{
+    margin: 5px 0 5px 0;
+}
+
+/*tabla*/
+
+.contenedorbebidas, .conteiner{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+.conteiner input {
+    width: 80%;
+}
+
+table, thead, tbody, tfoot, th, td{
+    border: solid;
+    border-color: rgb(161, 97, 67);
+    border-collapse: collapse;
+    font-size: small;
+
+}
+
+table {
+    width: 98%;
+}
+
+tbody{
+    background-color: black;
+}
+
+tfoot, thead{ 
+    background-color: white;
+    color: black;
+}
+
+/*formulario*/
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    border-color: rgb(161, 97, 67);
+}
+
+.datos{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.datos input{
+    width: 90%;
+}
+
+select{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.big{
+    padding-bottom: 5rem;
+}
+
+.suma, .aceptado, .rechazado{
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.suma{
+    background-color: white;
+    color: black;
+    margin-right: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.aceptado{
+    background-color: green;
+    margin-left: 5px;
+}
+
+.rechazado{
+    background-color: red;
+    margin-left: 5px;
+}
+
+.btn-generar-suma, .btn-enviar{
+width: 45%;
+} 
+
+.result-suma{
+    margin-top: 2px;
+    margin-bottom: 2px;    
+}
+
+@media only screen and (min-width: 600px){
+    nav img{
+        width: 35px;
+        display: none;
+    }
+
+    header div img{
+        height: 130px
+    }
+
+    nav article{
+        display: flex; 
+        justify-content: flex-end;
+        align-items: center; 
+        flex-direction: inherit;
+    }
+
+    nav article section{
+        margin: 0 4px;
+        width: inherit;
+    }
+
+    .deslizar{
+        margin: 0%;
+        display: flex;
+    }
+    
+    table, thead, tbody, tfoot, th, td{
+        font-size: medium;
+    }
+}

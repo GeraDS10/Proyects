@@ -1,0 +1,40 @@
+
+<body>
+    <div class="contenido">
+        <h2>PAGOS Y ENTREGAS</h2>
+        <p>Brindamos flexibilidad en los pagos online aceptando todas las tarjetas de crédito, MercadoPago Y pago al retirar</p>
+        <form>
+            <div class="datos">
+                Nombre: <input type="text" name="nombre" value="">  
+                Apellido: <input type="text" name="apellido" value="">
+                DNI:<input type="text" name="dni" value="">
+                Direccion: <input type="text" name="direccion" value="">
+                Telefono: 
+                <select id="telefono"> 
+                    <option value="movil">Movil</option>
+                    <option value="fijo">Fijo</option>
+                </select> 
+                <input type="text" name="telefono" value="">
+                Mail:<input type="text" name="mail" value="">
+                Codogo postal: <input type="text" name="postal" value="">
+                Provincia: <input type="text" name="provincia" value="">
+            </div>            
+            <div class="datos">
+                Ciudad: <input type="text" name="ciudad" value="">
+                Instrucciones de entregas: <input type="text" class="big" name="instrucciones" value="">
+                <select> MEDIO DE PAGO
+                    <option value="efectivo">Efectivo</option>
+                    <option value="debito">Débito</option>
+                    <option value="credito">Crédito</option>
+                </select>
+                <button type="button" id="btn-generar-suma" class="btn-generar-suma">Generar suma</button>
+                <p id="suma-verificacion" class="suma"></p>
+                <input type="text" id="result" class="result-suma" placeholder="Resultado Suma">   
+                <button type="button" id="btn-enviar" class="btn-enviar">Enviar</button>
+                <p id="okverification" class="aceptado"></p>
+                <p id="nookverification" class="rechazado"></p>
+            </div>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+</body>

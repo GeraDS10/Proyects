@@ -1,0 +1,73 @@
+
+<body>
+    <div class="contenido">
+        <div>
+            <h2>Nuestros vinos</h2>
+            <p>Bienvenidos a nuestra tienda. Estamos orgullosos de ofrecerle una amplia selección de las mejores bebidas</p>
+        </div>
+        <div class="contenedorbebidas">
+            <table>
+                <thead>
+                    <tr>
+                        <th id="filtro-variedad">
+                            VARIEDAD
+                        </th>
+                        <th>
+                            MARCA
+                        </th>
+                        <th>
+                            CONTENIDO
+                        </th>
+                        <th>
+                            PRECIO
+                        </th>
+                        <th>
+                            CANTIDAD
+                        </th>
+                        <th>
+                            BORRAR
+                        </th>
+                        <th>
+                            EDITAR
+                        </th>
+                    <tr>
+                </thead>
+                <tbody id="pedido-ingresado">
+                </tbody >
+            </table>
+        </div>
+        <form>
+            <div class="conteiner">
+                <div>
+                    <select id="variedad">
+                        <option value="Blanco Dulce">Blanco Dulce</option>
+                        <option value="Malbec">Malbec</option>
+                        <option value="Orgánico">Orgánico</option>
+                        <option value="Rosado">Rosado</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="text" placeholder="Ingrese Marca" id="marca">
+                </div>
+                <div>
+                    <input type="number" placeholder="Ingrese Contenido" id="contenido">
+                </div>
+                <div>
+                    <input type="number" placeholder="Ingrese Precio" id="precio">
+                </div>
+                <div>
+                    <input type="text" placeholder="Ingrese Cantidad" id="cantidad">
+                </div>
+            </div>
+            <div class="conteiner">
+                <div>
+                    <button type="button" id="btn-agregarpedido">AGREGAR</button>
+                </div>
+                <div>
+                    <button type="button" id="btn_x3">X3</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+</body>

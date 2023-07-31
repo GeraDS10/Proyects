@@ -1,3 +1,18 @@
 <body>
-    <h1>Guarderia</h1>
+    <section class="guarderiaSection">
+        <h1 class="titulo">Guarderia</h1>
+        <div class="guarderiaForm">
+            <form action="">
+                <label for="">Fecha ingreso:</label>
+                <input type="date" name="fechaIngreso" id="fechaIngreso">
+                <label for="">Fecha egreso:</label>
+                <input type="date" name="fechaEgreso" id="fechaEgreso">
+                <label for="hora">Hora de egreso:</label>
+                <input type="time" id="horaEgreso" name="horaEgreso">
+                <button type="button" id="buttonConsultar">Calcular</button>
+            </form>
+        </div>
+        <div id="resultadoDiv" class="ocultar">
+        </div>
+    </section>
 </body>

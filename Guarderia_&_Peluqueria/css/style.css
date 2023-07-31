@@ -1,10 +1,18 @@
+:root{
+    --casa-snoopy: rgba(254,0,0,255);
+    --cielo: rgba(126,167,229,255);
+}
+
 *{
     
 }
+
+
 body{
     background-image: url(../images/background.jpg);
     /* background-repeat: no-repeat; */
     background-size: cover;
+    margin: 0%;
 }
 
 header{
@@ -15,6 +23,90 @@ nav{
     display: flex;
 }
 
+nav ul{
+    list-style-type: none;
+    padding-left: 25%;
+    background-color: var(--casa-snoopy);
+
+}
+
+nav ul li{
+}
+
+.logoDiv{
+    width: 50%;
+    /* border-radius: 20%; */
+}
+
+#logo{
+    width: inherit;
+    border-radius: 50%;
+    border: solid 1px;
+    border-color: black;
+}
+
+.menuDiv{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#menu{
+    width: 20%;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    cursor: pointer;
+}
+
+#navMenu{
+padding-top: 25%;
+}
+
 .redes ul{
     display: flex;
-} 
+}
+
+.redes ul li{
+    width: 10%;
+}
+
+footer{
+    background-color: var(--casa-snoopy);
+}
+
+.guarderiaSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guarderiaForm form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guarderiaForm input{
+
+}
+
+#buttonConsultar{
+    margin-top: 3%;
+    border: solid 1px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(0, 187, 45, 1);
+}
+
+#resultadoDiv{
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 3%;
+    text-align: center;
+    width: 80%;
+}
+
+.deslizar{
+    display: none;
+}

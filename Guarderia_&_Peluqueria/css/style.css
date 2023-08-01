@@ -4,7 +4,8 @@
 }
 
 *{
-    
+    margin: 0%;
+    padding: 0%;
 }
 
 
@@ -25,17 +26,29 @@ nav{
 
 nav ul{
     list-style-type: none;
-    padding-left: 25%;
     background-color: var(--casa-snoopy);
-
+    text-align: center;
 }
 
 nav ul li{
+    border-bottom: solid 0.5vh;
+    border-color: white;
+}
+
+.logoCompletoDiv{
+    padding-top: 30%;
+    width: 100%;
+}
+
+#logoCompleto{
+    width: inherit;
 }
 
 .logoDiv{
     width: 50%;
     /* border-radius: 20%; */
+    padding-top: 2%;
+    padding-left: 2%;
 }
 
 #logo{
@@ -49,31 +62,55 @@ nav ul li{
     width: 50%;
     display: flex;
     flex-direction: column;
+    align-items: end;
 }
 
 #menu{
     width: 20%;
-    position: absolute;
-    top: 0%;
-    right: 0%;
     cursor: pointer;
 }
 
 #navMenu{
-padding-top: 25%;
+
 }
 
-.redes ul{
-    display: flex;
-}
-
-.redes ul li{
-    width: 10%;
+.titulo{
+    -webkit-text-stroke: 0.7px black;
+    color: var(--casa-snoopy);
+    font-size: 2em;
 }
 
 footer{
     background-color: var(--casa-snoopy);
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.redes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoRed{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoRed img{
+    width: inherit;
+    height: inherit;
+}
+
+
 
 .guarderiaSection{
     display: flex;
@@ -106,6 +143,13 @@ footer{
     text-align: center;
     width: 80%;
 }
+
+.peluqueriaSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .deslizar{
     display: none;

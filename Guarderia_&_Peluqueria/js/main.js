@@ -22,7 +22,10 @@ async function load_content(id) {
             let text = await response.text();
             conteiner.innerHTML = text;
         }else{
-        conteiner.innerHTML = 'error loading for /' + id + '...';
+        //conteiner.innerHTML = 'error loading for /' + id + '...';
+        conteiner.innerHTML = '<div class="logoCompletoDiv">' + 
+                                '<img src="../Guarderia_&_Peluqueria/images/LogoCompleto.png" alt="Logo" id="logoCompleto">' +
+                                '</div>';
         }
     }catch(error){
         console.log(error);

@@ -5,11 +5,30 @@
 //------------- menu ----------------
 document.querySelector("#menu").addEventListener("click", deslizar);
 let navMenu = document.querySelector("#navMenu");
+let imgMenu = document.querySelector("#menu");
 
 function deslizar(){
     navMenu.classList.toggle("deslizar");
+    cambiarImgMenu();
 };
 
+function cambiarImgMenu(){
+   if(imgMenu.alt == "menu"){
+    imgMenu.src = "../Guarderia_&_Peluqueria/images/menuClose.png";
+    imgMenu.alt = "menuClose";
+   }
+   else{
+    imgMenu.src = "../Guarderia_&_Peluqueria/images/menu.png";
+    imgMenu.alt = "menu";
+   }
+}
+
+let logo = document.querySelector("#logo").addEventListener("click",()=>{
+    let id = "inicio";
+    document.title = id;
+    load_content(id);
+    window.history.pushState(id, `${id}`,`./${id}.html`);
+});
 
 
 //------------------PARTIAL RENDER---------------------------------------------
@@ -33,8 +52,8 @@ async function load_content(id) {
     if(id === 'guarderia'){
          estadia();
     }
-    if(id === 'bebidas'){
-        //agregarTabla();
+    if(id === 'peluqueria'){
+        baño();
     }
 }
 
@@ -42,6 +61,7 @@ async function load_content(id) {
 
 
 function push(event) {
+    deslizar();
     let id = event.target.id;
     document.title = id;
     load_content(id);
@@ -65,7 +85,7 @@ window.addEventListener("popstate", event => {
 */
 function estadia(){
     const valorEstadia = 1800;
-    let btnConsutla = document.querySelector("#buttonConsultar").addEventListener("click", calcular);
+    let btnConsulta = document.querySelector("#buttonConsultar").addEventListener("click", calcular);
     let divResultado = document.querySelector("#resultadoDiv");
 
     function calcularAdicional(horaEgreso){
@@ -119,6 +139,136 @@ function estadia(){
         return diferenciaEnDias;
     }
 
+}
+
+function baño(){
+    let btnConsulta = document.querySelector("#buttonConsultar").addEventListener("click", calcular);
+    let divResultado = document.querySelector("#resultadoDiv");
+
+    function calcular(){
+        let perroTamanio = document.querySelector("#perroTamanio");
+        let perroPelaje = document.querySelector("#perroPelaje");
+        let perroCorte = document.querySelector("#perroCorte");
+       
+       switch(perroTamanio.value){
+        case 'grande':
+            switch(perroPelaje.value){
+                case 'largo':
+                    switch(perroCorte.value){
+                        case 'si':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+                        
+                        case 'no':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+                    }
+                    break;
+                case 'mediano':
+                    switch(perroCorte){
+                        case 'si':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+
+                        case 'no':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+                    }
+                    break;
+                case 'corto':
+                    switch(perroCorte){
+                        case 'si':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+
+                        case 'no':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+                    }
+                break;      
+            }
+
+        break;
+
+        case 'mediano':
+            switch(perroPelaje){
+                case 'largo':
+                    switch(perroCorte){
+                        case 'si':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+
+                        case 'no':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+                    }
+                    break;
+                case 'mediano':
+                    switch(perroCorte){
+                        case 'si':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+
+                        case 'no':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+                    }
+                    break;
+                case 'corto':
+                    switch(perroCorte){
+                        case 'si':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+
+                        case 'no':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+                    }
+                break;      
+            }
+
+        break;
+
+        case 'chico':
+            switch(perroPelaje){
+                case 'largo':
+                    switch(perroCorte){
+                        case 'si':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+
+                        case 'no':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+                    }
+                    break;
+                case 'mediano':
+                    switch(perroCorte){
+                        case 'si':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+
+                        case 'no':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+                    }
+                    break;
+                case 'corto':
+                    switch(perroCorte){
+                        case 'si':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+
+                        case 'no':
+                            divResultado.innerHTML = "Valor estimado = xxxx"
+                        break;
+                    }
+                break;      
+            }
+
+        break;
+       }
+    }
 }
 
 

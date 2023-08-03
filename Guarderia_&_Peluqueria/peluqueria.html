@@ -6,15 +6,30 @@
             Breve Reseña
         </p>
     </div>
-    <form action="">
-        <select name="raza" id="">
-            <option value=""></option>
-        </select>
-        <select name="tamanio" id="">
-            <option value=""></option>
-        </select>
-        <input type="radio">
-    </form>
+    <div class="guarderiaForm">
+        <form action="">
+            <label for="tamanio">Tamaño</label>
+            <select name="tamanio" id="perroTamanio">
+                <option value="grande">Grande</option>
+                <option value="mediano">Mediano</option>
+                <option value="chico">Chico</option>
+            </select>
+            <label for="pelaje">Pelaje</label>
+            <select name="pelaje" id="perroPelaje">
+                <option value="largo">Largo</option>
+                <option value="mediano">Mediano</option>
+                <option value="corto">Corto</option>
+            </select>
+            <label for="corte">Corte</label>
+            <select name="corte" id="perroCorte">
+                <option value="no">No</option>
+                <option value="si">Si</option>
+            </select>
+            <button type="button" id="buttonConsultar">Calcular</button>
+        </form>
+    </div>
+    <div id="resultadoDiv" class="ocultar">
+    </div>
     </section>
     
 </body>

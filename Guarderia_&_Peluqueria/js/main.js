@@ -27,6 +27,7 @@ let logo = document.querySelector("#logo").addEventListener("click",()=>{
     let id = "inicio";
     document.title = id;
     load_content(id);
+    deslizar();
     window.history.pushState(id, `${id}`,`./${id}.html`);
 });
 

@@ -79,7 +79,7 @@ nav ul li{
 }
 
 #menu{
-    width: 70%;
+    width: 50%;
     cursor: pointer;
 }
 
@@ -103,11 +103,19 @@ footer{
     border-top: solid;
 }
 
+.contenidoFooter{
+    display: none;
+}
+
 .redes{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.nombreRed{
+    display: none;
 }
 
 .logoRed{
@@ -174,4 +182,133 @@ footer{
 
 .deslizar{
     display: none;
+}
+
+@media only screen and (min-width: 600px){
+
+    #logo{
+        width: 50%;
+        cursor: pointer;
+    }
+
+    .menuDiv{
+        /* display: none; */
+    }
+
+    .menuDiv img{
+        display: none;
+    }
+
+    .deslizar{
+        display: flex;
+    }
+
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav ul li{
+        width: 100%;
+        border: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    nav ul li:hover{
+        background-color: white;
+        color: var(--casa-snoopy);
+        font-size: 2em;
+    }
+
+    .logoCompletoDiv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0%;
+    }
+
+    #logoCompleto{
+        width: 50%;
+    }
+
+    footer{
+        position: absolute;
+        position: fixed;
+        bottom: 0%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .contenidoFooter{
+        display: block;
+    }
+
+    .redes{
+        width: 50%;
+    }
+
+    .nombreRed{
+        display: block;
+    }
+
+    .logoRed{
+        /* width: 20%; */
+    }
+
+    .logoRed a{
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        align-items: center;
+        color: white;
+    }
+
+    .logoRed a:hover{
+        border-bottom: solid 1px white;
+        border-left: solid 1px white;
+        font-size: 1.5em;
+    }
+
+    .logoRed img{
+        width: 20%;
+    }
+
+
+    .titulo{
+        font-size: 5em;
+    }
+
+    .guarderiaForm{
+        font-size: 2rem;
+    }
+
+    .guarderiaForm input{
+        font-size: 2rem;
+    }
+
+    .guarderiaForm select{
+        font-size: 2rem;
+    }
+
+    #buttonConsultar{
+        font-size: 1.5rem;
+    }
+
+    #buttonConsultar:hover{
+        border: solid 2px;
+        font-size: 2rem;
+        cursor: pointer;
+
+    }
+
+    #resultadoDiv{
+        margin-bottom: 10%;
+        width: 40%;
+        font-size: 2rem;
+    }
 }

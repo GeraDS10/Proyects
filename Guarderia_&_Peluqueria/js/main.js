@@ -125,6 +125,7 @@ function estadia(){
         }
         
         divResultado.classList.remove("ocultar");
+        window.scrollBy(0, divResultado.clientHeight * 5);
     }
 
     
@@ -269,6 +270,7 @@ function baño(){
 
         break;
        }
+       window.scrollBy(0, divResultado.clientHeight * 5);
     }
 }
 

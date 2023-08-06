@@ -41,6 +41,10 @@ header nav a{
     overflow: hidden;
 }
 
+main{
+    padding-bottom: 20%;
+}
+
 .index_section{
     width: 80%;
     padding-left: 10%;
@@ -83,28 +87,28 @@ section button{
     margin-bottom: 1%;
 }
 
- .newsletter_section{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+.newsletter_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    .newsletter_section form{
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+.newsletter_section form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-    .newsletter_section form div{
-        margin-bottom: 1%;
-    }
+.newsletter_section form div{
+    margin-bottom: 1%;
+}
 
-    .newsletter_section form button{
-        width: 50%;
-        align-self: center;
-    }
+.newsletter_section form button{
+    width: 50%;
+    align-self: center;
+}
 
 .aboutUs_section{
     display: flex;
@@ -127,7 +131,6 @@ section button{
     justify-content: center;
     align-items: center;
 }
-
 
 .card{
     display: flex;
@@ -154,6 +157,13 @@ section button{
 
 .card button{
     margin-bottom: 1%;
+}
+
+footer{
+    position: absolute;
+    bottom: 0%;
+    position: fixed;
+    background-color: black;
 }
 
 .redes{

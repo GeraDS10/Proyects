@@ -161,6 +161,7 @@ section button{
 
 footer{
     position: absolute;
+    width: 100%;
     bottom: 0%;
     position: fixed;
     background-color: black;

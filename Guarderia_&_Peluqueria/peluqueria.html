@@ -1,35 +1,39 @@
 <body>
     <section class="peluqueriaSection">
         <h1 class="titulo">Peluquería</h1>
-    <div>
         <p>
-            Breve Reseña
+            En el formulario debajo puede calcular el valor estimativo con una raza de referencia. Dicho
+            valor puede variar acorde al estado del manto.
         </p>
-    </div>
-    <div class="guarderiaForm">
-        <form action="">
-            <label for="tamanio">Tamaño</label>
-            <select name="tamanio" id="perroTamanio">
-                <option value="grande">Grande</option>
-                <option value="mediano">Mediano</option>
-                <option value="chico">Chico</option>
-            </select>
-            <label for="pelaje">Pelaje</label>
-            <select name="pelaje" id="perroPelaje">
-                <option value="largo">Largo</option>
-                <option value="mediano">Mediano</option>
-                <option value="corto">Corto</option>
-            </select>
-            <label for="corte">Corte</label>
-            <select name="corte" id="perroCorte">
-                <option value="no">No</option>
-                <option value="si">Si</option>
-            </select>
-            <button type="button" id="buttonConsultar">Calcular</button>
-        </form>
-    </div>
-    <div id="resultadoDiv" class="ocultar">
-    </div>
+        <p>
+            El baño contempla corte higiénico, corte de uñas y limpieza de oidos, en caso de ser necesarios.
+        </p>
+        <p>
+            En caso de requerir traslado, consultar por el mismo, ya que se determinará según distancia.
+        </p>
+        <div class="guarderiaForm">
+            <form action="">
+                <label for="tamanio">Tamaño</label>
+                <select name="tamanio" id="perroTamanio">
+                    <option value="grande">Grande</option>
+                    <option value="mediano">Mediano</option>
+                    <option value="chico">Chico</option>
+                </select>
+                <label for="pelaje">Pelaje</label>
+                <select name="pelaje" id="perroPelaje">
+                    <option value="largo">Largo</option>
+                    <option value="corto">Corto</option>
+                </select>
+                <label for="corte">Corte</label>
+                <select name="corte" id="perroCorte">
+                    <option value="no">No</option>
+                    <option value="si">Si</option>
+                </select>
+                <button type="button" id="buttonConsultar">Calcular</button>
+            </form>
+        </div>
+        <div id="resultadoDiv" class="ocultar">
+        </div>
     </section>
     
 </body>

@@ -93,6 +93,17 @@ nav ul li{
     font-size: 2em;
 }
 
+.subtitulo{
+    -webkit-text-stroke: 0.7px black;
+    color: var(--casa-snoopy);
+    font-size: 1.5em;
+    text-decoration: underline 1px black;
+}
+
+.aclaracion{
+    font-size: 0.7em;
+}
+
 footer{
     background-color: var(--casa-snoopy);
     width: 100%;
@@ -125,16 +136,9 @@ footer{
     align-items: center;
 }
 
-.logoRed a{
-    /* width: 60%;
-    height: fit-content; */
-}
-
 .logoRed img{
     width: 100%;
 }
-
-
 
 .guarderiaSection{
     display: flex;
@@ -156,6 +160,12 @@ footer{
     margin-bottom: 10%;
 }
 
+.guarderiaForm{
+    padding: 2% 5% 2% 5%;
+    border-radius: 20%;
+    border: solid 2px var(--casa-snoopy);
+}
+
 #buttonConsultar{
     margin-top: 3%;
     border: solid 1px;
@@ -171,18 +181,36 @@ footer{
     margin-top: 3%;
     text-align: center;
     width: 80%;
+    font-weight: bold;
 }
 
 .peluqueriaSection{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
+.peluqueriaSection p{
+    width: 90%;
+    font-style: italic;
+}
+
+.guarderiaSection ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.guarderiaSection ul li{
+    width: 80%;
+}
 
 .deslizar{
     display: none;
 }
+
 
 @media only screen and (min-width: 600px){
 
@@ -292,6 +320,18 @@ footer{
     }
 
     .guarderiaForm select{
+        font-size: 2rem;
+    }
+
+    .subtitulo{
+        font-size: 2.5rem;
+    }
+
+    .peluqueriaSection p{
+        font-size: 2rem;
+    }
+
+    .guarderiaSection ul li{
         font-size: 2rem;
     }
 

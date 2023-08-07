@@ -85,12 +85,12 @@ window.addEventListener("popstate", event => {
 -------------PARTIAL RENDER
 */
 function estadia(){
-    const valorEstadia = 1800;
+    const valorEstadia = 2000;
     let btnConsulta = document.querySelector("#buttonConsultar").addEventListener("click", calcular);
     let divResultado = document.querySelector("#resultadoDiv");
 
     function calcularAdicional(horaEgreso){
-        if(( horaEgreso > '13:00') && ( horaEgreso < '19:00' )){
+        if(( horaEgreso > '14:00') && ( horaEgreso < '19:00' )){
             return valorEstadia * 0.5;
         }
         if(horaEgreso >= '19:00'){
@@ -108,13 +108,14 @@ function estadia(){
         let horaEgreso = document.querySelector("#horaEgreso").value;
         let diasEstadia = calcularDiferenciaEnDias(fechaIngreso, fechaEgreso);
         let adicionalDia = 0;
+        let limitePrecio = '<br> <p  class="aclaracion">Precio válido hasta 31 de Agosto 2023</p>';
         if(horaEgreso >= '00:00'){
             adicionalDia = calcularAdicional(horaEgreso);
             if(diasEstadia > 0){
-                divResultado.innerHTML = "Valor Estadia = $" + (diasEstadia * valorEstadia + adicionalDia);
+                divResultado.innerHTML = "Valor Estadia = $" + (diasEstadia * valorEstadia + adicionalDia) + limitePrecio;
             }
             else if(diasEstadia == 0){
-                divResultado.innerHTML = "Valor Estadia = $" + (valorEstadia + adicionalDia);
+                divResultado.innerHTML = "Valor Estadia = $" + (valorEstadia + adicionalDia) + limitePrecio;
             }
             else{
                 divResultado.innerHTML = "Fechas inválidas, intente nuevamente";    
@@ -151,123 +152,94 @@ function baño(){
         let perroTamanio = document.querySelector("#perroTamanio");
         let perroPelaje = document.querySelector("#perroPelaje");
         let perroCorte = document.querySelector("#perroCorte");
+        let razaEjemplo;
+        let saltoLinea = "<br>";
        
        switch(perroTamanio.value){
         case 'grande':
             switch(perroPelaje.value){
                 case 'largo':
+                    razaEjemplo = "<p>Raza Ejemplo : Golden Retriever</p>";
+
                     switch(perroCorte.value){
                         case 'si':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
+                            divResultado.innerHTML = "Valor estimado = 4000" + saltoLinea + razaEjemplo;
                         break;
                         
                         case 'no':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
-                        break;
-                    }
-                    break;
-                case 'mediano':
-                    switch(perroCorte){
-                        case 'si':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
-                        break;
-
-                        case 'no':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
+                            divResultado.innerHTML = "Valor estimado = 3500" + saltoLinea + razaEjemplo;
                         break;
                     }
                     break;
                 case 'corto':
-                    switch(perroCorte){
+                    razaEjemplo = "<p>Raza Ejemplo : Dogo Burdeos</p>";
+                    switch(perroCorte.value){
                         case 'si':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
+                            divResultado.innerHTML = "Valor estimado = 3000" + saltoLinea + razaEjemplo;
                         break;
 
                         case 'no':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
+                            divResultado.innerHTML = "Valor estimado = 3000" + saltoLinea + razaEjemplo;
                         break;
                     }
                 break;      
             }
-
         break;
-
         case 'mediano':
-            switch(perroPelaje){
+            switch(perroPelaje.value){
                 case 'largo':
-                    switch(perroCorte){
+                    razaEjemplo = "<p>Raza Ejemplo : Border Colie</p>";
+                    switch(perroCorte.value){
                         case 'si':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
+                            divResultado.innerHTML = "Valor estimado = 3500" + saltoLinea + razaEjemplo;
                         break;
 
                         case 'no':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
-                        break;
-                    }
-                    break;
-                case 'mediano':
-                    switch(perroCorte){
-                        case 'si':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
-                        break;
-
-                        case 'no':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
+                            divResultado.innerHTML = "Valor estimado = 2900" + saltoLinea + razaEjemplo;
                         break;
                     }
                     break;
                 case 'corto':
-                    switch(perroCorte){
+                    razaEjemplo = "<p>Raza Ejemplo : Boxer</p>";
+                    switch(perroCorte.value){
                         case 'si':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
+                            divResultado.innerHTML = "Valor estimado = 3000" + saltoLinea + razaEjemplo;
                         break;
 
                         case 'no':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
+                            divResultado.innerHTML = "Valor estimado = 2800" + saltoLinea + razaEjemplo;
                         break;
                     }
                 break;      
             }
-
         break;
-
         case 'chico':
-            switch(perroPelaje){
+            switch(perroPelaje.value){
                 case 'largo':
-                    switch(perroCorte){
+                    razaEjemplo = "<p>Raza Ejemplo : Caniche Toy</p>";
+                    switch(perroCorte.value){
                         case 'si':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
+                            divResultado.innerHTML = "Valor estimado = 2700" + saltoLinea + razaEjemplo;
                         break;
 
                         case 'no':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
-                        break;
-                    }
-                    break;
-                case 'mediano':
-                    switch(perroCorte){
-                        case 'si':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
-                        break;
-
-                        case 'no':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
+                            divResultado.innerHTML = "Valor estimado = 2200" + saltoLinea + razaEjemplo;
                         break;
                     }
                     break;
                 case 'corto':
-                    switch(perroCorte){
+                    razaEjemplo = "<p>Raza Ejemplo : Jack Russell</p>";
+                    switch(perroCorte.value){
                         case 'si':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
+                            divResultado.innerHTML = "Valor estimado = 2700" + saltoLinea + razaEjemplo;
                         break;
 
                         case 'no':
-                            divResultado.innerHTML = "Valor estimado = xxxx"
+                            divResultado.innerHTML = "Valor estimado = 2200" + saltoLinea + razaEjemplo;
                         break;
                     }
                 break;      
             }
-
         break;
        }
        window.scrollBy(0, divResultado.clientHeight * 5);

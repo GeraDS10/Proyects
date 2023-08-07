@@ -42,6 +42,23 @@ nav ul li{
     font-size: x-large;
 }
 
+main{
+    padding-bottom: 40%;
+}
+
+footer{
+    position: absolute;
+    position: fixed;
+    bottom: 0%;
+    background-color: var(--casa-snoopy);
+    width: 100%;
+    justify-self: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid;
+}
+
 .logoCompletoDiv{
     padding-top: 30%;
     width: 100%;
@@ -98,20 +115,11 @@ nav ul li{
     color: var(--casa-snoopy);
     font-size: 1.5em;
     text-decoration: underline 1px black;
+    margin-top: 2%;
 }
 
 .aclaracion{
     font-size: 0.7em;
-}
-
-footer{
-    background-color: var(--casa-snoopy);
-    width: 100%;
-    justify-self: end;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: solid;
 }
 
 .contenidoFooter{
@@ -144,6 +152,15 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.requisitos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5%;
+    margin-bottom: 2%;
 }
 
 .guarderiaForm form{
@@ -253,6 +270,10 @@ footer{
         font-size: 2em;
     }
 
+    main{
+        padding-bottom: 10%;
+    }
+
     .logoCompletoDiv{
         display: flex;
         align-items: center;
@@ -261,7 +282,7 @@ footer{
     }
 
     #logoCompleto{
-        width: 50%;
+        /* width: 50%; */
     }
 
     footer{

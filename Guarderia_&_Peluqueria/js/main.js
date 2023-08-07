@@ -27,7 +27,12 @@ let logo = document.querySelector("#logo").addEventListener("click",()=>{
     let id = "inicio";
     document.title = id;
     load_content(id);
-    deslizar();
+    imgMenu = document.querySelector("#menu");
+    console.log(imgMenu.alt);
+    if(imgMenu.alt == "menuClose"){
+        console.log("Logo Click")
+        deslizar();
+    }
     window.history.pushState(id, `${id}`,`./${id}.html`);
 });
 
@@ -42,10 +47,15 @@ async function load_content(id) {
             let text = await response.text();
             conteiner.innerHTML = text;
         }else{
+            console.log("implementando else");
         //conteiner.innerHTML = 'error loading for /' + id + '...';
-        conteiner.innerHTML = '<div class="logoCompletoDiv">' + 
-                                '<img src="../Guarderia_&_Peluqueria/images/LogoCompleto.png" alt="Logo" id="logoCompleto">' +
-                                '</div>';
+        // conteiner.innerHTML = '<div class="logoCompletoDiv">' + 
+        //                         '<img src="../Guarderia_&_Peluqueria/images/LogoCompleto.png" alt="Logo" id="logoCompleto">' +
+        //                         '</div>';
+        let id = "inicio";
+        document.title = id;
+        load_content(id);
+        window.history.pushState(id, `${id}`,`./${id}.html`);
         }
     }catch(error){
         console.log(error);
@@ -62,7 +72,10 @@ async function load_content(id) {
 
 
 function push(event) {
-    deslizar();
+    if(imgMenu.alt = "menuClose"){
+        console.log("Cerrando menu")
+        deslizar();
+    }
     let id = event.target.id;
     document.title = id;
     load_content(id);

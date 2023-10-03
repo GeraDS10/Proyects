@@ -1,0 +1,92 @@
+body{
+    margin: 0px;
+}
+
+:root{
+    --primario: rgba(68,4,104,255);
+    --primario_luz_1: rgba(108,19,157,255);
+    --primario_luz_2: rgba(83,7,125,255);
+    --primario_sombra_1: rgba(52,2,79,255);
+    --primario_sombra_2: rgba(32,1,49,255);
+    --secundario: rgba(125,0,71,255);
+    --secundario_luz_1: rgba(151,0,85,255);
+    --secundario_luz_2: rgba(188,13,112,255);
+    --secundario_sombra_1: rgba(95,0,54,255);
+    --secundario_sombra_2: rgba(59,0,35,255);
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url(../fuentes/static/Nunito-Regular.ttf);
+}
+
+.contenedorHeader{
+    background-color: var(--primario);
+    display: flex;
+    height: 120px;
+}
+.botonMenu{
+    display: flex;
+    align-self: center;
+    position: relative;
+    left: 48px;
+    
+}
+#botonMenuHamburguesa{
+    width: 70px;
+    height: 60px;
+}
+
+.logo{
+
+}
+
+#logo{
+    display: flex;
+    position: relative;
+    align-self: center;
+    right: -120px;
+    width: 350px;
+    height: 120px;
+}
+
+.buscador{
+    display: flex;
+    align-self: center;
+    position: relative;
+    right: -402px;
+}
+
+.buscadorInput{
+    background-color: var(--primario_luz_1);
+    border-color: var(--primario_luz_1);
+    border-radius: 25px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    width: 380px;
+    height: 61px;
+    font-size: 24px;
+    font-family: 'Nunito';
+}
+
+#buscadorBotonImagen{
+    display: flex;
+    align-self: center;
+    position: relative;
+    right: 72px;
+    width: 44px;
+    height: 40px;
+}
+
+.miPerfil{
+    display: flex;
+    position: absolute;
+    align-self: center;
+    right: 48px;
+}
+
+#botonPerfil{
+    width: 70px;
+    height: 60px;
+}

@@ -3,6 +3,9 @@ body{
 }
 
 :root{
+    --fuente_blanco: rgba(255,255,255,255);
+    --fuente_negro: rgba(0,0,0,1);
+    --texto_opaco: rgba(255,255,255,0.5);
     --primario: rgba(68,4,104,255);
     --primario_luz_1: rgba(108,19,157,255);
     --primario_luz_2: rgba(83,7,125,255);
@@ -20,73 +23,476 @@ body{
     src: url(../fuentes/static/Nunito-Regular.ttf);
 }
 
+/*  --------- Header --------- */
+
 .contenedorHeader{
+    display: flex;
+    height: 10vh;
+}
+
+.botonMenu{
     background-color: var(--primario);
     display: flex;
-    height: 120px;
-}
-.botonMenu{
-    display: flex;
-    align-self: center;
-    position: relative;
-    left: 48px;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 10vh;
     
 }
-#botonMenuHamburguesa{
-    width: 70px;
-    height: 60px;
+
+.img_boton_menu{
+    width: 40%;
+    height: 40%;
+    
 }
 
 .logo{
-
+    width: 60vw;
+    height: 10vh;
 }
 
-#logo{
-    display: flex;
-    position: relative;
-    align-self: center;
-    right: -120px;
-    width: 350px;
-    height: 120px;
+.img_logo{
+    width: 100%;
+    height: 10vh;
 }
 
 .buscador{
-    display: flex;
-    align-self: center;
-    position: relative;
-    right: -402px;
+    display: none;
 }
 
-.buscadorInput{
-    background-color: var(--primario_luz_1);
-    border-color: var(--primario_luz_1);
-    border-radius: 25px;
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    width: 380px;
-    height: 61px;
-    font-size: 24px;
-    font-family: 'Nunito';
-}
+.buscador_img{
 
-#buscadorBotonImagen{
-    display: flex;
-    align-self: center;
-    position: relative;
-    right: 72px;
-    width: 44px;
-    height: 40px;
 }
 
 .miPerfil{
+    background-color: var(--primario);
     display: flex;
-    position: absolute;
-    align-self: center;
-    right: 48px;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 10vh;
 }
 
-#botonPerfil{
-    width: 70px;
-    height: 60px;
+.img_miPerfil{
+    width: 50%;
+    height: 50%;
+}
+
+/*  --------- Header --------- */
+/*  --------- Nav --------- */
+.container_nav{
+    display: none;
+    width: 50vw;
+}
+
+.lista_nav{
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+    background-color: var(--secundario_sombra_1);
+}
+
+.item_lista_nav{
+    font-family: 'Nunito';
+    color: var(--fuente_blanco);
+    border:1px solid var(--fuente_blanco);
+    font-size: 1.4em;
+    padding: 1% 0% 1% 20%;
+}
+/*  --------- Nav --------- */
+/*  --------- Carrusel --------- */
+.container_carrusel{
+    font-family: 'Nunito';
+    background-color: var(--primario_sombra_2);
+    height: 60vh;
+}
+
+.titulo_container_carrusel{
+    color: var(--fuente_blanco);
+    font-size: 1.6em;
+    text-align: center;
+    margin-top: 0%;
+    padding-top: 2%;
+}
+
+.carrusel{
+
+}
+
+.card{
+    background-color: var(--primario_sombra_1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+    height: 40vh;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.img_card{
+    width: 100%;
+    height: 70%;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+.container_etiqueta_card{
+
+}
+
+.nombre_card{
+    margin: 1% 0% 1% 0%;
+    color: var(--fuente_blanco);
+    font-size: 1.4em;
+}
+
+.precio_card{
+    margin: 0% 0% 0% 0%;
+}
+
+.btn_card{
+    font-family: 'Nunito';
+    font-weight: bold;
+    margin-top: 2%;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 10px;
+    color: var(--primario);
+    border: 1px solid var(--primario);
+    background-color: var(--fuente_blanco);
+
+}
+/*  --------- Carrusel --------- */
+/*  --------- Footer --------- */
+.container_footer{
+    background-color: var(--secundario_sombra_2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Nunito';
+    color: var(--fuente_blanco);
+}
+
+.footer_columna{
+}
+
+.footer_columna_titulo{
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 0%;
+}
+
+.footer_columna_lista{
+    list-style: none;
+    margin-top: 1%;
+    padding: 0% 0% 0% 0%;
+    text-align: center;
+    font-size: 1em;
+}
+
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.label_newsletter{
+    text-align: center;
+    width: 50%;
+}
+.form_newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input_newsletter{
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    font-family: 'Nunito';
+    border: 0px;
+    height: 3vh;
+}
+
+.btn_newsletter{
+    font-family: 'Nunito';
+    border-radius: 10px;
+    width: 30vw;
+    height: 4vh;
+    background-color: var(--secundario_sombra_1);
+    color: var(--fuente_blanco);
+    border: 0px;
+}
+/*  --------- Footer --------- */
+
+
+@media only screen and (min-width: 600px) {
+    
+    /*  --------- Header --------- */
+    .contenedorHeader{
+        background-color: var(--primario);
+        display: flex;
+        height: 120px;
+    }
+    .botonMenu{
+        display: flex;
+        align-self: center;
+        position: relative;
+        left: 48px;
+        
+    }
+    #botonMenuHamburguesa{
+        width: 70px;
+        height: 60px;
+    }
+
+    .logo{
+
+    }
+
+    #logo{
+        display: flex;
+        position: relative;
+        align-self: center;
+        right: -120px;
+        width: 350px;
+        height: 120px;
+    }
+
+    .buscador{
+        display: flex;
+        align-self: center;
+        position: relative;
+        right: -402px;
+    }
+
+    .buscadorInput{
+        background-color: var(--primario_luz_1);
+        border-color: var(--primario_luz_1);
+        border-radius: 25px;
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        width: 380px;
+        height: 61px;
+        font-size: 24px;
+        font-family: 'Nunito';
+    }
+
+    #buscadorBotonImagen{
+        display: flex;
+        align-self: center;
+        position: relative;
+        right: 72px;
+        width: 44px;
+        height: 40px;
+    }
+
+    .miPerfil{
+        display: flex;
+        position: absolute;
+        align-self: center;
+        right: 48px;
+    }
+
+    #botonPerfil{
+        width: 70px;
+        height: 60px;
+    }
+    /*  --------- Header --------- */
+
+    /*  --------- Footer --------- */
+    .container_footer{
+        background-color: var(--secundario_sombra_2);
+        display: flex;
+        justify-content: center;
+        color: var(--fuente_blanco);
+        font-family: 'Nunito';
+    }
+
+    .footer_columna{
+        /* width: 20%; */
+        padding: 0% 5% 0% 5%;
+    }
+
+    .footer_columna_titulo{
+        margin-bottom: 1%;
+        font-size: 2em;
+    }
+
+    .footer_columna_lista{
+        list-style: none;
+        padding-left: 0%;
+        margin-top: 1.5%;
+        font-size: 1.5em;
+    }
+
+    .footer_columna_lista_item{
+        padding: 2% 0% 2% 0%;
+    }
+
+    .newsletter{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .label_newsletter{
+        font-size: 1.5em;
+        margin-bottom: 0.5%;
+    }
+
+    .input_newsletter{
+        width: 15vw;
+        height: 4vh;
+        border-radius: 10px;
+        font-family: 'Nunito';
+        font-size: 1.2em;
+        padding: 0%;
+        border: 0px;
+        margin: 0%;
+        margin-right: 1%;
+    }
+
+    .btn_newsletter{
+        font-family: 'Nunito';
+        width: 10vw;
+        height: 4vh;
+        font-size: 1.5em;
+        border-radius: 10px;
+        border:solid 1px var(--fuente_blanco);
+        background-color: var(--secundario_sombra_1);
+        color: var(--fuente_blanco);
+    }
+
+    /*  --------- Footer --------- */
+
+    /*  --------- Pagina de Registro --------- */
+
+
+    .container{
+        background-color: var(--primario_sombra_2);
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .form_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--primario_sombra_1);
+        width: 60vw;
+        padding-top: 5%;
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+        border-radius: 10px;
+    }
+
+    .form_input{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: fit-content;
+        padding-bottom: 5%;
+    }
+
+    .form_input label{
+        font-family: 'Nunito';
+        font-size: 1.5em;
+        color: var(--fuente_blanco);
+    }
+
+    .form_input input{
+        width: 22vw;
+        height: 4vh;
+        border-radius: 10px;
+        border-color: transparent;
+    }
+
+    .container_btn_registrar{
+    }
+
+    .btn_registrar{
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 15vw;
+        height: 6vh;
+        color: var(--fuente_blanco);
+        font-family: 'Nunito';
+        font-weight: bold;
+        font-size: 2em;
+        border-radius: 10px;
+        background-color: var(--primario);
+        border: solid 1px var(--texto_opaco);
+    }
+
+    .btn_cambio_login{
+        margin-top: 10%;
+        width: 22vw;
+        height: 4.5vh;
+        color: var(--fuente_blanco);
+        font-family: 'Nunito';
+        font-size: 1.2em;
+        border-radius: 10px;
+        background-color: var(--secundario);
+        border: solid 1px var(--texto_opaco);
+    }
+
+    .container_btn_inicio_google{
+        margin-top: 2%;
+    }
+
+    .btn_inicio_google{
+        width: 22vw;
+        height: 4.5vh;
+        color: var(--fuente_negro);
+        font-family: 'Nunito';
+        font-weight: bold;
+        font-size: 1.2em;
+        border-radius: 10px;
+        background-color: var(--fuente_blanco);
+        border: solid 1px var(--texto_opaco);
+    }
+
+    .img_btn_google{
+        justify-self: left;
+        width: 10%;
+        height: 60%;
+        padding-right: 5%;
+        transform: translateX(-60%);
+        transform: translateY(10%);
+        
+    }
+
+    .container_btn_inicio_facebook{
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .img_btn_facebook{
+        width: 10%;
+        height:60%;
+        padding-right: 5%;
+        transform: translateY(10%);
+    }
+
+    .btn_inicio_facebook{
+        width: 22vw;
+        height: 4.5vh;
+        color: var(--fuente_blanco);
+        font-family: 'Nunito';
+        font-weight: bold;
+        font-size: 1.2em;
+        border-radius: 10px;
+        background-color: rgba(96, 129, 196, 255);
+        border: solid 1px var(--texto_opaco);
+    }
+    
+    /*  --------- Pagina de Registro --------- */
+
+        
 }

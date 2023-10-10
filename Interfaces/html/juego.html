@@ -26,77 +26,119 @@
     </header>
     <main>
         <nav>
-            <div class="container_nav ocultar_nav">
+            <div class="container_nav ocultar_nav" id="container_nav">
                 <ul class="lista_nav">
-                    <li class="item_lista_nav">Acción</li>
-                    <li class="item_lista_nav">Aventura</li>
-                    <li class="item_lista_nav">Carreras</li>
-                    <li class="item_lista_nav">Clásicos</li>
-                    <li class="item_lista_nav">Deportes</li>
-                    <li class="item_lista_nav">Cartas</li>
-                    <li class="item_lista_nav">Estrategias</li>
-                    <li class="item_lista_nav">Futbol</li>
-                    <li class="item_lista_nav">Infantiles</li>
-                    <li class="item_lista_nav">Terror</li>
-                    <li class="item_lista_nav">Suspenso</li>
-                    <li class="item_lista_nav">Mesa</li>
-                    <li class="item_lista_nav">Motos</li>
-                    <li class="item_lista_nav">Coches</li>
-                    <li class="item_lista_nav">Armas</li>
-                    <li class="item_lista_nav">Matemáticas</li>
-                    <li class="item_lista_nav">Pintura</li>
-                    <li class="item_lista_nav">Basquet</li>
+                    <li class="item_lista_nav"><p>Acción</p></li>
+                    <li class="item_lista_nav"><p>Aventura</p></li>
+                    <li class="item_lista_nav"><p>Carreras</p></li>
+                    <li class="item_lista_nav"><p>Clásicos</p></li>
+                    <li class="item_lista_nav"><p>Deportes</p></li>
+                    <li class="item_lista_nav"><p>Cartas</p></li>
+                    <li class="item_lista_nav"><p>Estrategias</p></li>
+                    <li class="item_lista_nav"><p>Futbol</p></li>
+                    <li class="item_lista_nav"><p>Infantiles</p></li>
+                    <li class="item_lista_nav"><p>Terror</p></li>
+                    <li class="item_lista_nav"><p>Suspenso</p></li>
+                    <li class="item_lista_nav"><p>Mesa</p></li>
+                    <li class="item_lista_nav"><p>Motos</p></li>
+                    <li class="item_lista_nav"><p>Coches</p></li>
+                    <li class="item_lista_nav"><p>Armas</p></li>
+                    <li class="item_lista_nav"><p>Matemáticas</p></li>
+                    <li class="item_lista_nav"><p>Pintura</p></li>
+                    <li class="item_lista_nav"><p>Basquet</p></li>
                 </ul>
             </div>
         </nav>
+        <nav class="container_nav_perfil ocultar_nav_perfil" id="container_nav_perfil">
+            <h2 class="titulo_lista_nav_perfil">Bienvenido, Jorgex!</h2>
+            <ul class="lista_nav_perfil">
+                <li class="item_lista_nav_perfil"><a href="" class="anchor_item_lista_nav_perfil">Mis Compras</a></li>
+                <li class="item_lista_nav_perfil"><a href="" class="anchor_item_lista_nav_perfil">Mi Carrito</a></li>
+                <li class="item_lista_nav_perfil"><a href="" class="anchor_item_lista_nav_perfil">Mis Cuenta</a></li>
+                <li class="item_lista_nav_perfil"><a href="" class="anchor_item_lista_nav_perfil">Mis Perfil</a></li>
+                <li class="item_lista_nav_perfil"><a href="../html/sesion.html" class="anchor_item_lista_nav_perfil">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
         <div class="container_breadcum">
-            <p class="parte_breadcum">Inicio</p>
-            <div class="division_breadcum"></div>
+            <p class="parte_breadcum"><a href="../html/inicio.html" class="inicio_breadcum">Inicio</a></p>
+            <div class="division_breadcum">
+                <img src="../imagenes_iconos/breadcum.png" alt="" class="img_breadcum">
+            </div>
             <p class="parte_breadcum">Juego de mesa</p>
-            <div class="division_breadcum"></div>
-            <pclass="parte_breadcum">4 en línea</p>
+            <div class="division_breadcum">
+                <img src="../imagenes_iconos/breadcum.png" alt="" class="img_breadcum">
+            </div>
+            <p class="parte_breadcum">4 en línea</p>
         </div>
         <div class="container_juego">
             <div class="espacio_juego">
-                <img src="" alt="">
+                <img src="../imagenes/marvel_vs_dc.png" alt="" class="img_juego">
             </div>
-            <div class="descripcion_juego">
-                <h2>4 en línea</h2>
-                <p></p>
+            <div class="informacion_juego">
+                <h2 class="titulo_juego">4 en línea</h2>
+                <p class="descripcion_juego">La eterna rivalidad llego al clásico juego de mesa.</p>
+                <p class="descripcion_juego">Elegi tu bando y sumergite en una batalla epica entre dos mundos!</p> 
+                <p class="descripcion_juego">DC oficial:  https://www.dc.com</p>
+                <p class="descripcion_juego">Marvel oficial: https://www.marvel.com</p>
                 <button class="btn_comprar">Comprar</button>
-                <button class="btn_aniadir_carrito">Añadir al carrito</button>
+                <button class="btn_agregar_carrito">Añadir al carrito</button>
                 <div class="redes">
 
                 </div>
             </div>
         </div>
         <div class="instrucciones">
-            <p></p>
+            <h3 class="titulo_instrucciones">Instrucciones</h3>
+            <p class="parrafo_instrucciones">El juego es simple, pero la batalla será épica! </p>
+            <p class="parrafo_instrucciones">Elegi tu bando, el superheroe que los representara e intenta colocar 4 fichas en linea antes que tu rival!</p>
         </div>
         <div class="container_personajes">
-            <h2></h2>
+            <h2 class="titulo_personajes">Personajes</h2>
             <div class="carrusel_personajes">
-                <button></button>
+                <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
                 <div class="personaje">
-                    <img src="" alt="">
+                    <img src="../imagenes/personajes/batman.jpg" alt="" class="img_personaje">
                 </div>
                 <div class="card_personaje">
-                    <h3 class="card_personaje_titulo"></h3>
-                    <p class="descripcion_personaje"></p>
+                    <h3 class="card_personaje_titulo">Batman</h3>
+                    <p class="card_personaje_descripcion">Su identidad secreta es Bruce Wayne, un multimillonario filántropo de Gotham City. Conocido por su sentido de la justicia, su compromiso inquebrantable y su símbolo icónico: el murciélago.</p>
                 </div>
+                <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
             </div>
         </div>
         <div class="container_funcionalidades">
-            <h2></h2>
+            <h2 class="titulo_funcionalidades">Funcionalidades</h2>
             <div class="carrusel_funcionalidades">
-                <button></button>
+                <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
                 <div class="funcionalidad">
-                    <img src="" alt="">
+                    <img src="../imagenes_iconos/icono_autoguardado_fondeo_violeta.png" alt="" class="img_funcionalidad">
                 </div>
                 <div class="card_funcionalidad">
-                    <h3 class="card_funcionalidad_titulo"></h3>
-                    <p class="descripcion_funcionalidad"></p>
+                    <h3 class="card_funcionalidad_titulo">Autoguardado</h3>
+                    <p class="card_funcionalidad_descripcion">Nueva funcion de autoguardado, para que las desconexiones no sean un problema en tu batalla y ningun movimiento se pierda!</p>
                 </div>
+                <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
+            </div>
+        </div>
+        <div class="container_comunidad">
+            <h2 class="titulo_comunidad">Comunidad</h2>
+            <input type="text" name="Comentario" id="" class="input_comentario">
+            <button class="btn_enviar_comentario">Enviar</button>
+            <div class="carrusel_comentarios">
+                <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
+                <div class="card_comentario">
+                    <p class="comentario">Al fin reglas simples y claras, el juego me parecio una bomba.</p>
+                    <img src="../imagenes/darin_bombita.jpg" alt="" class="img_perfil_comentario">
+                </div>
+                <div class="card_comentario">
+                    <p class="comentario">No puedo dejar de viciar, el juego es como empanada sin relleno, una masa!</p>
+                    <img src="../imagenes/micky_vainilla.jpg" alt="" class="img_perfil_comentario">
+                </div>
+                <div class="card_comentario">
+                    <p class="comentario">Justo lo que estaba buscando, un juego para divertirme, un juego para bailar</p>
+                    <img src="../imagenes/sergio_gonal.jpg" alt="" class="img_perfil_comentario">
+                </div>
+                <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
             </div>
         </div>
 
@@ -139,5 +181,6 @@
             </div>
         </div>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 </html>

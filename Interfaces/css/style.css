@@ -6,6 +6,7 @@ body{
     --fuente_blanco: rgba(255,255,255,255);
     --fuente_negro: rgba(0,0,0,1);
     --texto_opaco: rgba(255,255,255,0.5);
+    --acento:rgba(234,234,16,255);
     --primario: rgba(68,4,104,255);
     --primario_luz_1: rgba(108,19,157,255);
     --primario_luz_2: rgba(83,7,125,255);
@@ -22,6 +23,72 @@ body{
     font-family: 'Nunito';
     src: url(../fuentes/static/Nunito-Regular.ttf);
 }
+
+.container_loader{
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--fuente_blanco);
+    z-index: 2;
+    background-color: var(--primario);
+}
+
+.loader_logo{
+    position: absolute;
+    z-index: 3;
+    transform: translateX(-50%);
+    top:10%;
+    left: 50%;
+    width: 100%;
+
+}
+
+.porcentaje_loader{
+    color: var(--fuente_blanco);
+    font-family: 'Nunito';
+    font-size: 2em;
+    font-weight: bold;
+    width: 20vw;
+    position: absolute;
+    top: 62%;
+    left:43vw;
+    padding: 0%;
+
+}
+
+.loader {
+    width: 10vw;
+    height: 10vw;
+    border:0px;
+    border-radius: 50%;
+    position: absolute;
+    left: 45vw;
+    top: 50%;
+    z-index: 3;
+    transform:rotate(45deg);
+    box-sizing: border-box;
+  }
+  .loader::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    inset:-10px;
+    border-radius: 50%;
+    border:10px solid var(--fuente_blanco);
+    animation: prixClipFix 5s infinite linear;
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  }
+
+  .ocultar_loader{
+    display: none;
+  }
 
 /*  --------- Header --------- */
 
@@ -79,15 +146,20 @@ body{
 }
 
 /*  --------- Header --------- */
-/*  --------- Nav --------- */
+/*  --------- Nav Categorias --------- */
 .container_nav{
+    position: absolute;
     width: 50vw;
+    z-index: 1;
+    left: -50vw;
+    transition: 1s;
 }
 
-.ocultar_nav{
-    position: absolute;
-    left: -100%;
+.mostrar_nav{
+    z-index: 1;
+    transform: translateX(50vw);
 }
+
 
 .lista_nav{
     margin: 0%;
@@ -103,24 +175,77 @@ body{
     font-size: 1.4em;
     padding: 1% 0% 1% 20%;
 }
-/*  --------- Nav --------- */
+
+.item_lista_nav p{
+    margin: 0%;
+}
+/*  --------- Nav Categorias --------- */
+/*  --------- Nav Perfil --------- */
+.container_nav_perfil{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    right: -50vw;
+    width: 50vw;
+    background-color: var(--secundario_sombra_1);
+    font-family: 'Nunito';
+    color: var(--fuente_blanco);
+    text-align: center;
+    transition: 2s;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.mostrar_nav_perfil{
+    display: block;
+    transform: translateX(-50vw);
+}
+
+.titulo_lista_nav_perfil{
+    margin: 1% 0% 0% 0%;
+    font-size: 1.2em;
+}
+
+.lista_nav_perfil{
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+}
+
+.anchor_item_lista_nav_perfil{
+    text-decoration: none;
+    color: var(--texto_opaco);
+}
+
+.item_lista_nav_perfil{
+    padding-bottom: 1%;
+}
+/*  --------- Nav Perfil --------- */
 /*  --------- Carrusel --------- */
 .container_carrusel_mobile{
-
+width: 100vw;
 }
 
 .container_carrusel_desktop{
     display: none;
 }
 
+.container_categoria{
+    background-color: var(--primario_sombra_2);
+    width: 100vw;
+    height: 70vh;
+}
+
 .container_carrusel{
+    display: flex;
+    align-items: center;
     font-family: 'Nunito';
     background-color: var(--primario_sombra_2);
-    height: 70vh;
+    
 }
 
 .titulo_container_carrusel{
     color: var(--fuente_blanco);
+    font-family: 'Nunito';
     font-size: 1em;
     text-align: center;
     margin-top: 0%;
@@ -171,14 +296,10 @@ body{
     border-top-right-radius: 10%;
 }
 
-.container_etiqueta_card{
-
-}
-
 .nombre_card{
     margin: 1% 0% 1% 0%;
     color: var(--fuente_blanco);
-    font-size: 0.8em;
+    font-size: 1.2em;
 }
 
 .precio_card{
@@ -190,7 +311,7 @@ body{
     font-weight: bold;
     padding: 0%;
     margin-top: 2%;
-    font-size: 0.5em;
+    font-size: 1em;
     width: 20vw;
     height: 5vh;
     border-radius: 10px;
@@ -198,6 +319,51 @@ body{
     border: 1px solid var(--primario);
     background-color: var(--fuente_blanco);
 
+}
+
+.container_etiqueta_card_gratis{
+    width: 16vw;
+    height: 4vh;
+    position: relative;
+    left: -22vw;
+    top: -42vh;
+    border-radius: 0px 10px 10px 0px;
+    color: var(--fuente_blanco);
+    background-color: var(--acento);    
+
+}
+
+.container_etiqueta_card_comprar{
+    width: 16vw;
+    height: 4vh;
+    position: relative;
+    left: -22vw;
+    top: -42vh;
+    border-radius: 0px 10px 10px 0px;
+    color: var(--fuente_blanco);
+    background-color: var(--primario_luz_2);    
+
+}
+
+.container_etiqueta_card_agregado{
+    width: 16vw;
+    height: 4vh;
+    position: relative;
+    left: -22vw;
+    top: -42vh;
+    border-radius: 0px 10px 10px 0px;
+    color: var(--fuente_blanco);
+    background-color: var(--secundario_luz_2);  
+    font-size: 0.8em;
+}
+
+.etiqueta_card{
+    margin: 0% 0% 0% 0%;
+    text-align: center;
+}
+
+.container_etiqueta_card_gratis{
+    color: var(--fuente_negro);
 }
 /*  --------- Carrusel --------- */
 /*  --------- Footer --------- */
@@ -284,10 +450,11 @@ body{
        height: 12vh;
         
     }
-    #botonMenuHamburguesa{
-        width: 40%;
-        height: 50%;
+
+    .img_boton_menu:hover{
+        cursor: pointer;
     }
+
 
     .logo{
         width: 20vw;
@@ -331,6 +498,7 @@ body{
         right: 5vw;
         width: 3vw;
         height: 3vh;
+        cursor: pointer;
     }
 
     .miPerfil{
@@ -338,6 +506,10 @@ body{
         right: 0px;
         width: 10vw;
         height: 12vh;
+    }
+
+    .img_miPerfil{
+        cursor: pointer;
     }
 
     #botonPerfil{
@@ -349,8 +521,52 @@ body{
     .container_nav{
         position: absolute;
         width: 15vw;
+        z-index: 1;
+    }
+
+    .ocultar_nav_perfil{
+        right: -30vw;
+    }
+
+    .item_lista_nav p{
+        margin: 0%;
+    }
+
+    .item_lista_nav p:hover{
+        cursor: pointer;
+        z-index: 2;
+        transform: translateX(1vw);
+    }
+
+    .container_nav_perfil{
+        width: 20vw;
+        padding-bottom: 1%;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .titulo_lista_nav_perfil{
+        font-size: 2em;
+    }
+
+    .anchor_item_lista_nav_perfil{
+        transition: 0.5s;
+    }
+
+    .item_lista_nav_perfil{
+        font-size: 1.5em;
+        transition: 0.5s;
+    }
+
+    .item_lista_nav_perfil:hover{
+        transform: scale(1.5,1.5);
+        transform-origin: center center;
+    }
+
+    .anchor_item_lista_nav_perfil:hover{
+        color: var(--fuente_blanco);
     }
     /*  --------- Nav --------- */
+
     /*  --------- Carrusel --------- */
 
     .container_carrusel_mobile{
@@ -359,13 +575,19 @@ body{
     
     .container_carrusel_desktop{
         display: flex;
+        height: 80vh;
+        background-color: var(--primario_sombra_2);
+    }
+
+    .container_categoria{
+        width: 98vw;
     }
 
     .container_carrusel{
         display: flex;
-        flex-direction: column;
-        width: 100vw;
-        height: 80vh;
+        flex-direction: row;
+        width: 98vw;
+        height: 65vh;
     }
 
     .titulo_container_carrusel{
@@ -375,11 +597,19 @@ body{
     .carrusel{
         display: flex;
         justify-content: space-between;
+        width: 80vw;
+        height: 70vh;
+        transition: transform 5s ease-out; 
     }
 
     .card{
-        width: 25vw;
+        width: 24vw;
         height: 60vh;
+        transition: transform 0.5s ease;
+    }
+
+    .card:hover{
+        transform: scale(1.1);
     }
 
     .nombre_card{
@@ -390,11 +620,71 @@ body{
         width: 15vw;
         height: 7vh;
         font-size: 1.5em;
+        letter-spacing: 0;
+        transition: letter-spacing 0.3s ease
+    }
+
+    .btn_card:hover{
+        letter-spacing: 0.5vw;
+        font-size: 2em;
+        background-color: var(--secundario);
+        color: var(--fuente_blanco);
+    }
+
+    .container_etiqueta_card_gratis{
+        width: 10vw;
+        height: 4vh;
+        position: relative;
+        left: -7vw;
+        top: -50vh;
+        border-radius: 0px 10px 10px 0px;
+        color: var(--fuente_blanco);
+        background-color: var(--acento);
+        font-size: 1.5em;  
+    
+    }
+    
+    .container_etiqueta_card_comprar{
+        width: 10vw;
+        height: 4vh;
+        position: relative;
+        left: -7vw;
+        top: -50vh;
+        border-radius: 0px 10px 10px 0px;
+        color: var(--fuente_blanco);
+        background-color: var(--primario_luz_2);    
+        font-size: 1.5em;
+    }
+    
+    .container_etiqueta_card_agregado{
+        width: 10vw;
+        height: 4vh;
+        position: relative;
+        left: -7vw;
+        top: -50vh;
+        border-radius: 0px 10px 10px 0px;
+        color: var(--fuente_blanco);
+        background-color: var(--secundario_luz_2);  
+        font-size: 1.5em;
+    }
+    
+    .etiqueta_card{
+        margin: 0% 0% 0% 0%;
+        text-align: center;
+    }
+
+    .container_etiqueta_card_gratis{
+        color: var(--fuente_negro);
     }
 
     .btn_carrusel{
         width: 8vw;
         margin:0% 1% 0% 1%;
+        transition: transform 0.5s ease;
+    }
+
+    .btn_carrusel:hover{
+        transform: scale(1.1);
     }
     /*  --------- Carrusel --------- */
     /*  --------- Footer --------- */
@@ -411,12 +701,13 @@ body{
     .footer_columna_titulo{
         margin-bottom: 1%;
         font-size: 1.7em;
+        text-align: unset;
     }
 
     .footer_columna_lista{
         list-style: none;
         text-align: unset;
-        padding-left: 20%;
+        /* padding-left: 20%; */
         margin-top: 1.5%;
         font-size: 1em;
         width: 20vw;
@@ -425,6 +716,7 @@ body{
     .footer_columna_lista_item{
         font-size: 1.2em;
         padding: 2% 0% 2% 0%;
+        width: 100%;
     }
 
     .newsletter{
@@ -434,14 +726,13 @@ body{
 
     .label_newsletter{
         width: 70%;
-        padding-left: 20%;
         font-size: 1.2em;
         margin-bottom: 0.5%;
         text-align: unset;
     }
 
     .form_newsletter{
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .input_newsletter{
@@ -526,11 +817,17 @@ body{
         border-radius: 10px;
         background-color: var(--primario);
         border: solid 1px var(--texto_opaco);
+        text-decoration: none;
+    }
+
+    .btn_registrar_anchor{
+        text-decoration: none;
+        color: var(--fuente_blanco);
     }
 
     .btn_inicio_sesion{
-        margin-left: 50%;
-        transform: translateX(-50%);
+        display: flex;
+        transform: translateX(25%);
         width: 15vw;
         height: 6vh;
         color: var(--fuente_blanco);
@@ -538,11 +835,33 @@ body{
         font-weight: bold;
         font-size: 1.2em;
         border-radius: 10px;
+        padding: 0%;
         background-color: var(--primario);
         border: solid 1px var(--texto_opaco);
     }
 
+    .btn_inicio_sesion_anchor{
+        text-decoration: none;
+        color: var(--fuente_blanco);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: inset 0 0 0 0 var(--fuente_blanco);
+        transition: ease-out 0.4s;
+    }
+
+
+    .btn_inicio_sesion_anchor:hover{
+        box-shadow: inset 0 0 0 50px var(--fuente_blanco);
+        color: var(--primario);
+        font-size: 1.5em;
+    }
+
     .btn_cambio_login{
+        display: flex;
         margin-top: 10%;
         width: 22vw;
         height: 6vh;
@@ -552,13 +871,34 @@ body{
         border-radius: 10px;
         background-color: var(--secundario);
         border: solid 1px var(--texto_opaco);
+        transition: transform 0.3s ease;
+    }
+
+    .btn_cambio_login:hover{
+        transform: scale(1.1);
+    }
+
+    .btn_cambio_login_anchor{
+        text-decoration: none;
+        color: var(--fuente_blanco);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .container_btn_inicio_google{
         margin-top: 2%;
+        transition: transform 0.3s ease;
+    }
+
+    .container_btn_inicio_google:hover{
+        transform: scale(1.1);
     }
 
     .btn_inicio_google{
+        cursor: pointer;
         width: 22vw;
         height: 6vh;
         color: var(--fuente_negro);
@@ -583,7 +923,13 @@ body{
     .container_btn_inicio_facebook{
         margin-top: 2%;
         margin-bottom: 2%;
+        transition: transform 0.3s ease;
     }
+
+    .container_btn_inicio_facebook:hover{
+        transform: scale(1.1);
+    }
+
 
     .img_btn_facebook{
         width: 10%;
@@ -593,6 +939,7 @@ body{
     }
 
     .btn_inicio_facebook{
+        cursor: pointer;
         width: 22vw;
         height: 6vh;
         color: var(--fuente_blanco);
@@ -603,8 +950,377 @@ body{
         background-color: rgba(96, 129, 196, 255);
         border: solid 1px var(--texto_opaco);
     }
+
+    .registro_exitoso{
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4%;
+        border-radius: 10px;
+    }
+
+    .registro_exitoso_mensaje{
+        display: none;
+        text-align: center;
+        font-family: 'Nunito';
+        font-weight: bold;
+        color: var(--secundario_sombra_1);
+        background-color: var(--acento);
+        margin: 0%;
+        width: 80%;
+        border-radius: 10px;
+    }
+
+    .mostrar_mensaje{
+        display: block;
+    }
     
     /*  --------- Pagina de Registro --------- */
+    /*  --------- Pagina Juego --------- */
+    
+    .loader_logo{
+        position: absolute;
+        z-index: 3;
+        transform: translateX(-50%);
+        width: 30vw;
+        top:10%;
+        left: 50%;
+    }
+    
+    .porcentaje_loader{
+        color: var(--fuente_blanco);
+        font-family: 'Nunito';
+        font-size: 3em;
+        font-weight: bold;
+        width: 30vw;
+        position: absolute;
+        top: 68%;
+        left:47vw;
+        padding: 0%;
+    
+    }
+    
+    .loader {
+        width: 10vw;
+        height: 10vw;
+        border:0px;
+        border-radius: 50%;
+        position: absolute;
+        left: 45vw;
+        top: 40%;
+        z-index: 3;
+        transform:rotate(45deg);
+        box-sizing: border-box;
+      }
 
+
+.container_breadcum{
+    background-color: var(--primario_sombra_2);
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 8vh;
+    color: var(--fuente_blanco);
+    font-family: 'Nunito';
+    font-size: 1.7em;
+    padding-left: 5%;
+}
+
+.inicio_breadcum{
+    text-decoration: none;
+    color: var(--fuente_blanco);
+}
+
+.inicio_breadcum:hover{
+    color: var(--secundario);
+}
+
+.parte_breadcum{
+    margin: 0px;
+}
+
+.division_breadcum{
+    width: 8vw;
+    height: 6vh;
+}
+
+.img_breadcum{
+    width: 100%;
+    height: 100%;
+}
+
+.container_juego{
+    font-family: 'Nunito';
+    color: var(--fuente_blanco);
+    display: flex;
+    background-color: var(--primario_sombra_2);
+}
+
+.espacio_juego{
+    width: 60vw;
+    height: 50vh;
+    padding-left: 5%;
+    padding-bottom: 2%;
+}
+
+.img_juego{
+    width: 100%;
+    height: 100%;
+}
+
+.informacion_juego{
+    width: 40vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0% 2% 0% 2%;
+
+}
+
+.titulo_juego{
+    font-size: 5em;
+    margin: 0%;
+}
+
+.descripcion_juego{
+    margin: 0%;
+    font-size: 2em;
+    align-self: flex-start;
+
+}
+
+.btn_comprar{
+    width: 15vw;
+    height: 6vh;
+    margin-top: 3%;
+    padding: 0%;
+    border: 0px;
+    border-radius: 10px;
+    background-color: var(--fuente_blanco);
+    color: var(--primario_luz_1);
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.btn_agregar_carrito{
+    width: 15vw;
+    height: 6vh;
+    margin-top: 2%;
+    padding: 0%;
+    border: 0px;
+    border-radius: 10px;
+    background-color: var(--primario_sombra_2);
+    border: solid 2px var(--primario_luz_1);
+    color: var(--texto_opaco);
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.instrucciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primario_sombra_2);
+    font-family: 'Nunito';
+    color: var(--fuente_blanco);
+    padding-bottom: 2%;
+}
+
+.titulo_instrucciones{
+    font-size: 3em;
+    margin: 0%;
+}
+
+.parrafo_instrucciones{
+    font-size: 2em;
+    margin: 0%;
+}
+
+.container_personajes{
+    width: 100vw;
+    height: 50vh;
+    background-color: var(--primario_sombra_2);
+    font-family: 'Nunito';
+    color: var(--fuente_blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo_personajes{
+    font-size: 3em;
+    margin: 0% 0% 0% 0%;
+}
+
+.carrusel_personajes{
+    margin-top: 1.5%;
+    display: flex;
+    align-items: center;
+}
+
+.personaje{
+    padding-left: 3%;
+}
+
+.img_personaje{
+    height: 35vh;
+}
+
+.card_personaje{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 35vh;
+    justify-content: flex-start;
+    padding-right: 3%;
+    background-color: var(--primario_sombra_1);
+    border-radius: 0px 10px 10px 00px;
+}
+
+.card_personaje_titulo{
+    margin: 1% 0% 0% 0%;
+    font-size: 2.5em;
+}
+
+.card_personaje_descripcion{
+    font-size: 2em;
+    padding-left: 3%;
+    margin: 0.5% 0% 0% 0%;
+}
+
+.container_funcionalidades{
+    width: 100vw;
+    height: 50vh;
+    background-color: var(--primario_sombra_2);
+    font-family: 'Nunito';
+    color: var(--fuente_blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo_funcionalidades{
+    font-size: 3em;
+    margin: 0% 0% 0% 0%;
+}
+
+.carrusel_funcionalidades{
+    display: flex;
+    align-items: center;
+    margin-top: 1.5%;
+}
+
+.funcionalidad{
+    padding-left: 3%;
+    width: 23vw;
+    height: 35vh;
+}
+
+.img_funcionalidad{
+    width: 100%;
+    height: 100%;
+}
+
+.card_funcionalidad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 35vh;
+    justify-content: flex-start;
+    padding-right: 3%;
+    background-color: var(--primario_sombra_1);
+    border-radius: 0px 10px 10px 00px;
+}
+
+.card_funcionalidad_titulo{
+    margin: 1% 0% 0% 0%;
+    font-size: 2.5em;
+}
+
+.card_funcionalidad_descripcion{
+    font-size: 2em;
+    padding-left: 3%;
+    margin: 0.5% 0% 0% 0%;
+}
+
+.container_comunidad{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primario_sombra_2);
+    font-family: 'Nunito';
+    color: var(--fuente_blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo_comunidad{
+    font-size: 3em;
+    margin: 0% 0% 0% 0%;
+}
+
+.input_comentario{
+    margin-top: 1.5%;
+    width: 50vw;
+    height: 40vh;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.btn_enviar_comentario{
+    margin: 1% 0% 2% 0%;
+    font-size: 2.5em;
+    font-family: 'Nunito';
+    padding: 0%;
+    background-color: var(--primario_luz_1);
+    color: var(--texto_opaco);
+    border: 0px;
+    border-radius: 10px;
+    width: 15vw;
+    height: 10vh;
+}
+
+.carrusel_comentarios{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card_comentario{
+    margin: 0% 1% 0% 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+    height: 30vh;
+}
+
+.comentario{
+    font-size: 1.7em;
+    padding: 1% 3% 1% 3%;
+    height: 15vh;
+    margin: 0% 0% 5% 0%;
+    background-color: var(--primario_luz_2);
+    text-align: center;
+    border-radius: 10px;
+
+
+}
+
+.img_perfil_comentario{
+    width: 25%;
+    height: 25%;
+    border-radius: 100%;
+
+}
+
+
+    /*  --------- Pagina Juego --------- */
+
+   
         
 }

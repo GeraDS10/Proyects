@@ -2,17 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=}, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+<body>
+    <div class="container_loader" id="loader">
+        <img src="../imagenes/L-GAMES.png" alt="" class="loader_logo">
+        <span class="loader"></span>
+        <p class="porcentaje_loader">0%</p>
+    </div>
     <header>
         <div class="contenedorHeader">
             <div class="botonMenu">
                 <img src="../imagenes_iconos/menu_hamburguesa_default.png" alt="" id="botonMenuHamburguesa" class="img_boton_menu">
             </div>
             <div class="logo">
-                <img src="../imagenes/L-GAMES.png" alt="logo L-GAMES" class="img_logo">
+                <a href="../html/inicio.html"><img src="../imagenes/L-GAMES.png" alt="logo L-GAMES" class="img_logo"></a>
             </div>
             <div class="buscador">
                 <input type="text" class="buscadorInput" placeholder="¿Qué juego estás buscando?">
@@ -25,166 +31,230 @@
     </header>
     <main>
         <nav>
-            <div class="container_nav ocultar_nav">
+            <div class="container_nav" id="container_nav">
                 <ul class="lista_nav">
-                    <li class="item_lista_nav">Acción</li>
-                    <li class="item_lista_nav">Aventura</li>
-                    <li class="item_lista_nav">Carreras</li>
-                    <li class="item_lista_nav">Clásicos</li>
-                    <li class="item_lista_nav">Deportes</li>
-                    <li class="item_lista_nav">Cartas</li>
-                    <li class="item_lista_nav">Estrategias</li>
-                    <li class="item_lista_nav">Futbol</li>
-                    <li class="item_lista_nav">Infantiles</li>
-                    <li class="item_lista_nav">Terror</li>
-                    <li class="item_lista_nav">Suspenso</li>
-                    <li class="item_lista_nav">Mesa</li>
-                    <li class="item_lista_nav">Motos</li>
-                    <li class="item_lista_nav">Coches</li>
-                    <li class="item_lista_nav">Armas</li>
-                    <li class="item_lista_nav">Matemáticas</li>
-                    <li class="item_lista_nav">Pintura</li>
-                    <li class="item_lista_nav">Basquet</li>
+                    <li class="item_lista_nav"><p>Acción</p></li>
+                    <li class="item_lista_nav"><p>Aventura</p></li>
+                    <li class="item_lista_nav"><p>Carreras</p></li>
+                    <li class="item_lista_nav"><p>Clásicos</p></li>
+                    <li class="item_lista_nav"><p>Deportes</p></li>
+                    <li class="item_lista_nav"><p>Cartas</p></li>
+                    <li class="item_lista_nav"><p>Estrategias</p></li>
+                    <li class="item_lista_nav"><p>Futbol</p></li>
+                    <li class="item_lista_nav"><p>Infantiles</p></li>
+                    <li class="item_lista_nav"><p>Terror</p></li>
+                    <li class="item_lista_nav"><p>Suspenso</p></li>
+                    <li class="item_lista_nav"><p>Mesa</p></li>
+                    <li class="item_lista_nav"><p>Motos</p></li>
+                    <li class="item_lista_nav"><p>Coches</p></li>
+                    <li class="item_lista_nav"><p>Armas</p></li>
+                    <li class="item_lista_nav"><p>Matemáticas</p></li>
+                    <li class="item_lista_nav"><p>Pintura</p></li>
+                    <li class="item_lista_nav"><p>Basquet</p></li>
                 </ul>
             </div>
         </nav>
-        <div class="container_carrusel_mobile">
-            <div class="container_carrusel">
-                <h2 class="titulo_container_carrusel">Recomendados para vos</h2>
-                <div class="carrusel">
-                    <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
-                    <div class="card">
-                        <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
-                        <div class="container_etiqueta_card"></div>
-                        <h3 class="nombre_card">Bioshock</h3>
-                        <p class="precio_card"></p>
-                        <button class="btn_card">Comprar</button>
-                    </div>
-                    <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
-                </div>
-            </div>
+        <nav >
+            <div class="container_nav_perfil" id="container_nav_perfil">            
+                <h2 class="titulo_lista_nav_perfil">Bienvenido, Jorgex!</h2>
+                <ul class="lista_nav_perfil">
+                    <li class="item_lista_nav_perfil"><a href="" class="anchor_item_lista_nav_perfil">Mis Compras</a></li>
+                    <li class="item_lista_nav_perfil"><a href="" class="anchor_item_lista_nav_perfil">Mi Carrito</a></li>
+                    <li class="item_lista_nav_perfil"><a href="" class="anchor_item_lista_nav_perfil">Mis Cuenta</a></li>
+                    <li class="item_lista_nav_perfil"><a href="" class="anchor_item_lista_nav_perfil">Mis Perfil</a></li>
+                    <li class="item_lista_nav_perfil"><a href="../html/sesion.html" class="anchor_item_lista_nav_perfil">Cerrar Sesión</a></li>
+                </ul>
         </div>
+        </nav>
         <div class="container_carrusel_desktop">
-            <div class="container_carrusel">
+            <div class="container_categoria">
                 <h2 class="titulo_container_carrusel">Recomendados para vos</h2>
+                <div class="container_carrusel">
+                    <button class="btn_carrusel" id="btn_carrusel_izquierda"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
+                    <div class="carrusel">
+                        <div class="card">
+                            <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
+                            <h3 class="nombre_card">Bioshock</h3>
+                            <p class="precio_card"></p>
+                            <button class="btn_card">Jugar</button>
+                            <div class="container_etiqueta_card_gratis">
+                                <p class="etiqueta_card">Gratis</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
+                            <h3 class="nombre_card">Bioshock</h3>
+                            <p class="precio_card"></p>
+                            <button class="btn_card">Jugar</button>
+                            <div class="container_etiqueta_card_gratis">
+                                <p class="etiqueta_card">Gratis</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
+                            <h3 class="nombre_card">Bioshock</h3>
+                            <button class="btn_card">Comprar</button>
+                            <div class="container_etiqueta_card_gratis">
+                                <p class="etiqueta_card">Gratis</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn_carrusel" id="btn_carrusel_derecha"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
+                </div>
+            </div>
+        <div class="container_carrusel_mobile">
+            <div class="container_categoria">
+                <h2 class="titulo_container_carrusel">Recomendados para vos</h2>
+                <div class="container_carrusel">
+                    <button class="btn_carrusel" id="btn_carrusel_izquierda"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
+                    <div class="carrusel">
+                        <div class="card">
+                            <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
+                            <h3 class="nombre_card">Bioshock</h3>
+                            <p class="precio_card"></p>
+                            <button class="btn_card">Jugar</button>
+                            <div class="container_etiqueta_card_gratis">
+                                <p class="etiqueta_card">Gratis</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn_carrusel" id="btn_carrusel_derecha"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
+                </div>
+                
+
+            </div>
+        </div>
+
+            
+        </div>
+       <div class="container_carrusel_mobile">
+        <div class="container_categoria">
+            <h2 class="titulo_container_carrusel">Multijugador</h2>
+            <div class="container_carrusel">
+                
+                <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
                 <div class="carrusel">
-                    <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
+                    
                     <div class="card">
                         <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
-                        <div class="container_etiqueta_card"></div>
                         <h3 class="nombre_card">Bioshock</h3>
                         <p class="precio_card"></p>
                         <button class="btn_card">Comprar</button>
+                        <div class="container_etiqueta_card_comprar">
+                            <p class="etiqueta_card">$99</p>
+                        </div>
                     </div>
-                    <div class="card">
-                        <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
-                        <div class="container_etiqueta_card"></div>
-                        <h3 class="nombre_card">Bioshock</h3>
-                        <p class="precio_card"></p>
-                        <button class="btn_card">Comprar</button>
-                    </div>
-                    <div class="card">
-                        <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
-                        <div class="container_etiqueta_card"></div>
-                        <h3 class="nombre_card">Bioshock</h3>
-                        <p class="precio_card"></p>
-                        <button class="btn_card">Comprar</button>
-                    </div>
-                    <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
-                </div>
-            </div>
-        </div>
-       <div class="container_carrusel_mobile">
-        <div class="container_carrusel">
-            <h2 class="titulo_container_carrusel">Multijugador</h2>
-            <div class="carrusel">
-                <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
-                <div class="card">
-                    <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
-                    <div class="container_etiqueta_card"></div>
-                    <h3 class="nombre_card">Bioshock</h3>
-                    <p class="precio_card"></p>
-                    <button class="btn_card">Comprar</button>
+                
                 </div>
                 <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
             </div>
         </div>
+        
        </div>
        <div class="container_carrusel_desktop">
-        <div class="container_carrusel">
+        <div class="container_categoria">
             <h2 class="titulo_container_carrusel">Multijugador</h2>
+        <div class="container_carrusel">
+            <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
             <div class="carrusel">
-                <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
+                
                 <div class="card">
-                    <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
-                    <div class="container_etiqueta_card"></div>
-                    <h3 class="nombre_card">Bioshock</h3>
+                    <img src="../imagenes/cards/multijugador/battlefield_5.jpg" alt="" class="img_card">
+                    <h3 class="nombre_card">Battlefield 5</h3>
                     <p class="precio_card"></p>
-                    <button class="btn_card">Comprar</button>
+                    <button class="btn_card">Jugar</button>
+                    <div class="container_etiqueta_card_gratis">
+                        <p class="etiqueta_card">Gratis</p>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
-                    <div class="container_etiqueta_card"></div>
-                    <h3 class="nombre_card">Bioshock</h3>
+                    <img src="../imagenes/cards/multijugador/cs_go.jpg" alt="" class="img_card">
+                    <h3 class="nombre_card">CS GO</h3>
                     <p class="precio_card"></p>
                     <button class="btn_card">Comprar</button>
+                    <div class="container_etiqueta_card_comprar">
+                        <p class="etiqueta_card">$89</p>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
-                    <div class="container_etiqueta_card"></div>
-                    <h3 class="nombre_card">Bioshock</h3>
+                    <img src="../imagenes/cards/multijugador/diablo_4.jpg" alt="" class="img_card">
+                    <h3 class="nombre_card">Diablo 4</h3>
                     <p class="precio_card"></p>
-                    <button class="btn_card">Comprar</button>
+                    <button class="btn_card">Jugar</button>
+                    <div class="container_etiqueta_card_gratis">
+                        <p class="etiqueta_card">Gratis</p>
+                    </div>
                 </div>
-                <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
+        
             </div>
+            <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
         </div>
+        </div>
+        
        </div>
        <div class="container_carrusel_mobile">
-        <div class="container_carrusel">
+        <div class="container_categoria">
             <h2 class="titulo_container_carrusel">Accion</h2>
-            <div class="carrusel">
+            <div class="container_carrusel">
                 <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
-                <div class="card">
-                    <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
-                    <div class="container_etiqueta_card"></div>
-                    <h3 class="nombre_card">Bioshock</h3>
-                    <p class="precio_card"></p>
-                    <button class="btn_card">Comprar</button>
+                <div class="carrusel">
+                    
+                    <div class="card">
+                        <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
+                        <h3 class="nombre_card">Bioshock</h3>
+                        <p class="precio_card"></p>
+                        <button class="btn_card">Comprar</button>
+                        <div class="container_etiqueta_card_agregado">
+                            <p class="etiqueta_card">Agregado</p>
+                        </div>
+                    </div>
+                    
                 </div>
                 <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
             </div>
         </div>
+
        </div>
        <div class="container_carrusel_desktop">
-        <div class="container_carrusel">
+        <div class="container_categoria">
             <h2 class="titulo_container_carrusel">Accion</h2>
-            <div class="carrusel">
+            <div class="container_carrusel">
                 <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
-                <div class="card">
-                    <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
-                    <div class="container_etiqueta_card"></div>
-                    <h3 class="nombre_card">Bioshock</h3>
-                    <p class="precio_card"></p>
-                    <button class="btn_card">Comprar</button>
-                </div>
-                <div class="card">
-                    <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
-                    <div class="container_etiqueta_card"></div>
-                    <h3 class="nombre_card">Bioshock</h3>
-                    <p class="precio_card"></p>
-                    <button class="btn_card">Comprar</button>
-                </div>
-                <div class="card">
-                    <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
-                    <div class="container_etiqueta_card"></div>
-                    <h3 class="nombre_card">Bioshock</h3>
-                    <p class="precio_card"></p>
-                    <button class="btn_card">Comprar</button>
+                <div class="carrusel">
+                    
+                    <div class="card">
+                        <img src="../imagenes/cards/accion/fortnite.jpg" alt="" class="img_card">
+                        <h3 class="nombre_card">Fortnite</h3>
+                        <p class="precio_card"></p>
+                        <button class="btn_card">Jugar</button>
+                        <div class="container_etiqueta_card_gratis">
+                            <p class="etiqueta_card">Gratis</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="../imagenes/cards/accion/robocop.jpg" alt="" class="img_card">
+                        <h3 class="nombre_card">Robocop</h3>
+                        <p class="precio_card"></p>
+                        <button class="btn_card">Comprar</button>
+                        <div class="container_etiqueta_card_agregado">
+                            <p class="etiqueta_card">Agregado</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="../imagenes/cards/accion/the_surge.jpg" alt="" class="img_card">
+                        <h3 class="nombre_card">The Surge</h3>
+                        <p class="precio_card"></p>
+                        <button class="btn_card">Jugar</button>
+                        <div class="container_etiqueta_card_gratis">
+                            <p class="etiqueta_card">Gratis</p>
+                        </div>
+                    </div>
+                    
                 </div>
                 <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
             </div>
         </div>
+       
        </div>
     </main>
     <footer>
@@ -202,7 +272,6 @@
                 </div>
             </div>
             <div  class="footer_columna">
-                <div>
                     <h2 class="footer_columna_titulo">Acerca de</h2>
                     <ul class="footer_columna_lista">
                         <li class="footer_columna_lista_item">Politicas de Privacidad</li>
@@ -211,7 +280,6 @@
                         <li class="footer_columna_lista_item">Desarrolladores</li>
                         <li class="footer_columna_lista_item">Cookies</li>
                     </ul>
-                </div>
             </div>
             <div  class="footer_columna">
                 <h2 class="footer_columna_titulo">Newsletter</h2>
@@ -225,5 +293,6 @@
             </div>
         </div>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 </html>

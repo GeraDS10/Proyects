@@ -75,7 +75,7 @@ body{
     inset:-10px;
     border-radius: 50%;
     border:10px solid var(--fuente_blanco);
-    animation: prixClipFix 5s infinite linear;
+    animation: prixClipFix 5s linear;
   }
 
   @keyframes prixClipFix {
@@ -521,7 +521,7 @@ width: 100vw;
     .container_nav{
         position: absolute;
         width: 15vw;
-        z-index: 1;
+        z-index: 3;
     }
 
     .ocultar_nav_perfil{
@@ -575,19 +575,25 @@ width: 100vw;
     
     .container_carrusel_desktop{
         display: flex;
-        height: 80vh;
+        overflow: hidden;
         background-color: var(--primario_sombra_2);
     }
 
     .container_categoria{
-        width: 98vw;
+        width: 100vw;
+        height: auto;
     }
 
     .container_carrusel{
         display: flex;
         flex-direction: row;
-        width: 98vw;
-        height: 65vh;
+        width: 200%;
+        height: 50vh;
+    }
+
+    .carrusel_desktop{
+        width: 200%;
+        overflow: hidden;
     }
 
     .titulo_container_carrusel{
@@ -596,16 +602,40 @@ width: 100vw;
 
     .carrusel{
         display: flex;
-        justify-content: space-between;
-        width: 80vw;
-        height: 70vh;
-        transition: transform 5s ease-out; 
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 200%;
+        height: 50vh;
+        transition: transform 1s ease-out; 
+    }
+
+    .bounce_right {
+        animation: bounce-horizontal-right 1s ease;
+      }
+      @keyframes bounce-horizontal-right {
+        5% { transform: translateX(-55%); }
+        0% { transform: translateX(-50%); }
+    }
+
+    .bounce_left {
+        animation: bounce-horizontal-left 1s ease;
+      }
+      @keyframes bounce-horizontal-left {
+        5% { transform: translateX(5%); }
+        0% { transform: translateX(0%); }
     }
 
     .card{
-        width: 24vw;
-        height: 60vh;
-        transition: transform 0.5s ease;
+        width: calc(100% / 6);
+        margin: 0% 2% 0% 2%;
+        height: 45vh;
+        transition: transform 0.3s ease;
+    }
+
+    .skewed {
+        transform: skew(10deg);
+        transition: transform 0.3s ease;
     }
 
     .card:hover{
@@ -636,8 +666,8 @@ width: 100vw;
         width: 10vw;
         height: 4vh;
         position: relative;
-        left: -7vw;
-        top: -50vh;
+        left: -7.5vw;
+        top: -35vh;
         border-radius: 0px 10px 10px 0px;
         color: var(--fuente_blanco);
         background-color: var(--acento);
@@ -649,8 +679,8 @@ width: 100vw;
         width: 10vw;
         height: 4vh;
         position: relative;
-        left: -7vw;
-        top: -50vh;
+        left: -7.5vw;
+        top: -35vh;
         border-radius: 0px 10px 10px 0px;
         color: var(--fuente_blanco);
         background-color: var(--primario_luz_2);    
@@ -661,8 +691,8 @@ width: 100vw;
         width: 10vw;
         height: 4vh;
         position: relative;
-        left: -7vw;
-        top: -50vh;
+        left: -7.5vw;
+        top: -35vh;
         border-radius: 0px 10px 10px 0px;
         color: var(--fuente_blanco);
         background-color: var(--secundario_luz_2);  
@@ -679,13 +709,28 @@ width: 100vw;
     }
 
     .btn_carrusel{
-        width: 8vw;
-        margin:0% 1% 0% 1%;
+        cursor: pointer;
+        width: 5vw;
+        height: 15vh;
+        margin:0% 0% 0% 0%;
         transition: transform 0.5s ease;
+    }
+
+    .btn_carrusel_izquierda{
+        position: absolute;
+        left: 0px;
+        z-index: 1;
+    }
+
+    .btn_carrusel_derecha{
+        position: absolute;
+        right: 0%;
+        z-index: 1;
     }
 
     .btn_carrusel:hover{
         transform: scale(1.1);
+        z-index: 2;
     }
     /*  --------- Carrusel --------- */
     /*  --------- Footer --------- */
@@ -1020,12 +1065,10 @@ width: 100vw;
     background-color: var(--primario_sombra_2);
     display: flex;
     align-items: center;
-    width: 100vw;
     height: 8vh;
     color: var(--fuente_blanco);
     font-family: 'Nunito';
     font-size: 1.7em;
-    padding-left: 5%;
 }
 
 .inicio_breadcum{
@@ -1039,6 +1082,10 @@ width: 100vw;
 
 .parte_breadcum{
     margin: 0px;
+}
+
+.breadcum_inicio{
+    padding-left: 5%;
 }
 
 .division_breadcum{
@@ -1140,7 +1187,6 @@ width: 100vw;
 }
 
 .container_personajes{
-    width: 100vw;
     height: 50vh;
     background-color: var(--primario_sombra_2);
     font-family: 'Nunito';
@@ -1193,7 +1239,6 @@ width: 100vw;
 }
 
 .container_funcionalidades{
-    width: 100vw;
     height: 50vh;
     background-color: var(--primario_sombra_2);
     font-family: 'Nunito';
@@ -1249,7 +1294,6 @@ width: 100vw;
 }
 
 .container_comunidad{
-    width: 100vw;
     height: 100vh;
     background-color: var(--primario_sombra_2);
     font-family: 'Nunito';

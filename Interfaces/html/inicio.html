@@ -70,9 +70,9 @@
             <div class="container_categoria">
                 <h2 class="titulo_container_carrusel">Recomendados para vos</h2>
                 <div class="container_carrusel">
-                    <button class="btn_carrusel" id="btn_carrusel_izquierda"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
-                    <div class="carrusel_desktop carrusel">
-                        <div class="card">
+                    <button class="btn_carrusel btn_carrusel_izquierda" id="btn_recomendados_carrusel_izquierda"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
+                    <div class="carrusel_desktop carrusel" id="carrusel_recomendados">
+                        <div class="card cards_recomendados">
                             <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
                             <h3 class="nombre_card">Bioshock</h3>
                             <p class="precio_card"></p>
@@ -81,25 +81,49 @@
                                 <p class="etiqueta_card">Gratis</p>
                             </div>
                         </div>
-                        <div class="card">
-                            <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
-                            <h3 class="nombre_card">Bioshock</h3>
+                        <div class="card cards_recomendados">
+                            <img src="../imagenes/marvel_vs_dc.png" alt="" class="img_card">
+                            <h3 class="nombre_card">Marvel vs DC</h3>
                             <p class="precio_card"></p>
-                            <button class="btn_card">Jugar</button>
+                            <button class="btn_card" id="link_juego">Jugar</button>
+                            <div class="container_etiqueta_card_gratis" >
+                                <p class="etiqueta_card">Gratis</p>
+                            </div>
+                        </div>
+                        <div class="card cards_recomendados">
+                            <img src="../imagenes/cards/sugeridos/mortal_kombat.jpg" alt="" class="img_card">
+                            <h3 class="nombre_card">Mortal Kombat</h3>
+                            <button class="btn_card">Comprar</button>
                             <div class="container_etiqueta_card_gratis">
                                 <p class="etiqueta_card">Gratis</p>
                             </div>
                         </div>
-                        <div class="card">
-                            <img src="../imagenes/cards/accion/bioshock.jpg" alt="" class="img_card">
-                            <h3 class="nombre_card">Bioshock</h3>
+                        <div class="card cards_recomendados">
+                            <img src="../imagenes/cards/sugeridos/street_fighter.jpg" alt="" class="img_card">
+                            <h3 class="nombre_card">Street Fighter</h3>
+                            <button class="btn_card">Comprar</button>
+                            <div class="container_etiqueta_card_gratis">
+                                <p class="etiqueta_card">Gratis</p>
+                            </div>
+                        </div>
+                        <div class="card cards_recomendados">
+                            <img src="../imagenes/cards/accion/dead_space.jpg" alt="" class="img_card">
+                            <h3 class="nombre_card">Dead Space</h3>
+                            <button class="btn_card">Comprar</button>
+                            <div class="container_etiqueta_card_gratis">
+                                <p class="etiqueta_card">Gratis</p>
+                            </div>
+                        </div>
+                        <div class="card cards_recomendados">
+                            <img src="../imagenes/cards/accion/fortnite.jpg" alt="" class="img_card">
+                            <h3 class="nombre_card">Fortnite</h3>
                             <button class="btn_card">Comprar</button>
                             <div class="container_etiqueta_card_gratis">
                                 <p class="etiqueta_card">Gratis</p>
                             </div>
                         </div>
                     </div>
-                    <button class="btn_carrusel" id="btn_carrusel_derecha"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
+                    <button class="btn_carrusel btn_carrusel_derecha" id="btn_recomendados_carrusel_derecha"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
                 </div>
             </div>
         </div>
@@ -147,45 +171,69 @@
         </div>
        </div>
        <div class="container_carrusel_desktop">
-        <div class="container_categoria">
-            <h2 class="titulo_container_carrusel">Multijugador</h2>
-        <div class="container_carrusel">
-            <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
-            <div class="carrusel">
-                
-                <div class="card">
-                    <img src="../imagenes/cards/multijugador/battlefield_5.jpg" alt="" class="img_card">
-                    <h3 class="nombre_card">Battlefield 5</h3>
-                    <p class="precio_card"></p>
-                    <button class="btn_card">Jugar</button>
-                    <div class="container_etiqueta_card_gratis">
-                        <p class="etiqueta_card">Gratis</p>
+            <div class="container_categoria">
+                <h2 class="titulo_container_carrusel">Multijugador</h2>
+                <div class="container_carrusel">
+                <button class="btn_carrusel btn_carrusel_izquierda" id="btn_multijugador_carrusel_izquierda"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
+                <div class="carrusel carrusel_desktop" id="carrusel_multijugador">
+                    <div class="card cards_multijugador">
+                        <img src="../imagenes/cards/multijugador/battlefield_5.jpg" alt="" class="img_card">
+                        <h3 class="nombre_card">Battlefield 5</h3>
+                        <p class="precio_card"></p>
+                        <button class="btn_card">Jugar</button>
+                        <div class="container_etiqueta_card_gratis">
+                            <p class="etiqueta_card">Gratis</p>
+                        </div>
+                    </div>
+                    <div class="card cards_multijugador">
+                        <img src="../imagenes/cards/multijugador/cs_go.jpg" alt="" class="img_card">
+                        <h3 class="nombre_card">CS GO</h3>
+                        <p class="precio_card"></p>
+                        <button class="btn_card">Comprar</button>
+                        <div class="container_etiqueta_card_comprar">
+                            <p class="etiqueta_card">$89</p>
+                        </div>
+                    </div>
+                    <div class="card cards_multijugador">
+                        <img src="../imagenes/cards/multijugador/diablo_4.jpg" alt="" class="img_card">
+                        <h3 class="nombre_card">Diablo 4</h3>
+                        <p class="precio_card"></p>
+                        <button class="btn_card">Jugar</button>
+                        <div class="container_etiqueta_card_gratis">
+                            <p class="etiqueta_card">Gratis</p>
+                        </div>
+                    </div>
+                    <div class="card cards_multijugador">
+                        <img src="../imagenes/cards/multijugador/fifa_23.jpg" alt="" class="img_card">
+                        <h3 class="nombre_card">Fifa 23</h3>
+                        <p class="precio_card"></p>
+                        <button class="btn_card">Jugar</button>
+                        <div class="container_etiqueta_card_gratis">
+                            <p class="etiqueta_card">Gratis</p>
+                        </div>
+                    </div>
+                    <div class="card cards_multijugador">
+                        <img src="../imagenes/cards/multijugador/payday_3.jpg" alt="" class="img_card">
+                        <h3 class="nombre_card">Payday 3</h3>
+                        <p class="precio_card"></p>
+                        <button class="btn_card">Comprar</button>
+                        <div class="container_etiqueta_card_comprar">
+                            <p class="etiqueta_card">$89</p>
+                        </div>
+                    </div>
+                    <div class="card cards_multijugador">
+                        <img src="../imagenes/cards/multijugador/sacjboy.jpg" alt="" class="img_card">
+                        <h3 class="nombre_card">Sacjboy</h3>
+                        <p class="precio_card"></p>
+                        <button class="btn_card">Jugar</button>
+                        <div class="container_etiqueta_card_gratis">
+                            <p class="etiqueta_card">Gratis</p>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="../imagenes/cards/multijugador/cs_go.jpg" alt="" class="img_card">
-                    <h3 class="nombre_card">CS GO</h3>
-                    <p class="precio_card"></p>
-                    <button class="btn_card">Comprar</button>
-                    <div class="container_etiqueta_card_comprar">
-                        <p class="etiqueta_card">$89</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../imagenes/cards/multijugador/diablo_4.jpg" alt="" class="img_card">
-                    <h3 class="nombre_card">Diablo 4</h3>
-                    <p class="precio_card"></p>
-                    <button class="btn_card">Jugar</button>
-                    <div class="container_etiqueta_card_gratis">
-                        <p class="etiqueta_card">Gratis</p>
-                    </div>
-                </div>
-        
+                <button class="btn_carrusel btn_carrusel_derecha" id="btn_multijugador_carrusel_derecha"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
             </div>
-            <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
-        </div>
-        </div>
-        
+            </div>
        </div>
        <div class="container_carrusel_mobile">
         <div class="container_categoria">
@@ -214,10 +262,9 @@
         <div class="container_categoria">
             <h2 class="titulo_container_carrusel">Accion</h2>
             <div class="container_carrusel">
-                <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
-                <div class="carrusel">
-                    
-                    <div class="card">
+                <button class="btn_carrusel btn_carrusel_izquierda" id="btn_accion_carrusel_izquierda"><img src="../imagenes_iconos/flecha_violeta_izquierda.png" alt="" class="img_btn_carrusel"></button>
+                <div class="carrusel carrusel_desktop" id="carrusel_accion">  
+                    <div class="card cards_accion">
                         <img src="../imagenes/cards/accion/fortnite.jpg" alt="" class="img_card">
                         <h3 class="nombre_card">Fortnite</h3>
                         <p class="precio_card"></p>
@@ -226,7 +273,7 @@
                             <p class="etiqueta_card">Gratis</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card cards_accion">
                         <img src="../imagenes/cards/accion/robocop.jpg" alt="" class="img_card">
                         <h3 class="nombre_card">Robocop</h3>
                         <p class="precio_card"></p>
@@ -235,7 +282,7 @@
                             <p class="etiqueta_card">Agregado</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card cards_accion">
                         <img src="../imagenes/cards/accion/the_surge.jpg" alt="" class="img_card">
                         <h3 class="nombre_card">The Surge</h3>
                         <p class="precio_card"></p>
@@ -244,9 +291,35 @@
                             <p class="etiqueta_card">Gratis</p>
                         </div>
                     </div>
-                    
+                    <div class="card cards_accion">
+                        <img src="../imagenes/cards/accion/mafia_3.jpg" alt="" class="img_card">
+                        <h3 class="nombre_card">Mafia 3</h3>
+                        <p class="precio_card"></p>
+                        <button class="btn_card">Jugar</button>
+                        <div class="container_etiqueta_card_gratis">
+                            <p class="etiqueta_card">Gratis</p>
+                        </div>
+                    </div>
+                    <div class="card cards_accion">
+                        <img src="../imagenes/cards/accion/freeguy.jpg" alt="" class="img_card">
+                        <h3 class="nombre_card">Freeguy</h3>
+                        <p class="precio_card"></p>
+                        <button class="btn_card">Comprar</button>
+                        <div class="container_etiqueta_card_agregado">
+                            <p class="etiqueta_card">Agregado</p>
+                        </div>
+                    </div>
+                    <div class="card cards_accion">
+                        <img src="../imagenes/cards/accion/halo_infinite.jpg" alt="" class="img_card">
+                        <h3 class="nombre_card">Halo Infinite</h3>
+                        <p class="precio_card"></p>
+                        <button class="btn_card">Jugar</button>
+                        <div class="container_etiqueta_card_gratis">
+                            <p class="etiqueta_card">Gratis</p>
+                        </div>
+                    </div>
                 </div>
-                <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
+                <button class="btn_carrusel btn_carrusel_derecha" id="btn_accion_carrusel_derecha"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
             </div>
         </div>
        

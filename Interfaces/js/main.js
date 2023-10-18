@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let pageTitle = document.querySelector('title');
     let title = pageTitle.textContent;
     if(title == 'Inicio'){
+        document.body.classList.add("ocultar_overflow_y");
         let porcentajeCarga = document.querySelector(".porcentaje_loader");
     let porcentaje = 20;
     let tiempoTranscurrido = 0;
@@ -17,8 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
             loader.classList.add("ocultar_loader");
             }
             clearInterval(intervalo);
+            document.body.classList.remove("ocultar_overflow_y");
         }
     }, 1000);
+ 
     }
 });
 

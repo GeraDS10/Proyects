@@ -1,5 +1,14 @@
 body{
     margin: 0px;
+    overflow-x: hidden;
+}
+
+.ocultar_overflow_y{
+    overflow-y: hidden;
+}
+
+.mostrar_overflow_y{
+    overflow-y: auto;
 }
 
 :root{
@@ -150,7 +159,7 @@ body{
 .container_nav{
     position: absolute;
     width: 50vw;
-    z-index: 1;
+    z-index: 3;
     left: -50vw;
     transition: 1s;
 }
@@ -172,8 +181,9 @@ body{
     font-family: 'Nunito';
     color: var(--fuente_blanco);
     border:1px solid var(--fuente_blanco);
-    font-size: 1.4em;
+    font-size: 90%;
     padding: 1% 0% 1% 20%;
+    overflow: hidden;
 }
 
 .item_lista_nav p{
@@ -182,21 +192,19 @@ body{
 /*  --------- Nav Categorias --------- */
 /*  --------- Nav Perfil --------- */
 .container_nav_perfil{
-    display: none;
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     right: -50vw;
     width: 50vw;
     background-color: var(--secundario_sombra_1);
     font-family: 'Nunito';
     color: var(--fuente_blanco);
     text-align: center;
-    transition: 2s;
+    transition: 1s;
     border-radius: 10px 0px 0px 10px;
 }
 
 .mostrar_nav_perfil{
-    display: block;
     transform: translateX(-50vw);
 }
 
@@ -299,7 +307,7 @@ width: 100vw;
 .nombre_card{
     margin: 1% 0% 1% 0%;
     color: var(--fuente_blanco);
-    font-size: 1.2em;
+    font-size: 0.8em;
 }
 
 .precio_card{
@@ -310,8 +318,7 @@ width: 100vw;
     font-family: 'Nunito';
     font-weight: bold;
     padding: 0%;
-    margin-top: 2%;
-    font-size: 1em;
+    font-size: 0.5em;
     width: 20vw;
     height: 5vh;
     border-radius: 10px;
@@ -360,6 +367,7 @@ width: 100vw;
 .etiqueta_card{
     margin: 0% 0% 0% 0%;
     text-align: center;
+    font-size: 0.5em;
 }
 
 .container_etiqueta_card_gratis{
@@ -524,10 +532,6 @@ width: 100vw;
         z-index: 3;
     }
 
-    .ocultar_nav_perfil{
-        right: -30vw;
-    }
-
     .item_lista_nav p{
         margin: 0%;
     }
@@ -657,7 +661,7 @@ width: 100vw;
 
     .btn_card:hover{
         letter-spacing: 0.5vw;
-        font-size: 2em;
+        font-size: 1.5em;
         background-color: var(--secundario);
         color: var(--fuente_blanco);
     }
@@ -702,6 +706,7 @@ width: 100vw;
     .etiqueta_card{
         margin: 0% 0% 0% 0%;
         text-align: center;
+        font-size: 0.8em;
     }
 
     .container_etiqueta_card_gratis{
@@ -869,6 +874,20 @@ width: 100vw;
     .btn_registrar_anchor{
         text-decoration: none;
         color: var(--fuente_blanco);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: inset 0 0 0 0 var(--fuente_blanco);
+        transition: ease-out 0.4s;
+    }
+
+    .btn_registrar_anchor:hover{
+        box-shadow: inset 0 0 0 50px var(--fuente_blanco);
+        color: var(--primario);
+        font-size: 1.5em;
     }
 
     .btn_inicio_sesion{
@@ -1128,13 +1147,13 @@ width: 100vw;
 }
 
 .titulo_juego{
-    font-size: 5em;
+    font-size: 3em;
     margin: 0%;
 }
 
 .descripcion_juego{
     margin: 0%;
-    font-size: 2em;
+    font-size: 1.2em;
     align-self: flex-start;
 
 }
@@ -1148,7 +1167,7 @@ width: 100vw;
     border-radius: 10px;
     background-color: var(--fuente_blanco);
     color: var(--primario_luz_1);
-    font-size: 3em;
+    font-size: 1.4em;
     font-weight: bold;
 }
 
@@ -1162,7 +1181,7 @@ width: 100vw;
     background-color: var(--primario_sombra_2);
     border: solid 2px var(--primario_luz_1);
     color: var(--texto_opaco);
-    font-size: 1.6em;
+    font-size: 1em;
     font-weight: bold;
 }
 
@@ -1182,7 +1201,7 @@ width: 100vw;
 }
 
 .parrafo_instrucciones{
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0%;
 }
 
@@ -1194,6 +1213,7 @@ width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 5%;
 }
 
 .titulo_personajes{
@@ -1233,7 +1253,7 @@ width: 100vw;
 }
 
 .card_personaje_descripcion{
-    font-size: 2em;
+    font-size: 1.4em;
     padding-left: 3%;
     margin: 0.5% 0% 0% 0%;
 }
@@ -1246,6 +1266,7 @@ width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 5%;
 }
 
 .titulo_funcionalidades{
@@ -1288,7 +1309,7 @@ width: 100vw;
 }
 
 .card_funcionalidad_descripcion{
-    font-size: 2em;
+    font-size: 1.4em;
     padding-left: 3%;
     margin: 0.5% 0% 0% 0%;
 }
@@ -1301,6 +1322,7 @@ width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 5%;
 }
 
 .titulo_comunidad{
@@ -1345,7 +1367,7 @@ width: 100vw;
 }
 
 .comentario{
-    font-size: 1.7em;
+    font-size: 1em;
     padding: 1% 3% 1% 3%;
     height: 15vh;
     margin: 0% 0% 5% 0%;

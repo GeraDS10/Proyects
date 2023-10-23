@@ -182,9 +182,12 @@ if(btn_accion_derecha){
 let btn_registrar = document.querySelector("#btn_registrar");
 if(btn_registrar){
     btn_registrar.addEventListener("click",(event) => {
-        console.log("sarasa");
         event.preventDefault();
+        let container_registrando = document.querySelector("#container_registrando");
+        btn_registrar.classList.add("ocultar");
+        container_registrando.classList.add("mostrar_mensaje");
         mensajeExitoso();
+        
     });
 
 }
@@ -192,13 +195,14 @@ if(btn_registrar){
  function mensajeExitoso () {
     console.log("mostrar mensaje");
     let mensajeExitoso = document.querySelector(".registro_exitoso_mensaje");
-    mensajeExitoso.classList.add("mostrar_mensaje");
     setTimeout(function () {
         mostrarMensajeDeExito();
-    }, 2000);
+    }, 3000);
     function mostrarMensajeDeExito() {
+        container_registrando.classList.remove("mostrar_mensaje");
+        mensajeExitoso.classList.add("mostrar_mensaje");
         setTimeout(function () {
-        }, 3000);
+        }, 1000);
         window.location.href = "../html/inicio.html";
     }
 };

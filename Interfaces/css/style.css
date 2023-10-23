@@ -325,7 +325,6 @@ width: 100vw;
     color: var(--primario);
     border: 1px solid var(--primario);
     background-color: var(--fuente_blanco);
-
 }
 
 .container_etiqueta_card_gratis{
@@ -336,8 +335,7 @@ width: 100vw;
     top: -42vh;
     border-radius: 0px 10px 10px 0px;
     color: var(--fuente_blanco);
-    background-color: var(--acento);    
-
+    background-color: var(--acento);
 }
 
 .container_etiqueta_card_comprar{
@@ -348,7 +346,7 @@ width: 100vw;
     top: -42vh;
     border-radius: 0px 10px 10px 0px;
     color: var(--fuente_blanco);
-    background-color: var(--primario_luz_2);    
+    background-color: var(--primario_luz_2);   
 
 }
 
@@ -853,6 +851,19 @@ width: 100vw;
         border-color: transparent;
     }
 
+    .form_captcha{
+        width: 100%;
+        height: 8vh;
+        margin-bottom: 5%;
+        border-radius: 20px;
+    }
+
+    .form_captcha img{
+        width: 100%;
+        height: 8vh;
+        border-radius: 20px;
+    }
+
     .container_btn_registrar{
     }
 
@@ -869,9 +880,11 @@ width: 100vw;
         background-color: var(--primario);
         border: solid 1px var(--texto_opaco);
         text-decoration: none;
+        padding: 0%;
     }
 
     .btn_registrar_anchor{
+        z-index: 1;
         text-decoration: none;
         color: var(--fuente_blanco);
         width: 100%;
@@ -881,14 +894,41 @@ width: 100vw;
         justify-content: center;
         border-radius: 10px;
         box-shadow: inset 0 0 0 0 var(--fuente_blanco);
-        transition: ease-out 0.4s;
+        transition: ease-out 2s;
     }
+
+    .container_registrando{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+    }
+
+    .registrando {
+        width: 5vw;
+        height: 5vw;
+        border: 5px solid #FFF;
+        border-bottom-color: var(--acento);
+        border-radius: 50%;
+        display: flex;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+        }
+    
+        @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+        } 
 
     .btn_registrar_anchor:hover{
         box-shadow: inset 0 0 0 50px var(--fuente_blanco);
         color: var(--primario);
-        font-size: 1.5em;
-    }
+        font-size: 1.4  em;
+    }   
 
     .btn_inicio_sesion{
         display: flex;
@@ -1038,7 +1078,11 @@ width: 100vw;
     }
 
     .mostrar_mensaje{
-        display: block;
+        display: flex;
+    }
+
+    .ocultar{
+        display: none;
     }
     
     /*  --------- Pagina de Registro --------- */
@@ -1125,6 +1169,7 @@ width: 100vw;
 }
 
 .espacio_juego{
+    display: flex;
     width: 60vw;
     height: 50vh;
     padding-left: 5%;
@@ -1135,6 +1180,33 @@ width: 100vw;
     width: 100%;
     height: 100%;
 }
+
+.btn_jugar{
+    position: relative;
+    width: 20%;
+    height: 15%;
+    left: 50%;
+    top: 41%;
+    font-family: 'Nunito';
+    font-size: 1.2em;
+    color: var(--fuente_blanco);
+    font-weight: bolder;
+    background-color: var(--fuente_blanco);
+    background-image: var(--fuente_blanco); 
+    background-image: linear-gradient(to bottom, var(--primario_sombra_1) 0%,var(--primario_luz_2) 100%);
+    border-color: var(--fuente_blanco);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    border-radius: 10px;
+    transition: background 300ms ease-in-out;
+}
+
+  .btn_jugar:hover {
+    color: var(--primario);
+    background-position: -200%;
+    transition: background 300ms ease-in-out;
+  }
 
 .informacion_juego{
     width: 40vw;

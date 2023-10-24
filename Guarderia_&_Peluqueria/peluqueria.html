@@ -3,8 +3,8 @@
         <h1 class="titulo">Peluquería</h1>
         <div class="requisitos">
             <p>
-                En el formulario debajo puede calcular el valor estimativo con una raza de referencia. Dicho
-                valor puede variar acorde al estado del manto.
+                En el formulario debajo puede calcular el <span class="resaltar">valor estimativo</span> con una raza de referencia. Dicho
+                valor puede variar <span class="resaltar">acorde al estado del manto</span>, ya que considera un buen estado del mismo el precio publicado en la página. 
             </p>
             <p>
                 El baño contempla corte higiénico, corte de uñas y limpieza de oidos, en caso de ser necesarios.
@@ -12,11 +12,21 @@
             <p>
                 En caso de requerir traslado, consultar por el mismo, ya que se determinará según distancia.
             </p>
+            <p>
+                Ejemplos de clasificasión de perros por tamaño:
+            </p>
+            <ul class="listado_razas">
+                <li class="item_listado_razas">Pequeño: Jack Russell, Caniche Toy, Salchicha, Shih Tzu, Maltés, Bull Dog Francés</li>
+                <li class="item_listado_razas">Mediano: Fox Terrier, Border Collie, Beagle, Bretón, Bull Dog Inglés, Boxer</li>
+                <li class="item_listado_razas">Grande: Ovejero Malinois, Siberiano, Labrador</li>
+                <li class="item_listado_razas">Gigantes: Schnauzer Gigante, Boyero de Berna, Rhodesia, Dogo Burdeos, Terranova</li>
+            </ul>
         </div>
         <div class="guarderiaForm">
             <form action="">
                 <label for="tamanio">Tamaño</label>
                 <select name="tamanio" id="perroTamanio">
+                    <option value="gigante">Gigante</option>
                     <option value="grande">Grande</option>
                     <option value="mediano">Mediano</option>
                     <option value="chico">Chico</option>

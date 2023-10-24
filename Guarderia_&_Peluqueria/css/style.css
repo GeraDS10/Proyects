@@ -208,9 +208,22 @@ footer{
     justify-content: center;
 }
 
+.resaltar{
+    color: var(--casa-snoopy);
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
 .peluqueriaSection p{
     width: 90%;
-    font-style: italic;
+}
+
+.listado_razas{
+
+}
+
+.item_listado_razas{
+    font-size: 2em;
 }
 
 .guarderiaSection ul{

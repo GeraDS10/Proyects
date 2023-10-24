@@ -1,0 +1,140 @@
+:root {
+    --primario: rgb(44, 71, 112);
+    --primario_luz: rgb(77, 101, 141);
+    --primario_sombra: rgb(5, 25, 56);
+    --secundario: rgb(59, 93, 147);
+    --secundario_luz: rgb(87, 118, 168);
+    --secundario_sombra: rgb(19, 51, 103);
+    --acento: rgb(223, 197, 75);
+    --blanco:rgb(255, 255, 255);
+    --error: rgb(187, 0, 0);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--primario);
+    color: var(--primario);
+}
+
+h1 {
+    text-align: center;
+    color: var(--blanco);
+    text-shadow: 2px 2px var(--primario_sombra);
+}
+
+.marca{
+    font-size: 3em;
+    color: var(--blanco);
+    font-style: italic;
+    text-shadow: 2px 2px var(--primario_sombra);
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: var(--primario_sombra);
+    padding: 2% 5% 2% 5%;
+    border-radius: 10px;
+}
+
+label, input, select {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--primario);
+}
+
+label{
+    color: var(--blanco);
+}
+
+#anio{
+    width: 93%;
+}
+
+input[type="number"], input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    /* border: 1px solid var(--secundario); */
+    border-radius: 4px;
+}
+
+.container_button{
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    display: block;
+    margin: 10px 0;
+    background-color: var(--acento);
+    border: 1px solid var(--secundario);
+    border-radius: 10px;
+    color: var(--primario_luz);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s ease-out;
+}
+
+button:hover {
+    background-color: var(--acento);
+    transform: scale(1.2);
+    color: var(--primario_sombra);
+}
+
+.marca_error{
+    border: 2px solid var(--error);
+}
+
+.resultado {
+    display: none;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--secundario_luz);
+    color: var(--acento);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--blanco);
+    font-size: 24px;
+    box-shadow: 0 0 5px var(--blanco);
+}
+
+.texto_error{
+    color: var(--error);
+}
+
+.mostrar_resultado{
+    display: block;
+}
+
+/* Estilos para pantallas con un ancho mínimo de 600px */
+@media only screen and (min-width: 600px) {
+    body {
+        padding: 20px 10%; /* Márgenes más amplios en pantallas más grandes */
+    }
+
+    form {
+        max-width: 600px; /* Ajustar el ancho del formulario para pantallas más grandes */
+    }
+    
+    input[type="number"], input[type="text"], select {
+        padding: 12px; /* Aumentar el relleno para una mejor experiencia de usuario */
+    }
+    #anio{
+        width: 96%;
+    }
+    
+    button {
+        font-size: 18px; /* Aumentar el tamaño de fuente del botón en pantallas más grandes */
+    }
+    
+    .resultado {
+        max-width: 600px; /* Ajustar el ancho del resultado para pantallas más grandes */
+    }
+}

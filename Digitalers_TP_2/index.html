@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Siempre Segura, la aseguradora líder del mercado">
+    <meta name="keywords" content="Seguro, Honda, Ford, Toyota, Chevrolet, Volkswagen, Completo, Terceros">
+    <title>Cotizador Siempre Segura</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1>Cotizador de Seguro Automóvil</h1>
+    <h1 class="marca">Siempre Segura</h1>
+    <form id="form_seguro">
+        <label for="anio">Año:</label>
+        <input type="number" id="anio" min="2000" max="2023" required>
+        <label for="marca">Marca de Automóvil:</label>
+        <select id="marca" required>
+            <option value="">Selecciona una marca</option>
+            <option value="Ford">Ford</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Honda">Honda</option>
+            <option value="Volkswagen">Volkswagen</option>
+        </select>
+        <label for="modelo">Modelo de Automóvil:</label>
+        <select id="modelo" required>
+            <option value="">Selecciona una marca primero</option>
+        </select>
+
+        <label for="tipo_seguro">Tipo de Seguro:</label>
+        <select id="tipo_seguro">
+            <option value="terceros">Terceros</option>
+            <option value="completo">Completo</option>
+        </select>
+        <div class="container_button">
+            <button type="button" id="boton_calcular">Calcular Cotización</button>
+        </div>
+    </form>
+    <div id="resultado" class="resultado"></div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

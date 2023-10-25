@@ -113,28 +113,27 @@ button:hover {
     display: block;
 }
 
-/* Estilos para pantallas con un ancho mínimo de 600px */
 @media only screen and (min-width: 600px) {
     body {
-        padding: 20px 10%; /* Márgenes más amplios en pantallas más grandes */
+        padding: 20px 10%; 
     }
 
     form {
-        max-width: 600px; /* Ajustar el ancho del formulario para pantallas más grandes */
+        max-width: 600px; 
     }
     
     input[type="number"], input[type="text"], select {
-        padding: 12px; /* Aumentar el relleno para una mejor experiencia de usuario */
+        padding: 12px; 
     }
     #anio{
         width: 96%;
     }
     
     button {
-        font-size: 18px; /* Aumentar el tamaño de fuente del botón en pantallas más grandes */
+        font-size: 18px; 
     }
     
     .resultado {
-        max-width: 600px; /* Ajustar el ancho del resultado para pantallas más grandes */
+        max-width: 600px; 
     }
 }

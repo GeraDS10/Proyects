@@ -9,23 +9,26 @@ class Jugador{
         this.imagenFicha = imagenFicha;
     }
 
+    //Retorna el nombre del jugador
     getNombre(){
         return this.nombre;
     }
 
-
+    //Agrega una ficha al arreglo de fichas del jugador
     agregarFicha(){
         let ficha = new Ficha(this.fichasPosX, this.fichasPosY, this.radioFicha, this.imagenFicha, this.ctx, this.nombre);
         ficha.draw();
         this.fichas.push(ficha);
     }
 
+    //Dibuja las fichas que se encuentran en el arreglo de fichas del jugador
     dibujarFichas(){
         this.fichas.forEach(ficha => {
             ficha.draw();
         });
     }
 
+    //Retornas las fichas del arreglo del jugador
     obtenerFichas(){
         return this.fichas;
     }

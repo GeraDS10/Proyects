@@ -40,6 +40,8 @@ const btnReiniciar = document.getElementById("btn_reiniciar");
 let mostrarGanador = document.getElementById("mostrarGanador");
 btnJugar.addEventListener('click', mostrarSelectores);
 
+
+//Da inicio al temporizador, reiniciando el juego una vez transcurrido el tiempo restante
 function iniciarTemporizador() {
     const minutos = Math.floor(tiempoRestante / 60);
     const segundos = tiempoRestante % 60;
@@ -51,10 +53,11 @@ function iniciarTemporizador() {
         temporizador = setTimeout(iniciarTemporizador, 1000);
     } else {
         temporizadorDiv.querySelector("h2").textContent = "Tiempo agotado";
+        setTimeout(reiniciarJuego, 1000);
     }
 }
 
-
+// Muestras selectores de superheroes
 function mostrarSelectores(){
     btnJugar.classList.add("ocultar");
     espacioCanvas.classList.remove("ocultar");
@@ -62,6 +65,8 @@ function mostrarSelectores(){
     btniniciar.addEventListener('click', eleccionEquipos);
 }
 
+// toma los valores de los select y asigna la fuente de las 
+// imagenes correspondientes para dar inicio al juego
 function eleccionEquipos(){
      equipo1 = document.getElementById("equipo1").value;
      equipo2 = document.getElementById("equipo2").value;
@@ -81,14 +86,15 @@ function eleccionEquipos(){
     }   
 }
 
-
-
+//Muestra el equipo ganador y detiene el temporizador
 function cerrarJuego(ganador){
     clearTimeout(temporizador);
     mostrarGanador.children[0].innerHTML = "Ganador: " + ganador.getNombre();
     mostrarGanador.classList.remove("ocultar");
 }
 
+
+//inicia el juego determinando las dimensiones del tablero y las dimensiones de la ficha a partir de la altura del tablero
 function abrirJuego(cantidad){
     selectorEquipos.classList.add("ocultar");
     let fichasLinea = cantidad;
@@ -113,6 +119,8 @@ function abrirJuego(cantidad){
     iniciarTemporizador();
 }
 
+
+//Reinicia el juego permitiendo elegir nuevamente los superheroes
 function reiniciarJuego(){
     selectorEquipos.classList.remove("ocultar");
     selectorEquipos.classList.add("mostrar_selector");
@@ -123,16 +131,19 @@ function reiniciarJuego(){
     mostrarGanador.classList.add("ocultar");
 }
 
+//Define el jugador poseedor del turno
 function setTurno(jugador){
     jugadorTurno = jugador;
 }
 
+//Permite obtener el jugador poseedor del turno
 function getJugadorTurno(){
     if(jugadorTurno != null){
         return jugadorTurno;
     }
 }
 
+//Envia a limpiar el canvas para volver a dibujarlo
 function drawFigure(){
     clearCanvas();
     tablero.draw();
@@ -141,10 +152,11 @@ function drawFigure(){
     jugador2.dibujarFichas();
 }
 
+//Obtiene las coordenadas del cursor en el momento del click ajustadas al canvas y determina si hay una ficha factbible de mover
 function onMouseDown(e){
     isMouseDown = true;
-    const rect = canvas.getBoundingClientRect(); // Obtiene la posición del lienzo en la ventana
-    let posX = e.clientX - rect.left; // Coordenada X del clic ajustada al lienzo
+    const rect = canvas.getBoundingClientRect(); 
+    let posX = e.clientX - rect.left;
     let posY = e.clientY - rect.top; 
     if(lastClicledFigure == null){
         let clickFig = findClickedFigure(posX, posY);
@@ -156,16 +168,21 @@ function onMouseDown(e){
     }
     
 }
+
+//Limpia el rectangulo del canvas y lo rellena con un color de fondo
 function clearCanvas(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = 'rgba(32,1,49,1)';
     ctx.fillRect(0,0, canvasWidth, canvasHeight);
 }
 
+//Al momento de levantar el click del mouse determina las coordenadas ajustadas al canvas y verifica si 
+//en caso de tener seleccionada una ficha es factible fijarla en dicho lugar y posteriormente llama metodos
+//del objeto tablero para determinar si existe un ganador
 function onMouseUp(e){
     isMouseDown = false;
-    const rect = canvas.getBoundingClientRect(); // Obtiene la posición del lienzo en la ventana
-    let posX = e.clientX - rect.left; // Coordenada X del clic ajustada al lienzo
+    const rect = canvas.getBoundingClientRect();
+    let posX = e.clientX - rect.left; 
     let posY = e.clientY - rect.top; 
 
     if((lastClicledFigure != null)&&(tablero.estaDisponible(posX, posY))){
@@ -192,21 +209,21 @@ function onMouseUp(e){
         }
         
     }
-    
     drawFigure();
-    
 }
 
+//Determina las coordenadas del cursor ajustadas al canvas al detectar movimiento del mismo y traslada la figura en caso de tener una seleccionada
 function onMouseMove(e){
     if(isMouseDown && lastClicledFigure != null){
-        const rect = canvas.getBoundingClientRect(); // Obtiene la posición del lienzo en la ventana
-        let posX = e.clientX - rect.left; // Coordenada X del click ajustada al lienzo
-        let posY = e.clientY - rect.top; // Coordenada Y del click ajustada al lienzo
+        const rect = canvas.getBoundingClientRect(); 
+        let posX = e.clientX - rect.left; 
+        let posY = e.clientY - rect.top; 
         lastClicledFigure.setPosition(posX, posY);
         drawFigure();
     }
 }
 
+//Determina a partir de las coordenadas recibidas y el jugador poseedor del turno si encuentra una ficha factible de seleccionar
 function findClickedFigure(x, y){
     let fichas = getJugadorTurno().obtenerFichas();
     for(let i = 0; i < fichas.length; i++){

@@ -1,5 +1,4 @@
 class Tablero{
-
     constructor(posX, posY, width, height, fill, context, fichasLinea){
         this.posX = posX;
         this.posY = posY;
@@ -21,10 +20,13 @@ class Tablero{
         this.dibujarFichasTablero();
     }
 
+    //Retorna jugador ganador o null si no lo hay
     getGanador(){
         return this.ganador;
     }
 
+    //Recorre los circulos del tablero de manera vertical buscando una ficha fijada y al encontrarla verifica si existen
+    //más del mismo jugador en linea hasta llegar a las necesarias para ganar
     lineaVertical(jugador1, jugador2){
         let fichasJugador1 = 0; 
         let fichasJugador2 = 0;
@@ -67,6 +69,8 @@ class Tablero{
 
     }
 
+    //Recorre los circulos del tablero de manera horizontal buscando una ficha fijada y al encontrarla verifica si existen
+    //más del mismo jugador avanzando en diagonal hacia derecha y abajo hasta llegar a las necesarias para ganar
     lineaOblicuoDescendenteDerecha(jugador1, jugador2){
         let posInicio = 0;
         for(let i = 0; i <= this.fichasLinea; i++){
@@ -88,8 +92,6 @@ class Tablero{
                         else{
                             this.ganador = jugador2;
                         }
-                        // alert("Linea Oblicua Descendete Derecha! Ganador: " + fichaSeleccionada.getNombreJugador());
-                        // cerrarJuego(fichaSeleccionada.getNombreJugador(), this.fichasGanadoras);
                     }
                 }
             }
@@ -97,6 +99,8 @@ class Tablero{
         }
     }
 
+    //Recorre los circulos del tablero de manera horizontal buscando una ficha fijada y al encontrarla verifica si existen
+    //más del mismo jugador avanzando en diagonal hacia derecha e izquierda hasta llegar a las necesarias para ganar
     lineaOblicuoDescendenteIzquierda(jugador1, jugador2){
         let posInicio = (this.filas - 1) * this.columnas;
         for(let i = this.columnas; i >= this.fichasLinea; i--){
@@ -127,6 +131,8 @@ class Tablero{
         }
     }
 
+    //Recorre los circulos del tablero de manera horizontal buscando una ficha fijada y al encontrarla verifica si existen
+    //más del mismo jugador avanzando en diagonal hacia izquierda y arriba hasta llegar a las necesarias para ganar
     lineaOblicuoAscendenteIzquierda(jugador1, jugador2){
         let posInicio = (this.filas * this.columnas) - 1;
         for(let i = this.columnas; i >= this.fichasLinea; i--){
@@ -136,10 +142,7 @@ class Tablero{
                     let h = j;
                     let contador = 0;
                     this.fichasGanadoras = [];
-                    while((contador < this.fichasLinea) && (this.fichas[h].getNombreJugador() == fichaSeleccionada.getNombreJugador())){
-                        // this.fichas[h].setResaltado(true);
-                        // this.fichas[h].draw();
-                        
+                    while((contador < this.fichasLinea) && (this.fichas[h].getNombreJugador() == fichaSeleccionada.getNombreJugador())){                        
                         contador++;
                         this.fichasGanadoras.push(this.fichas[h]);
                         h += -(this.fichasLinea * 2 + 1);
@@ -151,8 +154,6 @@ class Tablero{
                         else{
                             this.ganador = jugador2;
                         }
-                        // alert("Linea Oblicua Ascendente Izquierda! Ganador: " + fichaSeleccionada.getNombreJugador());
-                        // cerrarJuego(fichaSeleccionada.getNombreJugador(), this.fichasGanadoras);
                     }
                 }
             }
@@ -160,22 +161,18 @@ class Tablero{
         }
     }
 
+    //Recorre los circulos del tablero de manera horizontal buscando una ficha fijada y al encontrarla verifica si existen
+    //más del mismo jugador avanzando en diagonal hacia derecha y arriba hasta llegar a las necesarias para ganar
     lineaOblicuoAscendenteDerecha(jugador1, jugador2){
         let posInicio = (this.filas - 1);
         for(let i = this.columnas; i >= this.fichasLinea; i--){
             for(let j = posInicio; j >= (posInicio - this.fichasLinea); j--){
                 let fichaSeleccionada = this.fichas[j];
-                // this.fichas[j].setResaltado(true);
-                // this.fichas[j].draw();
                 if(fichaSeleccionada.isFixed()){
-                    // this.fichas[j].setResaltado(true);
-                    // this.fichas[j].draw();
                     let h = j;
                     let contador = 0;
                     this.fichasGanadoras = [];
                     while((contador < this.fichasLinea) && (this.fichas[h].getNombreJugador() == fichaSeleccionada.getNombreJugador())){
-                        // this.fichas[h].setResaltado(true);
-                        // this.fichas[h].draw();
                         contador++;
                         this.fichasGanadoras.push(this.fichas[h]);
                         h += this.fichasLinea * 2 - 1;
@@ -187,8 +184,6 @@ class Tablero{
                         else{
                             this.ganador = jugador2;
                         }
-                        // alert("Linea Oblicua Ascendente Derecha! Ganador: " + fichaSeleccionada.getNombreJugador());
-                        // cerrarJuego(fichaSeleccionada.getNombreJugador());
                     }
                 }
             }
@@ -196,6 +191,8 @@ class Tablero{
         }
     }
 
+    //Recorre los circulos del tablero de manera horizontal buscando una ficha fijada y al encontrarla verifica si existen
+    //más del mismo jugador en linea hasta llegar a las necesarias para ganar
     lineaHorizontal(jugador1, jugador2){
         let fichasJugador1 = 0; 
         let fichasJugador2 = 0;
@@ -223,8 +220,6 @@ class Tablero{
                         this.fichasGanadoras.push(this.fichas[j]);
                         if(fichasJugador2 == this.fichasLinea){
                             this.ganador = jugador2;
-                            // alert("Ganador: " + jugador2.getNombre());
-                            // cerrarJuego(jugador2.getNombre(), this.fichasGanadoras);
                         }
                     }
                 }
@@ -241,7 +236,8 @@ class Tablero{
 
     }
 
-
+    //Crea las fichas del tablero por columna de manera vertical descendente a partir de las coordendas del tablero, el radio de la ficha y
+    //el espacio entre ellas, agregandolas al arreglo fichas
     crearFichasTablero(radioFicha, tableroPosX, tableroPosY, espacioEntreFichas, ctx){
         let posX = tableroPosX + espacioEntreFichas + radioFicha;
         let posY = tableroPosY + espacioEntreFichas + radioFicha;
@@ -255,12 +251,14 @@ class Tablero{
         }
     }
 
+    //Dibuja las fichas del tablero creadas y agregadas al arreglo 
     dibujarFichasTablero(){
         this.fichas.forEach(element => {
             element.draw();
         });
     }
 
+    //Verifica si hay una ficha de tablero disponible en las coordenadas recibidas
     estaDisponible(x,y){
         let encontrada = false;
         let i = 0;
@@ -274,9 +272,9 @@ class Tablero{
         return false;
     }
 
+    //Fija la ficha recibida en las coordenadas recibidas 
     fijarFicha(ficha, posX, posY){
         let encontrada = false;
-        let fichaTablero;
         let i = 0;
         while((i < this.fichas.length) && (encontrada != true)){
             if(this.fichas[i].isPointInside(posX,posY)){
@@ -285,20 +283,23 @@ class Tablero{
             i++;
         }
         let posFicha = this.fichas[i-1].getPos();
-        ficha.setPos(posFicha[0], posFicha[1]);
+        ficha.setPosition(posFicha[0], posFicha[1]);
         ficha.fix();
         this.fichas.splice(i-1, 1, ficha);
     }
 
+    //Dibuja el tablero
     draw(){
         this.ctx.fillStyle = this.fill;
         this.ctx.fillRect(this.posX, this.posY, this.width, this.height);
     }
 
+    //Devuelve el ancho del tablero
     getWidth(){
         return this.width;
     }
     
+    //Devuelve el alto del tablero
     getHeight(){
         return this.height;
     }

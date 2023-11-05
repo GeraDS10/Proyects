@@ -744,7 +744,6 @@ width: 100vw;
     }
 
     .footer_columna{
-        /* padding: 0% 3% 0% 3%; */
     }
 
     .footer_columna_titulo{
@@ -756,7 +755,6 @@ width: 100vw;
     .footer_columna_lista{
         list-style: none;
         text-align: unset;
-        /* padding-left: 20%; */
         margin-top: 1.5%;
         font-size: 1em;
         width: 20vw;
@@ -1124,351 +1122,346 @@ width: 100vw;
       }
 
 
-.container_breadcum{
-    background-color: var(--primario_sombra_2);
-    display: flex;
-    align-items: center;
-    height: 8vh;
-    color: var(--fuente_blanco);
-    font-family: 'Nunito';
-    font-size: 1.7em;
-}
+    .container_breadcum{
+        background-color: var(--primario_sombra_2);
+        display: flex;
+        align-items: center;
+        height: 8vh;
+        color: var(--fuente_blanco);
+        font-family: 'Nunito';
+        font-size: 1.7em;
+    }
 
-.inicio_breadcum{
-    text-decoration: none;
-    color: var(--fuente_blanco);
-}
+    .inicio_breadcum{
+        text-decoration: none;
+        color: var(--fuente_blanco);
+    }
 
-.inicio_breadcum:hover{
-    color: var(--secundario);
-}
+    .inicio_breadcum:hover{
+        color: var(--secundario);
+    }
 
-.parte_breadcum{
-    margin: 0px;
-}
+    .parte_breadcum{
+        margin: 0px;
+    }
 
-.breadcum_inicio{
-    padding-left: 5%;
-}
+    .breadcum_inicio{
+        padding-left: 5%;
+    }
 
-.division_breadcum{
-    width: 8vw;
-    height: 6vh;
-}
+    .division_breadcum{
+        width: 8vw;
+        height: 6vh;
+    }
 
-.img_breadcum{
-    width: 100%;
-    height: 100%;
-}
+    .img_breadcum{
+        width: 100%;
+        height: 100%;
+    }
 
-.container_juego{
-    font-family: 'Nunito';
-    color: var(--fuente_blanco);
-    display: flex;
-    background-color: var(--primario_sombra_2);
-    min-height: 500px;
-}
+    .container_juego{
+        font-family: 'Nunito';
+        color: var(--fuente_blanco);
+        display: flex;
+        background-color: var(--primario_sombra_2);
+        min-height: 500px;
+    }
 
-.espacio_juego{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url(../imagenes/marvel_vs_dc.png);
-    background-size: cover;
-    width: 80vw;
-    margin: 0% 0% 0% 2%;
-    padding-left: 5%;
-    padding-bottom: 2%;
-    padding: 2% 5% 2% 5%;
-}
+    .espacio_juego{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../imagenes/marvel_vs_dc.png);
+        background-size: cover;
+        width: 80vw;
+        margin: 0% 0% 0% 2%;
+        padding-left: 5%;
+        padding-bottom: 2%;
+        padding: 2% 5% 2% 5%;
+    }
 
-.img_juego{
-    width: 100%;
-    height: 100%;
-}
+    .img_juego{
+        width: 100%;
+        height: 100%;
+    }
 
-.btn_jugar{
-    /* position: relative;
-    left: 40%;
-    top: 42%; */
-    width: 20%;
-    height: 16%;
-   
-    font-family: 'Nunito';
-    font-size: 1.2em;
-    color: var(--fuente_blanco);
-    font-weight: bolder;
-    background-color: var(--fuente_blanco);
-    background-image: var(--fuente_blanco); 
-    background-image: linear-gradient(to bottom, var(--primario_sombra_1) 0%,var(--primario_luz_2) 100%);
-    border-color: var(--fuente_blanco);
-    background-size: 300px;
-    background-repeat: no-repeat;
-    background-position: 0%;
-    border-radius: 10px;
-    transition: 300ms ease-in-out;
-}
+    .btn_jugar{
+        width: 20%;
+        height: 16%;   
+        font-family: 'Nunito';
+        font-size: 1.2em;
+        color: var(--fuente_blanco);
+        font-weight: bolder;
+        background-color: var(--fuente_blanco);
+        background-image: var(--fuente_blanco); 
+        background-image: linear-gradient(to bottom, var(--primario_sombra_1) 0%,var(--primario_luz_2) 100%);
+        border-color: var(--fuente_blanco);
+        background-size: 1000px;
+        background-repeat: no-repeat;
+        background-position: 0%;
+        border-radius: 10px;
+        transition: 300ms ease-in-out;
+        cursor: pointer;
+    }
 
-  .btn_jugar:hover {
-    color: var(--primario);
-    background-position: -200%;
-    transition: 300ms ease-in-out;
-  }
+    .btn_jugar:hover {
+        color: var(--primario);
+        background-position: -200%;
+        transition: 300ms ease-in-out;
+    }
 
-.informacion_juego{
-    width: 40vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0% 2% 0% 2%;
-    text-align: left;
+    .informacion_juego{
+        width: 40vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0% 2% 0% 2%;
+        text-align: left;
 
-}
+    }
 
-.titulo_juego{
-    font-size: 2.5em;
-    margin: 0%;
-}
+    .titulo_juego{
+        font-size: 2.5em;
+        margin: 0%;
+    }
 
-.descripcion_juego{
-    margin: 0%;
-    font-size: 1.2em;
-    align-self: flex-start;
+    .descripcion_juego{
+        margin: 0%;
+        font-size: 1.2em;
+        align-self: flex-start;
 
-}
+    }
 
-.btn_comprar{
-    width: 15vw;
-    height: 6vh;
-    margin-top: 3%;
-    padding: 0%;
-    border: 0px;
-    border-radius: 10px;
-    background-color: var(--fuente_blanco);
-    color: var(--primario_luz_1);
-    font-size: 1.4em;
-    font-weight: bold;
-}
+    .btn_comprar{
+        width: 15vw;
+        height: 6vh;
+        margin-top: 3%;
+        padding: 0%;
+        border: 0px;
+        border-radius: 10px;
+        background-color: var(--fuente_blanco);
+        color: var(--primario_luz_1);
+        font-size: 1.4em;
+        font-weight: bold;
+    }
 
-.btn_agregar_carrito{
-    width: 15vw;
-    height: 6vh;
-    margin-top: 2%;
-    padding: 0%;
-    border: 0px;
-    border-radius: 10px;
-    background-color: var(--primario_sombra_2);
-    border: solid 2px var(--primario_luz_1);
-    color: var(--texto_opaco);
-    font-size: 1em;
-    font-weight: bold;
-}
+    .btn_agregar_carrito{
+        width: 15vw;
+        height: 6vh;
+        margin-top: 2%;
+        padding: 0%;
+        border: 0px;
+        border-radius: 10px;
+        background-color: var(--primario_sombra_2);
+        border: solid 2px var(--primario_luz_1);
+        color: var(--texto_opaco);
+        font-size: 1em;
+        font-weight: bold;
+    }
 
-.instrucciones{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--primario_sombra_2);
-    font-family: 'Nunito';
-    color: var(--fuente_blanco);
-    padding-bottom: 2%;
-}
+    .instrucciones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--primario_sombra_2);
+        font-family: 'Nunito';
+        color: var(--fuente_blanco);
+        padding-bottom: 2%;
+    }
 
-.titulo_instrucciones{
-    font-size: 2.5em;
-    margin: 5% 0% 0% 0%;
-}
+    .titulo_instrucciones{
+        font-size: 2.5em;
+        margin: 5% 0% 0% 0%;
+    }
 
-.parrafo_instrucciones{
-    font-size: 1.2em;
-    margin: 0%;
-    align-self: flex-start;
-}
+    .parrafo_instrucciones{
+        font-size: 1.2em;
+        margin: 0%;
+        align-self: flex-start;
+    }
 
-.container_personajes{
-    height: 50vh;
-    background-color: var(--primario_sombra_2);
-    font-family: 'Nunito';
-    color: var(--fuente_blanco);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 5%;
-}
+    .container_personajes{
+        height: 50vh;
+        background-color: var(--primario_sombra_2);
+        font-family: 'Nunito';
+        color: var(--fuente_blanco);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5%;
+    }
 
-.titulo_personajes{
-    font-size: 3em;
-    margin: 3% 0% 0% 0%;
-}
+    .titulo_personajes{
+        font-size: 3em;
+        margin: 3% 0% 0% 0%;
+    }
 
-.carrusel_personajes{
-    margin-top: 1.5%;
-    display: flex;
-    align-items: center;
-}
+    .carrusel_personajes{
+        margin-top: 1.5%;
+        display: flex;
+        align-items: center;
+    }
 
-.personaje{
-    padding-left: 3%;
-}
+    .personaje{
+        padding-left: 3%;
+    }
 
-.img_personaje{
-    height: 35vh;
-}
+    .img_personaje{
+        height: 35vh;
+    }
 
-.card_personaje{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    height: 35vh;
-    justify-content: flex-start;
-    padding-right: 3%;
-    background-color: var(--primario_sombra_1);
-    border-radius: 0px 10px 10px 00px;
-}
+    .card_personaje{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        height: 35vh;
+        justify-content: flex-start;
+        padding-right: 3%;
+        background-color: var(--primario_sombra_1);
+        border-radius: 0px 10px 10px 00px;
+    }
 
-.card_personaje_titulo{
-    margin: 1% 0% 0% 0%;
-    font-size: 2.5em;
-}
+    .card_personaje_titulo{
+        margin: 1% 0% 0% 0%;
+        font-size: 2.5em;
+    }
 
-.card_personaje_descripcion{
-    font-size: 1.4em;
-    padding-left: 3%;
-    margin: 0.5% 0% 0% 0%;
-}
+    .card_personaje_descripcion{
+        font-size: 1.4em;
+        padding-left: 3%;
+        margin: 0.5% 0% 0% 0%;
+    }
 
-.container_funcionalidades{
-    height: 50vh;
-    background-color: var(--primario_sombra_2);
-    font-family: 'Nunito';
-    color: var(--fuente_blanco);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 5%;
-}
+    .container_funcionalidades{
+        height: 50vh;
+        background-color: var(--primario_sombra_2);
+        font-family: 'Nunito';
+        color: var(--fuente_blanco);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5%;
+    }
 
-.titulo_funcionalidades{
-    font-size: 3em;
-    margin: 0% 0% 0% 0%;
-}
+    .titulo_funcionalidades{
+        font-size: 3em;
+        margin: 0% 0% 0% 0%;
+    }
 
-.carrusel_funcionalidades{
-    display: flex;
-    align-items: center;
-    margin-top: 1.5%;
-}
+    .carrusel_funcionalidades{
+        display: flex;
+        align-items: center;
+        margin-top: 1.5%;
+    }
 
-.funcionalidad{
-    padding-left: 3%;
-    width: 23vw;
-    height: 35vh;
-}
+    .funcionalidad{
+        padding-left: 3%;
+        width: 23vw;
+        height: 35vh;
+    }
 
-.img_funcionalidad{
-    width: 100%;
-    height: 100%;
-}
+    .img_funcionalidad{
+        width: 100%;
+        height: 100%;
+    }
 
-.card_funcionalidad{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    height: 35vh;
-    justify-content: flex-start;
-    padding-right: 3%;
-    background-color: var(--primario_sombra_1);
-    border-radius: 0px 10px 10px 00px;
-}
+    .card_funcionalidad{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        height: 35vh;
+        justify-content: flex-start;
+        padding-right: 3%;
+        background-color: var(--primario_sombra_1);
+        border-radius: 0px 10px 10px 00px;
+    }
 
-.card_funcionalidad_titulo{
-    margin: 1% 0% 0% 0%;
-    font-size: 2.5em;
-}
+    .card_funcionalidad_titulo{
+        margin: 1% 0% 0% 0%;
+        font-size: 2.5em;
+    }
 
-.card_funcionalidad_descripcion{
-    font-size: 1.4em;
-    padding-left: 3%;
-    margin: 0.5% 0% 0% 0%;
-}
+    .card_funcionalidad_descripcion{
+        font-size: 1.4em;
+        padding-left: 3%;
+        margin: 0.5% 0% 0% 0%;
+    }
 
-.container_comunidad{
-    height: 100vh;
-    background-color: var(--primario_sombra_2);
-    font-family: 'Nunito';
-    color: var(--fuente_blanco);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 5%;
-}
+    .container_comunidad{
+        height: 100vh;
+        background-color: var(--primario_sombra_2);
+        font-family: 'Nunito';
+        color: var(--fuente_blanco);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5%;
+    }
 
-.titulo_comunidad{
-    font-size: 3em;
-    margin: 0% 0% 0% 0%;
-}
+    .titulo_comunidad{
+        font-size: 3em;
+        margin: 0% 0% 0% 0%;
+    }
 
-.input_comentario{
-    margin-top: 1.5%;
-    width: 50vw;
-    height: 40vh;
-    border-radius: 10px;
-    border: 0px;
-}
+    .input_comentario{
+        margin-top: 1.5%;
+        width: 50vw;
+        height: 40vh;
+        border-radius: 10px;
+        border: 0px;
+    }
 
-.btn_enviar_comentario{
-    margin: 1% 0% 2% 0%;
-    font-size: 2.5em;
-    font-family: 'Nunito';
-    padding: 0%;
-    background-color: var(--primario_luz_1);
-    color: var(--texto_opaco);
-    border: 0px;
-    border-radius: 10px;
-    width: 15vw;
-    height: 10vh;
-}
+    .btn_enviar_comentario{
+        margin: 1% 0% 2% 0%;
+        font-size: 2.5em;
+        font-family: 'Nunito';
+        padding: 0%;
+        background-color: var(--primario_luz_1);
+        color: var(--texto_opaco);
+        border: 0px;
+        border-radius: 10px;
+        width: 15vw;
+        height: 10vh;
+    }
 
-.carrusel_comentarios{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    .carrusel_comentarios{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-.card_comentario{
-    margin: 0% 1% 0% 1%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 25vw;
-    height: 30vh;
-}
+    .card_comentario{
+        margin: 0% 1% 0% 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25vw;
+        height: 30vh;
+    }
 
-.comentario{
-    font-size: 1em;
-    padding: 1% 3% 1% 3%;
-    height: 15vh;
-    margin: 0% 0% 5% 0%;
-    background-color: var(--primario_luz_2);
-    text-align: center;
-    border-radius: 10px;
+    .comentario{
+        font-size: 1em;
+        padding: 1% 3% 1% 3%;
+        height: 15vh;
+        margin: 0% 0% 5% 0%;
+        background-color: var(--primario_luz_2);
+        text-align: center;
+        border-radius: 10px;
 
 
-}
+    }
 
-.img_perfil_comentario{
-    width: 25%;
-    height: 25%;
-    border-radius: 100%;
+    .img_perfil_comentario{
+        width: 25%;
+        height: 25%;
+        border-radius: 100%;
 
-}
-
+    }
 
     /*  --------- Pagina Juego --------- */
-
 
     .canbas {
         display: flex;
@@ -1509,18 +1502,11 @@ width: 100vw;
     }
     
     .selectorEquipos{
-        /* visibility: hidden; */
         display: none;
         position: relative;
         width: 0%;
         height: 0%;
-        /* left: 25%;
-        top: 50%; */
-        /* position: relative;
-        width: 20%;
-        height: 30%;
-        left: 40%;
-        top: 35%; */
+
     }
     
     div select{
@@ -1552,6 +1538,7 @@ width: 100vw;
         background-position: 0%;
         border-radius: 10px;
         transition: 300ms ease-in-out;
+        cursor: pointer;
     }
 
     .btnIniciar:hover{
@@ -1584,7 +1571,6 @@ width: 100vw;
 
     .mostrar_canvas{
         display: flex;
-        /* z-index: 2; */
     }
 
     .temporizador{
@@ -1608,17 +1594,17 @@ width: 100vw;
         border-radius: 10px;
         transition: 300ms ease-in-out;
         transform: translateY(-90px);
+        cursor: pointer;
     }
 
     .btn_reiniciar:hover{
         color: var(--secundario_luz_1);
         background-position: -200%;
         transition: 300ms ease-in-out;
-    }
+    }   
 
-    .mostrar_ganador{
-
+    .selectorEquipos_select{
+        cursor: pointer;
     }
-   
         
 }

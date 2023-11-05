@@ -1166,14 +1166,20 @@ width: 100vw;
     color: var(--fuente_blanco);
     display: flex;
     background-color: var(--primario_sombra_2);
+    min-height: 500px;
 }
 
 .espacio_juego{
     display: flex;
-    width: 60vw;
-    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../imagenes/marvel_vs_dc.png);
+    background-size: cover;
+    width: 80vw;
+    margin: 0% 0% 0% 2%;
     padding-left: 5%;
     padding-bottom: 2%;
+    padding: 2% 5% 2% 5%;
 }
 
 .img_juego{
@@ -1182,11 +1188,12 @@ width: 100vw;
 }
 
 .btn_jugar{
-    position: relative;
+    /* position: relative;
+    left: 40%;
+    top: 42%; */
     width: 20%;
-    height: 15%;
-    left: 50%;
-    top: 41%;
+    height: 16%;
+   
     font-family: 'Nunito';
     font-size: 1.2em;
     color: var(--fuente_blanco);
@@ -1199,13 +1206,13 @@ width: 100vw;
     background-repeat: no-repeat;
     background-position: 0%;
     border-radius: 10px;
-    transition: background 300ms ease-in-out;
+    transition: 300ms ease-in-out;
 }
 
   .btn_jugar:hover {
     color: var(--primario);
     background-position: -200%;
-    transition: background 300ms ease-in-out;
+    transition: 300ms ease-in-out;
   }
 
 .informacion_juego{
@@ -1215,11 +1222,12 @@ width: 100vw;
     flex-direction: column;
     align-items: center;
     padding: 0% 2% 0% 2%;
+    text-align: left;
 
 }
 
 .titulo_juego{
-    font-size: 3em;
+    font-size: 2.5em;
     margin: 0%;
 }
 
@@ -1268,13 +1276,14 @@ width: 100vw;
 }
 
 .titulo_instrucciones{
-    font-size: 3em;
-    margin: 0%;
+    font-size: 2.5em;
+    margin: 5% 0% 0% 0%;
 }
 
 .parrafo_instrucciones{
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: 0%;
+    align-self: flex-start;
 }
 
 .container_personajes{
@@ -1290,7 +1299,7 @@ width: 100vw;
 
 .titulo_personajes{
     font-size: 3em;
-    margin: 0% 0% 0% 0%;
+    margin: 3% 0% 0% 0%;
 }
 
 .carrusel_personajes{
@@ -1460,6 +1469,156 @@ width: 100vw;
 
     /*  --------- Pagina Juego --------- */
 
+
+    .canbas {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(32,1,49,1);
+        border-radius: 10px;
+        /* width: 350px;
+        height: 350px; */
+        align-items: center;
+        justify-content: center;
+        padding: 2% 5% 2% 5%;
+    }
+    
+    .myCanvas{
+        display: none;
+        width: 500px;
+        height: 500px;
+    }
+    
+    .mostrarGanador{
+        width: 100%;
+        height: 10%;
+        background-color: var(--primario_luz_1);
+        border-radius: 10px;
+        color: var(--acento);
+        font-family: 'Nunito';
+        font-size: 1.2em;
+        text-align: center;
+        transform: translateY(-100px);
+    }
+    
+    .btn{
+        position: relative;
+        width: 10%;
+        height: 10%;
+        left: 45%;
+        top: 45%;
+    }
+    
+    .selectorEquipos{
+        /* visibility: hidden; */
+        display: none;
+        position: relative;
+        width: 0%;
+        height: 0%;
+        /* left: 25%;
+        top: 50%; */
+        /* position: relative;
+        width: 20%;
+        height: 30%;
+        left: 40%;
+        top: 35%; */
+    }
+    
+    div select{
+        width: 100%;
+        height: 35%;
+        background-color: var(--secundario_sombra_1);
+        color: var(--fuente_blanco);
+        border-radius: 10px;
+        font-family: 'Nunito';
+        text-align: center;
+        font-size: large;
+        font-weight: bold;
+        margin-bottom: 5%;
+    }
+    
+    .btnIniciar{
+        width: 100%;
+        height: 40%;
+        font-family: 'Nunito';
+        font-size: 1.2em;
+        color: var(--fuente_blanco);
+        font-weight: bolder;
+        background-color: var(--fuente_blanco);
+        background-image: var(--fuente_blanco); 
+        background-image: linear-gradient(to bottom, var(--primario_sombra_1) 0%,var(--primario_luz_2) 100%);
+        border-color: var(--fuente_blanco);
+        background-size: 1000px;
+        background-repeat: no-repeat;
+        background-position: 0%;
+        border-radius: 10px;
+        transition: 300ms ease-in-out;
+    }
+
+    .btnIniciar:hover{
+        color: var(--primario);
+        background-position: -200%;
+        transition: 300ms ease-in-out;
+    }
+    
+    .ocultar{
+        display: none;
+    }
+    
+    .mostrar{
+        visibility: visible;
+        display: block;
+    }
+
+    .mostrar_selector{
+        display: block;
+        width: 50%;
+        height: 40%;
+    }
+
+    .selectorEquipos_label{
+        font-family: 'Nunito';
+        color: var(--fuente_blanco);
+        font-weight: bold;
+
+    }
+
+    .mostrar_canvas{
+        display: flex;
+        /* z-index: 2; */
+    }
+
+    .temporizador{
+        transform: translateY(-90px);
+    }
+
+    .btn_reiniciar{
+        width: 50%;
+        height: 40%;
+        font-family: 'Nunito';
+        font-size: 1.2em;
+        color: var(--fuente_blanco);
+        font-weight: bolder;
+        background-color: var(--fuente_blanco);
+        background-image: var(--fuente_blanco); 
+        background-image: linear-gradient(to bottom, var(--secundario_luz_1) 0%,var(--secundario_luz_2) 100%);
+        border-color: var(--fuente_blanco);
+        background-size: 1000px;
+        background-repeat: no-repeat;
+        background-position: 0%;
+        border-radius: 10px;
+        transition: 300ms ease-in-out;
+        transform: translateY(-90px);
+    }
+
+    .btn_reiniciar:hover{
+        color: var(--secundario_luz_1);
+        background-position: -200%;
+        transition: 300ms ease-in-out;
+    }
+
+    .mostrar_ganador{
+
+    }
    
         
 }

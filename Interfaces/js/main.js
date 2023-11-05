@@ -189,7 +189,6 @@ if(btn_registrar){
         mensajeExitoso();
         
     });
-
 }
 
  function mensajeExitoso () {

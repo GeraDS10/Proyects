@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>L-GAMES</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -71,10 +71,49 @@
             <p class="parte_breadcum">4 en línea</p>
         </div>
         <div class="container_juego">
-            <div class="espacio_juego">
-                <button class="btn_jugar">Jugar</button>
-                <img src="../imagenes/marvel_vs_dc.png" alt="" class="img_juego">
-            </div>
+            <div class="espacio_juego" id="espacio_juego">
+                <button class="btn_jugar" id="btn_jugar">Jugar</button>
+                <div class="canbas ocultar">
+                    <div id="selectorEquipos" class="selectorEquipos">
+                        <label for="equipo1" class="selectorEquipos_label">Equipo DC</label>
+                        <select name="" id="equipo1">
+                            <option value="superman">Superman</option>
+                            <option value="batman">Batman</option>
+                            <option value="flash">Flash</option>
+                            <option value="aquaman">Aquaman</option>
+                            <option value="wonderWoman">Wonder Woman</option>
+                        </select>
+                        <label for="equipo2" class="selectorEquipos_label">Equipo MARVEL</label>
+                        <select name="" id="equipo2">
+                            <option value="spiderman">Spiderman</option>
+                            <option value="ironMan">Iron Man</option>
+                            <option value="captainAmerica">Captain America</option>
+                            <option value="thor">Thor</option>
+                            <option value="hulk">Hulk</option>
+                        </select>
+                        <label for="fichasLinea" class="selectorEquipos_label">Fichas en linea</label>
+                        <select name="" id="fichasLinea" >
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                        </select>
+                        <button type="submit" class="btnIniciar" id="btnIniciar">Iniciar</button>
+                    </div>
+                    <canvas id="myCanvas" class="myCanvas" width="500px" height="500px">
+                    </canvas>
+                    <div class="temporizador" id="temporizador">
+                        <h2></h2>
+                    </div>
+                    <div id="mostrarGanador" class="mostrarGanador ocultar">
+                        <h1></h1>
+                    </div>
+                    <button class="btn_reiniciar ocultar" id="btn_reiniciar">Reiniciar</button>
+                </div>     
+            </div> 
             <div class="informacion_juego">
                 <h2 class="titulo_juego">4 en línea</h2>
                 <p class="descripcion_juego">La eterna rivalidad llego al clásico juego de mesa.</p>
@@ -84,14 +123,13 @@
                 <button class="btn_comprar">Comprar</button>
                 <button class="btn_agregar_carrito">Añadir al carrito</button>
                 <div class="redes">
-
                 </div>
+                <h3 class="titulo_instrucciones">Instrucciones</h3>
+                <p class="parrafo_instrucciones">Elijan el superhéroe que representará cada bando</p>
+                <p class="parrafo_instrucciones">Elijan la cantidad de fichas en linea para ganar</p>
+                <p class="parrafo_instrucciones">Dispondran de 5 minutos para seleccionar y </p>
+                <p class="parrafo_instrucciones"> arrastrar las fichas a sus casilleros y formar la linea</p>
             </div>
-        </div>
-        <div class="instrucciones">
-            <h3 class="titulo_instrucciones">Instrucciones</h3>
-            <p class="parrafo_instrucciones">El juego es simple, pero la batalla será épica! </p>
-            <p class="parrafo_instrucciones">Elegi tu bando, el superheroe que los representara e intenta colocar 4 fichas en linea antes que tu rival!</p>
         </div>
         <div class="container_personajes">
             <h2 class="titulo_personajes">Personajes</h2>
@@ -142,7 +180,6 @@
                 <button class="btn_carrusel"><img src="../imagenes_iconos/flecha_violeta_derecha.png" alt="" class="img_btn_carrusel"></button>
             </div>
         </div>
-
     </main>
     <footer>
         <div class="container_footer">
@@ -183,5 +220,10 @@
         </div>
     </footer>
     <script src="../js/main.js"></script>
+    <script src="../js/mainJuego.js"></script>
+    <script src="../js/Circle.js"></script>
+    <script src="../js/Ficha.js"></script>
+    <script src="../js/Jugador.js"></script>
+    <script src="../js/Tablero.js"></script>
 </body>
 </html>

@@ -1,13 +1,10 @@
 {
   "name": "digitalers-tp-3",
   "private": true,
-  "homepage": "https://gerads10.github.io/Proyects/Digitalers_TP_2",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy":"npm run build",
     "dev": "vite",
-    "deploy": "vite build && gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"

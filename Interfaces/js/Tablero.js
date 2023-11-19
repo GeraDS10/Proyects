@@ -25,6 +25,37 @@ class Tablero{
         return this.ganador;
     }
 
+    isOnTablero(x,y){
+            return (
+                x >= (this.posX) &&          // Verificar si la coordenada X está a la izquierda del límite derecho
+                x <= (this.posX + this.width) &&   // Verificar si la coordenada X está a la derecha del límite izquierdo
+                y >= (this.posY - this.radioFicha * 2 - this.espacioEntreFichas * 2) &&          // Verificar si la coordenada Y está arriba del límite inferior
+                y <= (this.posY - this.radioFicha)    // Verificar si la coordenada Y está debajo del límite superior
+            );  
+    }
+
+    findAvailable(x){
+        let columna = 0;
+        let fila = this.filas -1;
+        while(columna < this.columnas){
+            if(this.fichas[fila].isPointOnCircle(x)){
+                while(fila >= (this.filas * columna)){
+                    if(!this.fichas[fila].isFixed()){
+                        return this.fichas[fila];
+                    }
+                    fila--;
+                }
+                return null;
+            }
+            fila += this.filas;
+            // fila = (this.filas) * (columna + 1) -1;
+            columna++;
+
+        }
+        return null;
+    }
+    
+
     //Recorre los circulos del tablero de manera vertical buscando una ficha fijada y al encontrarla verifica si existen
     //más del mismo jugador en linea hasta llegar a las necesarias para ganar
     lineaVertical(jugador1, jugador2){
@@ -239,15 +270,15 @@ class Tablero{
     //Crea las fichas del tablero por columna de manera vertical descendente a partir de las coordendas del tablero, el radio de la ficha y
     //el espacio entre ellas, agregandolas al arreglo fichas
     crearFichasTablero(radioFicha, tableroPosX, tableroPosY, espacioEntreFichas, ctx){
-        let posX = tableroPosX + espacioEntreFichas + radioFicha;
-        let posY = tableroPosY + espacioEntreFichas + radioFicha;
+        let x = tableroPosX + espacioEntreFichas + radioFicha;
+        let y = tableroPosY + espacioEntreFichas + radioFicha;
         for(let i = 0; i < this.columnas; i++){
             for(let j = 0; j < this.filas; j++){
-                this.fichas.push(new Circle(posX, posY, radioFicha, "white", ctx, null));
-                posY += (radioFicha * 2) + espacioEntreFichas;
+                this.fichas.push(new Circle(x, y, radioFicha, "white", ctx, null));
+                y += (radioFicha * 2) + espacioEntreFichas;
             }
-            posX += (radioFicha * 2) + espacioEntreFichas;
-            posY = tableroPosY + espacioEntreFichas + radioFicha;
+            x += (radioFicha * 2) + espacioEntreFichas;
+            y = tableroPosY + espacioEntreFichas + radioFicha;
         }
     }
 
@@ -273,6 +304,7 @@ class Tablero{
     }
 
     //Fija la ficha recibida en las coordenadas recibidas 
+
     fijarFicha(ficha, posX, posY){
         let encontrada = false;
         let i = 0;

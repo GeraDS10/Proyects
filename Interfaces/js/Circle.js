@@ -100,4 +100,8 @@ class Circle{
         let _y = this.posY  - y;
         return Math.sqrt(_x * _x + _y * _y) < this.radius;
     }
+
+    isPointOnCircle(x){
+        return Math.abs(this.posX - x) < this.radius;
+    }
 }

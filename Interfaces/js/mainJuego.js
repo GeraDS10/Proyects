@@ -29,6 +29,7 @@ let canvasHeight = canvas.height;
 let jugador1, jugador2, jugadorTurno, tablero, cantidadFichas;
 let lastClicledFigure = null;
 let isMouseDown = false;
+let isGameOver = false;
 
 
 let tiempoInicial = 5 * 60;
@@ -88,6 +89,7 @@ function eleccionEquipos(){
 
 //Muestra el equipo ganador y detiene el temporizador
 function cerrarJuego(ganador){
+    isGameOver = true;
     clearTimeout(temporizador);
     mostrarGanador.children[0].innerHTML = "Ganador: " + ganador.getNombre();
     mostrarGanador.classList.remove("ocultar");
@@ -98,6 +100,7 @@ function cerrarJuego(ganador){
 function abrirJuego(cantidad){
     selectorEquipos.classList.add("ocultar");
     let fichasLinea = cantidad;
+    let fichasTablero = ((fichasLinea * 2) * (fichasLinea * 2));
     let tableroPosX = canvasWidth * 0.15;
     let tableroPosY = canvasHeight * 0.10;
     let tableroWidth = canvasWidth * 0.70
@@ -105,12 +108,12 @@ function abrirJuego(cantidad){
     let diametroFicha = tableroHeight / (fichasLinea * 2 + 1);
     let radioFicha = diametroFicha / 2;
 
-    jugador1 = new Jugador("DC", radioFicha, (canvasWidth * 0.05), (canvasHeight / 2), fichaDC, ctx);
-    jugador2 = new Jugador("MARVEL", radioFicha, (canvasWidth * 0.95), (canvasHeight / 2), fichaMARVEL, ctx);
+    jugador1 = new Jugador("DC", radioFicha, (canvasWidth * 0.05), (canvasHeight *0.15), fichaDC, ctx);
+    jugador2 = new Jugador("MARVEL", radioFicha, (canvasWidth * 0.95), (canvasHeight *0.15), fichaMARVEL, ctx);
     tablero = new Tablero(
         (tableroPosX), (tableroPosY), (tableroWidth),(tableroHeight), "blue", ctx, fichasLinea);
-    jugador1.agregarFicha();
-    jugador2.agregarFicha();
+    jugador1.agregarFicha(fichasTablero / 2);
+    jugador2.agregarFicha(fichasTablero / 2);
     setTurno(jugador1);
     btnReiniciar.classList.remove("ocultar");
     btnReiniciar.addEventListener("click", reiniciarJuego)
@@ -122,6 +125,7 @@ function abrirJuego(cantidad){
 
 //Reinicia el juego permitiendo elegir nuevamente los superheroes
 function reiniciarJuego(){
+    isGameOver = false;
     selectorEquipos.classList.remove("ocultar");
     selectorEquipos.classList.add("mostrar_selector");
     canvas.classList.remove("mostrar_canvas")
@@ -154,19 +158,20 @@ function drawFigure(){
 
 //Obtiene las coordenadas del cursor en el momento del click ajustadas al canvas y determina si hay una ficha factbible de mover
 function onMouseDown(e){
-    isMouseDown = true;
-    const rect = canvas.getBoundingClientRect(); 
-    let posX = e.clientX - rect.left;
-    let posY = e.clientY - rect.top; 
-    if(lastClicledFigure == null){
-        let clickFig = findClickedFigure(posX, posY);
-        if((clickFig != null) && (clickFig.isFixed() == false)){
-            clickFig.setResaltado(true);
-            lastClicledFigure = clickFig;
-        }
-        drawFigure();
-    }
-    
+    if(!isGameOver){
+        isMouseDown = true;
+        const rect = canvas.getBoundingClientRect(); 
+        let posX = e.clientX - rect.left;
+        let posY = e.clientY - rect.top; 
+        if(lastClicledFigure == null){
+            let clickFig = findClickedFigure(posX, posY);
+            if((clickFig != null) && (clickFig.isFixed() == false)){
+                clickFig.setResaltado(true);
+                lastClicledFigure = clickFig;
+            }
+            drawFigure();
+        }    
+    }   
 }
 
 //Limpia el rectangulo del canvas y lo rellena con un color de fondo
@@ -180,46 +185,55 @@ function clearCanvas(){
 //en caso de tener seleccionada una ficha es factible fijarla en dicho lugar y posteriormente llama metodos
 //del objeto tablero para determinar si existe un ganador
 function onMouseUp(e){
-    isMouseDown = false;
-    const rect = canvas.getBoundingClientRect();
-    let posX = e.clientX - rect.left; 
-    let posY = e.clientY - rect.top; 
-
-    if((lastClicledFigure != null)&&(tablero.estaDisponible(posX, posY))){
-        tablero.fijarFicha(lastClicledFigure, posX, posY);
-        lastClicledFigure.setResaltado(false);
-        lastClicledFigure = null;
+    if(!isGameOver){
+        isMouseDown = false;
+        const rect = canvas.getBoundingClientRect();
+        let posX = e.clientX - rect.left; 
+        let posY = e.clientY - rect.top; 
+    
+        if((lastClicledFigure != null)&&(tablero.isOnTablero(posX, posY))){
+            let circleTablero = tablero.findAvailable(posX);
+            if(circleTablero != null){
+                tablero.fijarFicha(lastClicledFigure, circleTablero.getPosX(), circleTablero.getPosY());
+                lastClicledFigure.setResaltado(false);
+                lastClicledFigure = null;
+                drawFigure();
+                tablero.lineaVertical(jugador1, jugador2);
+                tablero.lineaHorizontal(jugador1, jugador2);
+                tablero.lineaOblicuoDescendenteDerecha(jugador1, jugador2);
+                tablero.lineaOblicuoDescendenteIzquierda(jugador1, jugador2);
+                tablero.lineaOblicuoAscendenteIzquierda(jugador1, jugador2);
+                tablero.lineaOblicuoAscendenteDerecha(jugador1, jugador2);
+                if(tablero.getGanador() != null){
+                    cerrarJuego(tablero.getGanador());
+                }
+    
+                if(getJugadorTurno() == jugador1){
+                    // jugador1.agregarFicha();
+                    setTurno(jugador2)
+                }else{
+                    // jugador2.agregarFicha();
+                    setTurno(jugador1);
+                }
+            
+            }
+        }
+            
         drawFigure();
-        tablero.lineaVertical(jugador1, jugador2);
-        tablero.lineaHorizontal(jugador1, jugador2);
-        tablero.lineaOblicuoDescendenteDerecha(jugador1, jugador2);
-        tablero.lineaOblicuoDescendenteIzquierda(jugador1, jugador2);
-        tablero.lineaOblicuoAscendenteIzquierda(jugador1, jugador2);
-        tablero.lineaOblicuoAscendenteDerecha(jugador1, jugador2);
-        if(tablero.getGanador() != null){
-            cerrarJuego(tablero.getGanador());
-        }
-
-        if(getJugadorTurno() == jugador1){
-            jugador1.agregarFicha();
-            setTurno(jugador2)
-        }else{
-            jugador2.agregarFicha();
-            setTurno(jugador1);
-        }
-        
     }
-    drawFigure();
+   
 }
 
 //Determina las coordenadas del cursor ajustadas al canvas al detectar movimiento del mismo y traslada la figura en caso de tener una seleccionada
 function onMouseMove(e){
-    if(isMouseDown && lastClicledFigure != null){
-        const rect = canvas.getBoundingClientRect(); 
-        let posX = e.clientX - rect.left; 
-        let posY = e.clientY - rect.top; 
-        lastClicledFigure.setPosition(posX, posY);
-        drawFigure();
+    if(!isGameOver){
+        if(isMouseDown && lastClicledFigure != null){
+            const rect = canvas.getBoundingClientRect(); 
+            let posX = e.clientX - rect.left; 
+            let posY = e.clientY - rect.top; 
+            lastClicledFigure.setPosition(posX, posY);
+            drawFigure();
+        }
     }
 }
 

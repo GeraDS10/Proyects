@@ -98,7 +98,7 @@ window.addEventListener("popstate", event => {
 -------------PARTIAL RENDER
 */
 function estadia(){
-    const valorEstadia = 2500;
+    const valorEstadia = 3000;
     let btnConsulta = document.querySelector("#buttonConsultar").addEventListener("click", calcular);
     let divResultado = document.querySelector("#resultadoDiv");
 
@@ -167,6 +167,19 @@ function baño(){
         let perroCorte = document.querySelector("#perroCorte");
         let razaEjemplo;
         let saltoLinea = "<br>";
+        let gigantePeloLargoCorte = 8500;
+        let gigantePeloLargoBanio = 7800;
+        let gigantePeloCortoBanio = 7000;
+        let grandePeloLargoCorte = 7200;
+        let grandePeloLargoBanio = 6200;
+        let grandePeloCortoBanio = 5200;
+        let medianoPeloLargoCorte = 5200;
+        let medianoPeloLargoBanio = 4200;
+        let medianoPeloCortoBanio = 4000;
+        let pequenioPeloLargoCorte = 4000;
+        let pequenioPeloLargoBanio = 3200;
+        let pequenioPeloCortoBanio = 3200;
+        
        
        switch(perroTamanio.value){
         case 'gigante':
@@ -175,12 +188,12 @@ function baño(){
                     switch(perroCorte.value){
                         case 'si':
                             razaEjemplo = "<p> Raza Ejemplo : Schnauzer Gigante </p>"
-                            divResultado.innerHTML = "Valor estimado = 7000" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + gigantePeloLargoCorte + saltoLinea + razaEjemplo;
                         break;
                         
                         case 'no':
                             razaEjemplo = "<p> Raza Ejemplo : Schnauzer Gigante </p>"
-                            divResultado.innerHTML = "Valor estimado = 5800" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + gigantePeloLargoBanio + saltoLinea + razaEjemplo;
                         break;
                     }
                     break;
@@ -188,11 +201,11 @@ function baño(){
                     razaEjemplo = "<p>Raza Ejemplo : Dogo Burdeos</p>";
                     switch(perroCorte.value){
                         case 'si':
-                            divResultado.innerHTML = "Valor estimado = 5000" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + gigantePeloCortoBanio + saltoLinea + razaEjemplo;
                         break;
 
                         case 'no':
-                            divResultado.innerHTML = "Valor estimado = 5000" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + gigantePeloCortoBanio + saltoLinea + razaEjemplo;
                         break;
                     }
                 break;      
@@ -204,24 +217,24 @@ function baño(){
                     switch(perroCorte.value){
                         case 'si':
                             razaEjemplo = "<p> Raza Ejemplo : Golden Retriever </p>"
-                            divResultado.innerHTML = "Valor estimado = 6200" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + grandePeloLargoCorte + saltoLinea + razaEjemplo;
                         break;
                         
                         case 'no':
                             razaEjemplo = "<p> Raza Ejemplo : Golden Retriever </p>"
-                            divResultado.innerHTML = "Valor estimado = 5500" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + grandePeloLargoBanio + saltoLinea + razaEjemplo;
                         break;
                     }
                     break;
                 case 'corto':
-                    razaEjemplo = "<p>Raza Ejemplo : Dogo Burdeos</p>";
+                    razaEjemplo = "<p>Raza Ejemplo : Labrador</p>";
                     switch(perroCorte.value){
                         case 'si':
-                            divResultado.innerHTML = "Valor estimado = 4800" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + grandePeloCortoBanio + saltoLinea + razaEjemplo;
                         break;
 
                         case 'no':
-                            divResultado.innerHTML = "Valor estimado = 4800" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + grandePeloCortoBanio + saltoLinea + razaEjemplo;
                         break;
                     }
                 break;      
@@ -233,12 +246,12 @@ function baño(){
                     switch(perroCorte.value){
                         case 'si':
                             razaEjemplo = "<p>Raza Ejemplo : Border Collie</p>";
-                            divResultado.innerHTML = "Valor estimado = 4200" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + medianoPeloLargoCorte + saltoLinea + razaEjemplo;
                         break;
 
                         case 'no':
                             razaEjemplo = "<p>Raza Ejemplo : Border Collie</p>";
-                            divResultado.innerHTML = "Valor estimado = 3500" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + medianoPeloLargoBanio + saltoLinea + razaEjemplo;
                         break;
                     }
                     break;
@@ -246,11 +259,11 @@ function baño(){
                     razaEjemplo = "<p>Raza Ejemplo : Boxer</p>";
                     switch(perroCorte.value){
                         case 'si':
-                            divResultado.innerHTML = "Valor estimado = 3200" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + medianoPeloCortoBanio + saltoLinea + razaEjemplo;
                         break;
 
                         case 'no':
-                            divResultado.innerHTML = "Valor estimado = 3200" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + medianoPeloCortoBanio + saltoLinea + razaEjemplo;
                         break;
                     }
                 break;      
@@ -262,11 +275,11 @@ function baño(){
                     razaEjemplo = "<p>Raza Ejemplo : Caniche Toy</p>";
                     switch(perroCorte.value){
                         case 'si':
-                            divResultado.innerHTML = "Valor estimado = 3500" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + pequenioPeloLargoCorte + saltoLinea + razaEjemplo;
                         break;
 
                         case 'no':
-                            divResultado.innerHTML = "Valor estimado = 2800" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + pequenioPeloLargoBanio + saltoLinea + razaEjemplo;
                         break;
                     }
                     break;
@@ -274,11 +287,11 @@ function baño(){
                     razaEjemplo = "<p>Raza Ejemplo : Jack Russell</p>";
                     switch(perroCorte.value){
                         case 'si':
-                            divResultado.innerHTML = "Valor estimado = 2800" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + pequenioPeloCortoBanio + saltoLinea + razaEjemplo;
                         break;
 
                         case 'no':
-                            divResultado.innerHTML = "Valor estimado = 2800" + saltoLinea + razaEjemplo;
+                            divResultado.innerHTML = "Valor estimado = " + pequenioPeloCortoBanio + saltoLinea + razaEjemplo;
                         break;
                     }
                 break;      

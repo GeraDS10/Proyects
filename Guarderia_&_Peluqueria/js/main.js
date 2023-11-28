@@ -121,7 +121,7 @@ function estadia(){
         let horaEgreso = document.querySelector("#horaEgreso").value;
         let diasEstadia = calcularDiferenciaEnDias(fechaIngreso, fechaEgreso);
         let adicionalDia = 0;
-        let limitePrecio = '<br> <p  class="aclaracion">Precio válido hasta 31 de Octubre 2023 </p>';
+        let limitePrecio = '<br> <p  class="aclaracion"></p>';
         if(horaEgreso >= '00:00'){
             adicionalDia = calcularAdicional(horaEgreso);
             if(diasEstadia > 0){

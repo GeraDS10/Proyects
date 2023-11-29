@@ -1,0 +1,734 @@
+body{
+    margin: 0px;
+}
+
+@font-face {
+    font-family: 'Lato-Black';
+    src: url(../fonts/Lato-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url(../fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url(../fonts/Lato-Bold.ttf);
+}
+
+.container-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header{
+    position: sticky;
+    top: 0px;
+    z-index: 20;
+}
+.container-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    background-color: #5499F8;
+    width: 1280px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-menu{
+    position: relative;
+    left: -86px;
+}
+.menu-barra{
+    width: 34px;
+    height: 4px;
+    background-color: #FFE901;
+    border-radius: 111px;
+    border: solid 4px #2981FF;
+    box-shadow: 4px 5px 0px #02187E;
+}
+
+.container-logo{
+    position: relative;
+    opacity: 0;
+    left: 100px;
+    transition: opacity ease-in 0.2s;
+}
+
+.container-btn-comprar{
+    position: relative;
+    left: 180px;
+}
+
+.btn-comprar{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 94.5%;
+    font-weight: bolder;
+    border-radius: 111px;
+    color: #02187E;
+    font-family: 'Lato-Black';
+    background-color: #FFE901;
+    border: solid 4px #2981FF;
+    box-shadow: 4px 5px 0px #02187E;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.btn-comprar:hover{
+    color: #FFE901;
+    background-color: #02187E;
+}
+
+.container-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-parallax-spideys{
+    position: relative;
+    width: 1280px;
+    height: 950px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.layer{
+    position: absolute;
+}
+
+.layer-10{
+    background-image: url(../images/parallax-spideys/layer-10.png);
+    height: 720px;
+    width: 1280px;
+}
+
+.layer-9{
+    background-image: url(../images/parallax-spideys/layer-9.png);
+    width: 543.5px;
+    height: 213.5px;
+    left: 392px;
+    top: 634px;
+    z-index: 1;
+    
+}
+
+.layer-8{
+    background-image: url(../images/parallax-spideys/layer-8.png);
+    width: 374px;
+    height: 727.5px;
+    left: 906px;
+    top: 136px;
+    z-index: 2;
+}
+
+.layer-7{
+    background-image: url(../images/parallax-spideys/layer-7.png);
+    width: 452px;
+    height: 720px;
+    left: -54px;
+    top: 144px;
+    z-index: 3;
+}
+
+.layer-6{
+    width: 50%;
+    height: 500px;
+    position: relative;
+    left: 354px;
+    top: 91px;
+    z-index: 4;
+    transition:height 2s;
+}
+
+.layer-5{
+    background-image: url(../images/parallax-spideys/layer-5.png);
+    background-size: cover;
+    width: 360px;
+    height: 444px;
+    left: 90px;
+    top: 388px;
+    z-index: 5;
+}
+
+.layer-4{
+    background-image: url(../images/parallax-spideys/layer-4.png);
+    width: 393px;
+    height: 393px;
+    left: 695px;
+    top: 335px;
+    z-index: 6;
+}
+
+.layer-3{
+    background-image: url(../images/parallax-spideys/layer-3.png);
+    width: 465px;
+    height: 465px;
+    left: 404px;
+    top: 403px;
+    z-index: 7;
+}
+
+.layer-2{
+    background-image: url(../images/parallax-spideys/layer-2.png);    
+    width: 440px;
+    height: 350px;
+    left: 979px;
+    top: 388px;
+    transform: rotate(1deg);
+    z-index: 8;
+}
+
+.layer-1{
+    background-image: url(../images/parallax-spideys/layer-1.png);
+    width: 730px;
+    height: 600px;
+    left: -189px;
+    top: 399px;
+    transform: rotate(357deg);
+    z-index: 9;
+
+}
+
+.background_violet{
+    background-image: url('../images/conoceSpidey/background_violet.svg');
+    background-size: cover;
+    width: 1280px;
+    height: 845px;
+    position: relative;
+    top: -187px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orco-section{
+    height: 300px;
+}
+
+.container-conoceSpidey{
+    display: flex;
+    width: 1080px;
+}
+
+.container-conoceSpidey-left{
+    padding-top: 43%;
+    width: 1080px;
+    height: 100%;
+    z-index: 4;
+}
+
+.conoceSpidey-left-title{
+    font-family: 'Lato-Bold';
+    width: 646px;
+    font-size: 60px;
+    color: white;
+    margin: 0px 0px 24px 0px;
+}
+
+.conoceSpidey-left-text{
+    font-family: 'Lato-Regular';
+    width: 586px;
+    font-size: 20px;
+    color: white;
+}
+
+.container-conoceSpidey-right{
+    padding-top: 36%;
+    position: relative;
+    right: 70px;
+    z-index: 4;
+    transition: transform 0.3s ease;
+}
+
+.img-spidey-doc-ock{
+    position: absolute;
+    width: 753.65px;
+    height: 447.13px;
+    z-index: 3;
+    top: 545px;
+    left: 92px;
+}
+
+
+/* ---------------------Section spideys cards-------------------------- */
+
+.spideys-cards{
+    display: flex;
+    width: 1080px;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+
+.spidey-card{
+    width: 332.96px;
+    height: 302.691px;
+    transform: translateY(250px);
+    opacity: 0;
+}
+
+.show-card{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.spidey-card-text{
+    color: #000;
+    font-family: 'Lato-Regular';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.spidey-card-1{
+    transition: transform 1s ease-in, opacity 0.5s ease-in;
+    transition-delay: 0.3s;
+}
+
+.spidey-card-2{
+    transition: transform 1s ease-in, opacity 0.5s ease-in;
+    transition-delay: 0.5s;
+}
+
+.spidey-card-3{
+    transition: transform 1s ease-in, opacity 0.5s ease-in;
+    transition-delay: 0.7s;
+}
+
+
+/* ---------------------Ghost-Spider-Section-------------------------- */
+
+.ghost-spider{
+    background-image: url(../images/ghost-spider/ghost-spider.png);
+    background-size: cover;
+    width: 1280px;
+    height: 566px;
+    margin-top: 30%;
+}
+
+.gs-card{
+    cursor: pointer;
+
+}
+
+.skew{
+    transition: transform 1s ease-in-out;
+    transform: skewX(-20deg);
+}
+
+.gs-card-1{
+    position: relative;
+    top: -158px;
+    left: 55px;
+    width: 546.108px;
+    height: 326.509px;
+}
+
+.gs-card-1:hover{
+    transform: skewX(20deg);
+}
+
+.gs-card-2{
+    width: 543.218px;
+    height: 325.787px;
+    position: relative;
+    top: -350px;
+    left: 39px;
+}
+
+.gs-card-3{
+    width: 546.108px;
+    height: 326.509px;
+    position: relative;
+    top: -480px;
+    left: 66px;
+}
+
+.ghost-spider-background{
+    background-color: #000;
+    position: relative;
+    height: 200px;
+    top: -548px;
+    z-index: -1;
+}
+
+/* ---------------------Vengadores-Section-------------------------- */
+
+.vengadores-section{
+    background-color: #000;
+    width: 1280px;
+    height: 1100px;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+
+.vengadores-title{
+    font-family: 'Lato-Regular';
+    width: 667px;
+    position: relative;
+    padding-top: 24%;
+    z-index: 2;
+    color: white;
+    line-height: 94.5%;
+    font-size: 60px;
+}
+
+.vengadores-container{
+    width: 1080px;
+}
+
+.vengador-layer{
+
+}
+
+.vengador-layer-1{
+    background-image: url(../images/vengadores/vengador-layer-1.png);
+    background-size: cover;
+    width: 404.308px;
+    height: 552.462px;
+    position: absolute;
+    z-index: 7;
+    left: 500px;
+    top: 304px;
+}
+
+.vengador-layer-2{
+    background-image: url(../images/vengadores/vengador-layer-2.png);
+    background-size: cover;
+    width: 451.258px;
+    height: 668.442px;
+    z-index: 6;
+    position: absolute;
+    top: 434px;
+    left: 100px;
+}
+
+.vengador-layer-3{
+    background-image: url(../images/vengadores/vengador-layer-3.png);
+    background-size: cover;
+    width: 410.106px;
+    height: 457.972px;
+    z-index: 5;
+    position: absolute;
+    top: 660px;
+    left: 793px;
+}
+
+.vengador-layer-4{
+    background-image: url(../images/vengadores/vengador-layer-4.png);
+    background-size: cover;
+    position: absolute;
+    z-index: 4;
+    top: 528px;
+    width: 1077.059px;
+    height: 527.626px;
+}
+
+.vengador-layer-5{
+    background-image: url(../images/vengadores/vengador-layer-5.png);
+    background-size: cover;
+    width: 1077.059px;
+    height: 527.626px;
+    position: absolute;
+    top: 528px;
+    z-index: 6;
+}
+
+.vengador-layer-6{
+    background-image: url(../images/vengadores/vengador-layer-6.png);
+    background-size: cover;
+    position: absolute;
+    z-index: 2;
+    width: 1077.059px;
+    height: 527.626px;
+}
+
+.vengadores-section-skew{
+    position: relative;
+    top: 506px;
+    left: -100px;
+    background-color: white;
+    width: 1280px;
+    height: 180px;
+    transform: skewY(5deg);
+    transform-origin: top right;
+    z-index: 1;
+}
+
+/* ---------------------mas-amigos-mas-diversion-Section-------------------------- */
+
+
+.mas-amigos-mas-diversion-container{
+    padding-top: 5%;
+    width: 1080px;
+    background-color: white;
+}
+
+.mas-amigos-mas-diversion-title{
+    font-family: 'Lato-Bold';
+    font-size: 60px;
+}
+
+.mas-amigos-mas-diversion-content{
+    display: flex;
+    justify-content: space-around;
+}
+
+.mas-amigos-mas-diversion-columna-imagenes{
+    width: 50%;
+}
+
+.mas-amigos-mas-diversion-card-img{
+    position:fixed;
+    width: 548px;
+    height: 305px;
+    top: 360px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in; 
+}
+
+.mas-amigos-mas-diversion-card-content{
+    margin: 100% 0% 100% 0%;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease-in; 
+}
+
+.mas-amigos-mas-diversion-card-title{
+    font-family: 'Lato-Regular';
+    font-size: 40px;
+    width: 467px;
+    margin: 0% 0% 0% 0%;
+}
+
+.mas-amigos-mas-diversion-card-text{
+    font-family: 'Lato-Regular';
+    font-size: 20px;
+    width: 467px;
+}
+
+/* ---------------------comprar-Section-------------------------- */
+
+.comprar-container{
+    background-color: #000;
+}
+
+.background-skew-up{
+    position: relative;
+    top: 179px;
+    background-color: black;
+    width: 1280px;
+    height: 180px;
+    transform: skewY(5deg);
+    transform-origin: top right;
+    z-index: -1;
+}
+
+.background-skew-down{
+    position: relative;
+    top: -67px;
+    background-color: black;
+    width: 1280px;
+    height: 180px;
+    transform: skewY(-5deg);
+    transform-origin: bottom left;
+    z-index: -1;
+}
+
+.comprar-content{
+width: 1080px;
+}
+
+.comprar-background{
+    background-color: #000;
+    width: 1280px;
+    display: flex;
+    justify-content: center;
+}
+
+.comprar-content-title{
+    color: white;
+    font-family: 'Lato-Regular';
+    font-size: 60px;
+    width: 816px;
+}
+
+/* ---------------------spideys-action-Section-------------------------- */
+.spideys-action{
+    display: flex;
+}
+
+.spideys-action-alternative{
+    background-image: url(../images/spides-action/spidey-alternative.png);
+    background-size: cover;
+    width: 268px;
+    height: 416px;
+}
+
+.spideys-action-original{
+    background-image: url(../images/spides-action/spidey-original.png);
+    background-size: cover;
+    width: 416px;
+    height: 457px;
+}
+
+.spideys-action-black{
+    background-image: url(../images/spides-action/spidey-black.png);
+    background-size: cover;
+    width: 313px;
+    height: 398px;
+}
+
+/* ---------------------newsletter-Section-------------------------- */
+
+.newsletter-background{
+    background-image: url(../images/newsletter/newsletter-background.png);
+    background-size: cover;
+    width: 1280px;
+    height: 1273px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter-container{
+    width: 1080px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter-title{
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Lato-Bold';
+    width: 816px;
+}
+
+.newsletter-text{
+    width: 578px;
+    font-family: 'Lato-Regular';
+    font-size: 20px;
+}
+
+.newsletter-form{
+    background-image: url(../images/newsletter/newsletter-form.png);
+    background-size: cover;
+    width: 780px;
+    height: 104px;
+}
+
+.newsletter-text-underline{
+    text-decoration: underline;
+}
+
+.newsletter-city{
+    background-image: url(../images/newsletter/newsletter-city.png);
+    background-size: cover;
+    width: 1280px;
+    height: 720px;
+}
+
+.newsletter-advice{
+    background-image: url(../images/newsletter/violence-advice.png);
+    background-size: cover;
+    width: 231px;
+    height: 145px;
+    left: 302px;
+    top: 19px;
+    position: relative;
+}
+
+/* ---------------------footer-Section-------------------------- */
+.footer-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-top-background{
+    width: 1280px;
+    height: 80px;
+    background-color: #242424;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-top{
+    background-image: url(../images/footer/footer-top.png);
+    background-size: cover;
+    width: 1080px;
+    height: 80px;
+}
+
+.footer-bottom-background{
+    background-color: #5E5E5D;
+    width: 1280px;
+    height: 598px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 1080px;
+}
+
+.footer-bottom-text-1{
+    font-family: 'Lato-Regular';
+    font-size: 20px;
+    width: 820px;
+    height: 361px;
+    color: white;
+    margin: 1% 0% 0% 0%;
+}
+
+.footer-bottom-text-2{
+    text-decoration: underline;
+    font-family: 'Lato-Regular';
+    font-size: 20px;
+    color: white;
+    margin: 0% 0% 5% 0%;
+}
+
+.footer-icons{
+    background-image: url(../images/footer/footer-icons.png);
+    background-size: cover;
+    width: 212px;
+    height: 41px;
+}
+
+/* ---------------------spritesheets-Section-------------------------- */
+
+.spiderman{
+    width: 80px;
+    height: 90px;
+    top: 396px;
+    position: relative;
+    left: 937px;
+    background-image: url(../images/spritesheets/spritesheet-spiderman.png);
+    animation: walk 2s steps(9) infinite;
+}
+
+@keyframes walk {
+    0%{background-position: 0px;}
+    100%{background-position: 720px;}
+}

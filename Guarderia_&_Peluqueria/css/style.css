@@ -10,8 +10,9 @@
 
 
 body{
-    background-image: url(../images/background.jpg);
+    /* background-image: url(../images/background.jpg); */
     /* background-repeat: no-repeat; */
+    background-color: var(--cielo);
     background-size: cover;
     margin: 0%;
     display: flex;
@@ -62,10 +63,14 @@ footer{
 .logoCompletoDiv{
     padding-top: 30%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #logoCompleto{
-    width: inherit;
+    /* width: inherit; */
+    width: 50%;
 }
 
 .logoDiv{
@@ -219,11 +224,16 @@ footer{
 }
 
 .listado_razas{
+    width: 60%;
 
 }
 
+.categoria_item_listado_raza{
+    text-decoration: underline;
+}
+
 .item_listado_razas{
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .guarderiaSection ul{
@@ -292,6 +302,7 @@ footer{
         align-items: center;
         justify-content: center;
         padding-top: 0%;
+        height: 80vh;
     }
 
     #logoCompleto{

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="form-container">
+    <form [formGroup]="formEdit" (ngSubmit)="editar()">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="id" >ID</span>
+            <input class="form-control" type="text" value={{value.id}} aria-label="Disabled input example" formControlName="id" disable readonly>
+          </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="tamanio">Tamaño</span>
+            <input class="form-control" type="text" value={{value.tamanio}} aria-label="Disabled input example" formControlName="tamanio" readonly>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="tienePeloLargo" >Pelo Largo</span>
+            <input class="form-control" type="text" value={{value.tienePelolargo}} aria-label="Disabled input example" formControlName="tienePeloLargo" readonly>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="corte">Corte</span>
+            <input [ngClass]="{'is-invalid': hasErrors('corte')}" type="number" class="form-control" aria-label="Sizing example input"
+             placeholder= {{value.corte}} aria-describedby="inputGroup-sizing-default" formControlName="corte">
+          </div>
+          <div class="text-danger" *ngIf="hasErrors('corte')">Ingresa nuevo valor Corte</div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="banio">Baño</span>
+            <input [ngClass]="{'is-invalid': hasErrors('banio')}" type="number" class="form-control" aria-label="Sizing example input" 
+            placeholder= {{value.banio}} aria-describedby="inputGroup-sizing-default" formControlName="banio">
+          </div>
+          <div class="text-danger" *ngIf="hasErrors('banio')">Ingresa nuevo valor Baño</div>
+        <button type="submit" class="btn btn-primary" [disabled]="formEdit.invalid">Editar</button>
+      </form>
+  </div>
+</div>

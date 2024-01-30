@@ -1,0 +1,26 @@
+<h1>Listado de Precios</h1>
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tamaño</th>
+            <th scope="col">Pelo Largo</th>
+            <th scope="col">Corte</th>
+            <th scope="col">Baño</th>
+            <th scope="col">Raza Ejemplo</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let value of valuesList">
+             <th scope="row">{{value.id}}</th>
+            <td>{{value.tamanio}}</td>
+            <td>{{value.tienePelolargo}}</td>
+            <td>{{value.corte}}</td>
+            <td>{{value.banio}}</td>
+            <td>{{value.ejemplo}}</td>
+            <button type="button" class="btn btn-primary" [routerLink]="[value.id]">Editar</button>
+        </tr>
+        </tbody>
+    </table>
+</div>

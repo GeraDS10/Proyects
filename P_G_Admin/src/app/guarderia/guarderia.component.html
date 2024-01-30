@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="form-container">
+      <form [formGroup]="formGuarderia" (ngSubmit)="editar(estadia.id)">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="estadia">Estadia</span>
+              <input [ngClass]="{'is-invalid': hasErrors('valorEstadia')}" type="number" class="form-control" aria-label="Sizing example input" 
+              placeholder= {{estadia.valorEstadia}} aria-describedby="inputGroup-sizing-default" formControlName="valorEstadia">
+            </div>
+            <div class="text-danger" *ngIf="hasErrors('valorEstadia')">Ingresa nuevo valor Estadia</div>
+          <button type="submit" class="btn btn-primary" [disabled]="formGuarderia.invalid">Editar</button>
+        </form>
+    </div>
+  </div>
+  

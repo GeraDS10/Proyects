@@ -98,7 +98,7 @@ window.addEventListener("popstate", event => {
 -------------PARTIAL RENDER
 */
 function estadia(){
-    const valorEstadia = 3000;
+    const valorEstadia = 3500;
     let btnConsulta = document.querySelector("#buttonConsultar").addEventListener("click", calcular);
     let divResultado = document.querySelector("#resultadoDiv");
 
@@ -166,19 +166,19 @@ function baño(){
         let perroPelaje = document.querySelector("#perroPelaje");
         let perroCorte = document.querySelector("#perroCorte");
         let razaEjemplo;
-        let saltoLinea = "<br>";
-        let gigantePeloLargoCorte = 8500;
-        let gigantePeloLargoBanio = 7800;
-        let gigantePeloCortoBanio = 7000;
-        let grandePeloLargoCorte = 7200;
-        let grandePeloLargoBanio = 6200;
-        let grandePeloCortoBanio = 5200;
-        let medianoPeloLargoCorte = 5200;
-        let medianoPeloLargoBanio = 4200;
-        let medianoPeloCortoBanio = 4000;
-        let pequenioPeloLargoCorte = 4000;
-        let pequenioPeloLargoBanio = 3200;
-        let pequenioPeloCortoBanio = 3200;
+        const saltoLinea = "<br>";
+        const gigantePeloLargoCorte = 9200;
+        const gigantePeloLargoBanio = 8500;
+        const gigantePeloCortoBanio = 8000;
+        const grandePeloLargoCorte = 8200;
+        const grandePeloLargoBanio = 7000;
+        const grandePeloCortoBanio = 6000;
+        const medianoPeloLargoCorte = 6000;
+        const medianoPeloLargoBanio = 5000;
+        const medianoPeloCortoBanio = 4500;
+        const pequenioPeloLargoCorte = 4500;
+        const pequenioPeloLargoBanio = 3600;
+        const pequenioPeloCortoBanio = 3600;
         
        
        switch(perroTamanio.value){
